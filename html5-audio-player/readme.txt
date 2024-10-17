@@ -2,7 +2,7 @@
 Contributors: bplugins, shehabulislam, freemius
 Tags:  audio, audio player, html5 player, mp3 player, Player
 Donate link: https://www.buymeacoffee.com/abuhayat/  
-Requires at least: 5.3
+Requires at least: 5.4
 Tested up to: 6.6.2
 Stable tag: 2.2.25
 Requires PHP: 7.1
