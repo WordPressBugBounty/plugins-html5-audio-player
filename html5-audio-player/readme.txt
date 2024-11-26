@@ -2,9 +2,9 @@
 Contributors: bplugins, shehabulislam, freemius
 Tags:  audio, audio player, html5 player, mp3 player, Player
 Donate link: https://www.buymeacoffee.com/abuhayat/  
-Requires at least: 5.4
-Tested up to: 6.6.2
-Stable tag: 2.2.25
+Requires at least: 5.2
+Tested up to: 6.7
+Stable tag: 2.2.26
 Requires PHP: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -32,8 +32,21 @@ Get a quick video tutorial-
 
 https://www.youtube.com/watch?v=MbY9oyERJck
 
-`[audio_player src="video src" width="100%"]`
+== Shortcode Usage - Quick Embed ==
 
+The plugin provides a simple shortcode: `[audio_player]`.
+
+**Attributes:**
+1. `src` (required) - The URL of the audio file to be played.
+2. `width` (optional, default: `100%`) - Sets the width of the audio player. You can use percentage or pixel values, e.g., `100%` or `300px`.
+
+### Examples
+
+**Basic Usage**  
+`[audio_player src="https://example.com/audio-file.mp3"]`
+
+**Custom Width**  
+`[audio_player src="https://example.com/audio-file.mp3" width="300px"]`
 
 
 ### HTML5 Audio Player Features
@@ -160,6 +173,9 @@ e.g.
 
 
 == Changelog ==
+
+= 2.2.26 - 26 Nov, 2024 = 
+* Fixed: Undefined array key "primary"
 
 = 2.2.25 - 18 Aug, 2024 = 
 * Fixed: High Memory Usage 

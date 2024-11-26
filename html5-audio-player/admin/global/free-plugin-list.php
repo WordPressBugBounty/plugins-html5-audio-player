@@ -74,7 +74,7 @@ if (!class_exists('H5AP_BPlugins_Free_plugins')) {
 
 <div class="bplgins_free_plugins">
     <div class="wp-filter" style="text-align: center;">
-        <h1 style="padding:10px;">Free PLugnis From bPLugins LLC</h1>
+        <h1 style="padding:10px;">Free PLugnis From bPLugins</h1>
     </div>
     <form id="plugin-filter" method="post">
         <div class="wp-list-table widefat plugin-install">

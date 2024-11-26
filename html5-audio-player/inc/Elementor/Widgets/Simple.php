@@ -170,7 +170,7 @@ class Simple extends Widget_Base {
 				],
 				'label_block'	=> false,
 				'selectors' => [
-					'{{WRAPPER}} .skin_simple' => '--plyr-audio-control-color:{{VALUE}};--plyr-color-main::{{VALUE}}',
+					'{{WRAPPER}} .skin_simple .plyr' => '--plyr-audio-control-color:{{VALUE}};--plyr-color-main:{{VALUE}}',
 					'{{WRAPPER}} .skin_simple .plyr__control:hover' => 'background:{{VALUE}}',
 				],
 				'default' => '#4f5b5f'
@@ -221,8 +221,6 @@ class Simple extends Widget_Base {
 		$arm .= $settings['baudio_repeat'] === 'true' ? ' loop' : '';
 		$arm .= $settings['baudio_autoplay'] === 'true' ? ' autoplay' : '';
 		$arm .= $settings['baudio_muted'] == 'true' ? ' muted' : '';
-
-		$color = $settings['primary'];
 
 		$s = $settings;
 		$options = array(
