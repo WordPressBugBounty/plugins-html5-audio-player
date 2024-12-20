@@ -164,10 +164,10 @@ class Simple extends Widget_Base {
 			[
 				'label' 		=> esc_html__( 'Primary Color', 'h5ap' ),
 				'type' => Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
-				],
+				// 'scheme' => [
+				// 	'type' => Color::get_type(),
+				// 	'value' => Color::COLOR_1,
+				// ],
 				'label_block'	=> false,
 				'selectors' => [
 					'{{WRAPPER}} .skin_simple .plyr' => '--plyr-audio-control-color:{{VALUE}};--plyr-color-main:{{VALUE}}',
@@ -182,10 +182,10 @@ class Simple extends Widget_Base {
 			[
 				'label' 		=> esc_html__( 'Background Color', 'h5ap' ),
 				'type' => Controls_Manager::COLOR,
-				'scheme' => [
-					'type' => Color::get_type(),
-					'value' => Color::COLOR_1,
-				],
+				// 'scheme' => [
+				// 	'type' => Color::get_type(),
+				// 	'value' => Color::COLOR_1,
+				// ],
 				'label_block'	=> false,
 				'selectors' => [
 					'{{WRAPPER}} .skin_simple .plyr--audio .plyr__controls' => 'background:{{VALUE}};',

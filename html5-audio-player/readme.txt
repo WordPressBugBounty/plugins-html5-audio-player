@@ -4,7 +4,7 @@ Tags:  audio, audio player, html5 player, mp3 player, Player
 Donate link: https://www.buymeacoffee.com/abuhayat/  
 Requires at least: 5.2
 Tested up to: 6.7
-Stable tag: 2.2.26
+Stable tag: 2.2.27
 Requires PHP: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -47,7 +47,6 @@ The plugin provides a simple shortcode: `[audio_player]`.
 
 **Custom Width**  
 `[audio_player src="https://example.com/audio-file.mp3" width="300px"]`
-
 
 ### HTML5 Audio Player Features
 
@@ -173,6 +172,9 @@ e.g.
 
 
 == Changelog ==
+
+= 2.2.27 - 20 Dec, 2024 = 
+* Fixed: Elementor Can't Edit (Undefined Elementor Color Schema)
 
 = 2.2.26 - 26 Nov, 2024 = 
 * Fixed: Undefined array key "primary"
