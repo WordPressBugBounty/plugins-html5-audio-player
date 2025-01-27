@@ -1,10 +1,10 @@
 === HTML5 Audio Player- Best WordPress Audio Player Plugin ===
-Contributors: bplugins, shehabulislam, freemius
+Contributors: bplugins, shehabulislam, freemius, abuhayat
 Tags:  audio, audio player, html5 player, mp3 player, Player
 Donate link: https://www.buymeacoffee.com/abuhayat/  
 Requires at least: 5.2
 Tested up to: 6.7
-Stable tag: 2.2.27
+Stable tag: 2.2.28
 Requires PHP: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -172,6 +172,9 @@ e.g.
 
 
 == Changelog ==
+
+= 2.2.28 - 27 Jan, 2025 = 
+* Update: Update Freemius WordPress SDK
 
 = 2.2.27 - 20 Dec, 2024 = 
 * Fixed: Elementor Can't Edit (Undefined Elementor Color Schema)
