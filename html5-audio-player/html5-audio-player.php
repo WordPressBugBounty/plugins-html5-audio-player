@@ -4,7 +4,7 @@
  * Plugin Name: Html5 Audio Player
  * Plugin URI:  https://bplugins.com/products/html5-audio-player/
  * Description: You can easily integrate html5 audio player in your WordPress website using this plugin.
- * Version: 2.2.28
+ * Version: 2.3.0
  * Author: bPlugins
  * Author URI: http://bPlugins.com
  * License: GPLv3
@@ -53,8 +53,36 @@ if ( function_exists( 'h5ap_fs' ) ) {
     define( 'H5AP_PRO_PLUGIN_DIR', plugin_dir_url( __FILE__ ) );
     define( 'H5AP_PRO_FILE_BASENAME', plugin_basename( __FILE__ ) );
     define( 'H5AP_PRO_DIR_BASENAME', plugin_basename( __DIR__ ) );
-    define( 'H5AP_PRO_VERSION', ( $_SERVER['HTTP_HOST'] ?? null === 'localhost' ? time() : '2.2.28' ) );
+    define( 'H5AP_PRO_VERSION', ( $_SERVER['HTTP_HOST'] ?? null === 'localhost' ? time() : '2.3.0' ) );
     defined( 'H5AP_PRO_PATH' ) or define( 'H5AP_PRO_PATH', plugin_dir_path( __FILE__ ) );
+    if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
+        require_once dirname( __FILE__ ) . '/vendor/autoload.php';
+    }
+    if ( !function_exists( 'h5ap_get_post_meta' ) ) {
+        function h5ap_get_post_meta(  $id, $key  ) {
+            $meta = get_post_meta( $id, $key, true );
+            return function (
+                $key,
+                $default = null,
+                $isBoolean = false,
+                $key2 = null
+            ) use(&$meta) {
+                // If $key2 is provided, check for nested key
+                if ( $key2 !== null ) {
+                    if ( isset( $meta[$key][$key2] ) ) {
+                        return ( $isBoolean ? (bool) $meta[$key][$key2] : $meta[$key][$key2] );
+                    }
+                    return $default;
+                }
+                // If only $key is provided, check in $meta
+                if ( isset( $meta[$key] ) ) {
+                    return ( $isBoolean ? (bool) $meta[$key] : $meta[$key] );
+                }
+                return $default;
+            };
+        }
+
+    }
     function h5ap_get_audio_type(  $src  ) {
         $ext = pathinfo( $src, PATHINFO_EXTENSION );
         if ( $ext === 'm4a' ) {
@@ -63,16 +91,16 @@ if ( function_exists( 'h5ap_fs' ) ) {
         return "audio/{$ext}";
     }
 
+    if ( !class_exists( 'CSF' ) ) {
+        require_once 'admin/codestar-framework/codestar-framework.php';
+    }
+    if ( class_exists( 'H5APPlayer\\Init' ) ) {
+        H5APPlayer\Init::register_services();
+    }
     add_action( 'plugins_loaded', function () {
-        if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
-            require_once dirname( __FILE__ ) . '/vendor/autoload.php';
-        }
-        if ( !class_exists( 'CSF' ) ) {
-            require_once 'admin/codestar-framework/codestar-framework.php';
-        }
-        if ( class_exists( 'H5APPlayer\\Init' ) ) {
-            H5APPlayer\Init::register_services();
-        }
+        // if (class_exists('H5APPlayer\\Init')) {
+        // 	H5APPlayer\Init::register_services();
+        // }
         require_once 'shortcode/player.php';
         // require_once (__DIR__.'/inc/Elementor/Widgets/Widgets.php');
         if ( h5ap_fs()->can_use_premium_code() ) {
@@ -99,5 +127,8 @@ if ( function_exists( 'h5ap_fs' ) ) {
         /*UPDATE: there was a missing ";" after $template*/
         require_once __DIR__ . '/blocks.php';
         require_once __DIR__ . '/blocks/init.php';
+        if ( file_exists( __DIR__ . '/audio-player-block-pro/plugin.php' ) ) {
+            require_once __DIR__ . '/audio-player-block-pro/plugin.php';
+        }
     } );
 }

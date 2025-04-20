@@ -1,10 +1,12 @@
 <?php
+
 namespace H5APPlayer\Elementor\Widgets;
+
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use Elementor\Core\Schemes\Color;
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if (! defined('ABSPATH')) exit; // Exit if accessed directly
 
 /**
  * Elementor Hello World
@@ -13,47 +15,55 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  *
  * @since 1.0.0
  */
-class Simple extends Widget_Base {
+class Simple extends Widget_Base
+{
 
-	public function get_name() {
+	public function get_name()
+	{
 		return 'SimpleAudioPlayer';
 	}
 
-	public function get_title() {
-		return __( 'Simple Audio Player', 'h5ap' );
+	public function get_title()
+	{
+		return __('Simple Audio Player', 'h5ap');
 	}
 
-	public function get_icon() {
+	public function get_icon()
+	{
 		return 'eicon-play-o';
 	}
 
-	public function get_categories() {
-		return [ 'basic' ];
+	public function get_categories()
+	{
+		return ['basic'];
 	}
 
-	public function get_script_depends() {
-		return ['h5ap-player'];
+	public function get_script_depends()
+	{
+		return ['h5ap-player', 'bplugins-plyrio'];
 	}
 
 	/**
 	 * Style
 	 */
-	public function get_style_depends() {
-		return ['h5ap-player'];
+	public function get_style_depends()
+	{
+		return ['h5ap-player', 'bplugins-plyrio'];
 	}
 
-	protected function register_controls() {
+	protected function register_controls()
+	{
 		$this->start_controls_section(
 			'section_content',
 			[
-				'label' => esc_html__( 'Simple Audio Player', 'h5ap' ),
+				'label' => esc_html__('Simple Audio Player', 'h5ap'),
 				'tab' 	=> Controls_Manager::TAB_CONTENT,
 			]
 		);
 		$this->add_control(
 			'baudio_url',
 			[
-				'label' 		=> esc_html__( 'Upload or paste audio file', 'h5ap' ),
+				'label' 		=> esc_html__('Upload or paste audio file', 'h5ap'),
 				'type' 			=> 'b-select-file',
 				'separator' 	=> 'before',
 			]
@@ -61,21 +71,21 @@ class Simple extends Widget_Base {
 		$this->add_control(
 			'baudio_audio_title',
 			[
-				'label' 		=> esc_html__( 'Title', 'h5ap' ),
+				'label' 		=> esc_html__('Title', 'h5ap'),
 				'type' 			=> Controls_Manager::TEXT,
 				'separator' 	=> 'before',
 				'default' => 'Audio Title Will go here',
 				'label_block' => true
 			]
 		);
-		
+
 		$this->add_control(
 			'baudio_muted',
 			[
-				'label' => __( 'Muted', 'plugin-domain' ),
+				'label' => __('Muted', 'plugin-domain'),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'h5ap' ),
-				'label_off' => __( 'No', 'h5ap' ),
+				'label_on' => __('Yes', 'h5ap'),
+				'label_off' => __('No', 'h5ap'),
 				'return_value' => 'true',
 				'default' => '',
 				'separator' 	=> 'before',
@@ -85,10 +95,10 @@ class Simple extends Widget_Base {
 		$this->add_control(
 			'baudio_repeat',
 			[
-				'label' => __( 'Repeat', 'plugin-domain' ),
+				'label' => __('Repeat', 'plugin-domain'),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'h5ap' ),
-				'label_off' => __( 'No', 'h5ap' ),
+				'label_on' => __('Yes', 'h5ap'),
+				'label_off' => __('No', 'h5ap'),
 				'return_value' => 'true',
 				'default' => '',
 				'separator' 	=> 'before',
@@ -97,10 +107,10 @@ class Simple extends Widget_Base {
 		$this->add_control(
 			'baudio_autoplay',
 			[
-				'label' => __( 'Autoplay', 'plugin-domain' ),
+				'label' => __('Autoplay', 'plugin-domain'),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'h5ap' ),
-				'label_off' => __( 'No', 'h5ap' ),
+				'label_on' => __('Yes', 'h5ap'),
+				'label_off' => __('No', 'h5ap'),
 				'return_value' => 'true',
 				'default' => '',
 				'separator' 	=> 'before',
@@ -110,9 +120,9 @@ class Simple extends Widget_Base {
 		$this->add_control(
 			'baudio_seek_time',
 			[
-				'label' 		=> esc_html__( 'Seek Time', 'h5ap' ),
+				'label' 		=> esc_html__('Seek Time', 'h5ap'),
 				'type' 			=> Controls_Manager::NUMBER,
-				'placeholder'	=> esc_attr__('Input seek time here','h5ap'),
+				'placeholder'	=> esc_attr__('Input seek time here', 'h5ap'),
 				'default'		=> 15,
 				'label_block'	=> false,
 			]
@@ -129,9 +139,9 @@ class Simple extends Widget_Base {
 		$this->add_control(
 			'baudio_width',
 			[
-				'label' 		=> __( 'Width', 'plugin-domain' ),
+				'label' 		=> __('Width', 'plugin-domain'),
 				'type'			=> Controls_Manager::SLIDER,
-				'size_units' 	=> [ 'px', '%', 'em' ],
+				'size_units' 	=> ['px', '%', 'em'],
 				'range' => [
 					'px' => [
 						'min' => 0,
@@ -158,11 +168,11 @@ class Simple extends Widget_Base {
 			]
 		);
 
-		
+
 		$this->add_control(
 			'primary',
 			[
-				'label' 		=> esc_html__( 'Primary Color', 'h5ap' ),
+				'label' 		=> esc_html__('Primary Color', 'h5ap'),
 				'type' => Controls_Manager::COLOR,
 				// 'scheme' => [
 				// 	'type' => Color::get_type(),
@@ -180,7 +190,7 @@ class Simple extends Widget_Base {
 		$this->add_control(
 			'background',
 			[
-				'label' 		=> esc_html__( 'Background Color', 'h5ap' ),
+				'label' 		=> esc_html__('Background Color', 'h5ap'),
 				'type' => Controls_Manager::COLOR,
 				// 'scheme' => [
 				// 	'type' => Color::get_type(),
@@ -214,7 +224,8 @@ class Simple extends Widget_Base {
 	 *
 	 * @access protected
 	 */
-	protected function render() {
+	protected function render()
+	{
 		$settings = $this->get_settings_for_display();
 
 		$arm = '';
@@ -226,17 +237,18 @@ class Simple extends Widget_Base {
 		$options = array(
 			'controls' => ['play', 'progress', 'current-time', 'duration', 'mute', 'volume', 'settings'],
 			'seekTime' => $s['baudio_seek_time']
-		  );
+		);
 
-		?>
- 
-		<div class="skin_simple h5ap_standard_player"  data-options='<?php echo wp_json_encode( $options) ?>'>
-            <audio controls id="bplayer_id" <?php echo $arm; ?> >
-                <source src="<?php echo esc_url($settings['baudio_url'].'?download=false') ?>" type="<?php echo esc_attr(h5ap_get_audio_type($settings['baudio_url'])) ?>">
-            </audio> 
-        </div>
-		
-		<?php
+
+
+?>
+
+		<div class="skin_simple h5ap_standard_player" data-options='<?php echo wp_json_encode($options) ?>'>
+			<audio controls id="bplayer_id" <?php echo $arm; ?>>
+				<source src="<?php echo esc_url($settings['baudio_url'] . '?download=false') ?>" type="<?php echo esc_attr(h5ap_get_audio_type($settings['baudio_url'])) ?>">
+			</audio>
+		</div>
+
+<?php
 	}
-
 }

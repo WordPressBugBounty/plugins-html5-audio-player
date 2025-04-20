@@ -1,10 +1,13 @@
 <?php
+
 namespace H5APPlayer;
 
 
-class Init{
-   
-    public static function get_services(){
+class Init
+{
+
+    public static function get_services()
+    {
         return [
             Base\GlobalAction::class,
             Base\HelpUsages::class,
@@ -13,10 +16,10 @@ class Init{
             Elementor\Widgets\Register::class,
             Elementor\Controls\Register::class,
             PostType\AudioPlayer::class,
-            PostType\AudioList::class,
+            PostType\AudioListPro::class,
             Field\AudioPlayer::class,
-            Field\AudioList::class,
-            Field\Settings::class,
+            Field\AudioListPro::class,
+            Field\SettingsPro::class,
             Services\AdminNotice::class,
             Services\Shortcode::class,
             Services\EnqueueAssets::class,
@@ -25,26 +28,24 @@ class Init{
         ];
     }
 
-    public static function register_services(){
-        foreach(self::get_services() as $class){
+    public static function register_services()
+    {
+        foreach (self::get_services() as $class) {
             $services = self::instantiate($class);
-            if(method_exists($services, 'register')){
+            if (method_exists($services, 'register')) {
                 $services->register();
             }
         }
-
     }
 
-    private static function instantiate($class){
-        if(class_exists($class."Pro") && h5ap_fs()->can_use_premium_code()){
-            $class = $class."Pro";
+    private static function instantiate($class)
+    {
+        if (class_exists($class . "Pro") && h5ap_fs()->can_use_premium_code()) {
+            $class = $class . "Pro";
         }
-        if(class_exists($class)){
+        if (class_exists($class)) {
             return new $class();
         }
         return new \stdClass();
-        
     }
 }
-
-

@@ -1,0 +1,834 @@
+# Copyright (C) 2025 bPlugins
+# This file is distributed under the GPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Html5 Audio Player 2.3.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/html5-audio-player-pro\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-04-15T11:37:10+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: h5ap\n"
+
+#. Plugin Name of the plugin
+#: html5-audio-player.php
+msgid "Html5 Audio Player"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: html5-audio-player.php
+msgid "https://bplugins.com/products/html5-audio-player/"
+msgstr ""
+
+#. Description of the plugin
+#: html5-audio-player.php
+msgid "You can easily integrate html5 audio player in your WordPress website using this plugin."
+msgstr ""
+
+#. Author of the plugin
+#: html5-audio-player.php
+msgid "bPlugins"
+msgstr ""
+
+#. Author URI of the plugin
+#: html5-audio-player.php
+msgid "http://bPlugins.com"
+msgstr ""
+
+#: admin/global/help-usages.php:20
+#: bundled/html5-audio-player/admin/global/help-usages.php:20
+#: bundled/html5-audio-player/inc/Base/HelpUsages.php:21
+#: inc/Base/HelpUsages.php:21
+msgid "Help & Usages"
+msgstr ""
+
+#: admin/global/help-usages.php:32
+#: bundled/html5-audio-player/admin/global/help-usages.php:32
+#: bundled/html5-audio-player/inc/Base/HelpUsages.php:33
+#: inc/Base/HelpUsages.php:33
+msgid "Need any Assistance?"
+msgstr ""
+
+#: admin/global/help-usages.php:33
+#: bundled/html5-audio-player/admin/global/help-usages.php:33
+#: bundled/html5-audio-player/inc/Base/HelpUsages.php:34
+#: inc/Base/HelpUsages.php:34
+msgid "Our Expert Support Team is always ready to help you out promptly."
+msgstr ""
+
+#: admin/global/help-usages.php:35
+#: bundled/html5-audio-player/admin/global/help-usages.php:35
+#: bundled/html5-audio-player/inc/Base/HelpUsages.php:36
+#: inc/Base/HelpUsages.php:36
+msgid "Contact Support"
+msgstr ""
+
+#: admin/global/help-usages.php:41
+#: bundled/html5-audio-player/admin/global/help-usages.php:41
+#: bundled/html5-audio-player/inc/Base/HelpUsages.php:42
+#: inc/Base/HelpUsages.php:42
+msgid "Looking for Documentation?"
+msgstr ""
+
+#: admin/global/help-usages.php:42
+#: bundled/html5-audio-player/admin/global/help-usages.php:42
+#: bundled/html5-audio-player/inc/Base/HelpUsages.php:43
+#: inc/Base/HelpUsages.php:43
+msgid "We have detailed documentation on every aspects of HTML5 Audio Player."
+msgstr ""
+
+#: admin/global/help-usages.php:43
+#: bundled/html5-audio-player/admin/global/help-usages.php:43
+#: bundled/html5-audio-player/inc/Base/HelpUsages.php:44
+#: inc/Base/HelpUsages.php:44
+msgid "Documentation"
+msgstr ""
+
+#: admin/global/help-usages.php:49
+#: bundled/html5-audio-player/admin/global/help-usages.php:49
+#: bundled/html5-audio-player/inc/Base/HelpUsages.php:50
+#: inc/Base/HelpUsages.php:50
+msgid "Like This Plugin?"
+msgstr ""
+
+#: admin/global/help-usages.php:50
+#: bundled/html5-audio-player/admin/global/help-usages.php:50
+#: bundled/html5-audio-player/inc/Base/HelpUsages.php:51
+#: inc/Base/HelpUsages.php:51
+msgid "If you like HTML5 Audio Player, please leave us a 5 &#11088; rating."
+msgstr ""
+
+#: admin/global/help-usages.php:52
+#: bundled/html5-audio-player/admin/global/help-usages.php:52
+#: bundled/html5-audio-player/inc/Base/HelpUsages.php:53
+#: inc/Base/HelpUsages.php:53
+msgid "Rate the Plugin"
+msgstr ""
+
+#: admin/global/help-usages.php:63
+#: bundled/html5-audio-player/admin/global/help-usages.php:63
+#: bundled/html5-audio-player/inc/Base/HelpUsages.php:64
+#: inc/Base/HelpUsages.php:64
+msgid "Looking For Demo?"
+msgstr ""
+
+#: admin/global/help-usages.php:63
+#: bundled/html5-audio-player/admin/global/help-usages.php:63
+#: bundled/html5-audio-player/inc/Base/HelpUsages.php:64
+#: inc/Base/HelpUsages.php:64
+msgid "Click Here"
+msgstr ""
+
+#: admin/global/help-usages.php:74
+#: bundled/html5-audio-player/admin/global/help-usages.php:74
+#: bundled/html5-audio-player/inc/Base/HelpUsages.php:75
+#: inc/Base/HelpUsages.php:75
+msgid "Video Tutorials"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Base/BlackFriday.php:40
+#: bundled/html5-audio-player/inc/Base/BlackFriday.php:41
+#: inc/Base/BlackFriday.php:40
+#: inc/Base/BlackFriday.php:41
+msgid "Upgrade"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Fusion.php:41
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Fusion.php:111
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Stamp.php:45
+#: inc/Elementor/Widgets/Fusion.php:41
+#: inc/Elementor/Widgets/Fusion.php:111
+#: inc/Elementor/Widgets/Stamp.php:45
+msgid "Fusion Audio Player"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Fusion.php:118
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Simple.php:56
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:49
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Stamp.php:52
+#: inc/Elementor/Widgets/Fusion.php:118
+#: inc/Elementor/Widgets/Simple.php:56
+#: inc/Elementor/Widgets/SimplePro.php:49
+#: inc/Elementor/Widgets/Stamp.php:52
+msgid "Upload or paste audio file"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Fusion.php:126
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:130
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Simple.php:64
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:57
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Stamp.php:60
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:126
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:88
+#: bundled/html5-audio-player/inc/Widget/SearchForm.php:22
+#: bundled/html5-audio-player/inc/Widget/widget.php:32
+#: inc/Elementor/Widgets/Fusion.php:126
+#: inc/Elementor/Widgets/Playlist.php:130
+#: inc/Elementor/Widgets/Simple.php:64
+#: inc/Elementor/Widgets/SimplePro.php:57
+#: inc/Elementor/Widgets/Stamp.php:60
+#: inc/Field/AudioPlayer.php:126
+#: inc/Field/AudioPlayerPro.php:88
+#: inc/Widget/SearchForm.php:22
+#: inc/Widget/widget.php:32
+msgid "Title"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Fusion.php:136
+#: inc/Elementor/Widgets/Fusion.php:136
+msgid "Choose Image"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Fusion.php:147
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Stamp.php:81
+#: inc/Elementor/Widgets/Fusion.php:147
+#: inc/Elementor/Widgets/Stamp.php:81
+msgid "Muted"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Fusion.php:149
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Fusion.php:162
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Fusion.php:174
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:89
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:106
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Simple.php:77
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Simple.php:90
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Simple.php:102
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:70
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:83
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:95
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Stamp.php:83
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Stamp.php:96
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Stamp.php:108
+#: inc/Elementor/Widgets/Fusion.php:149
+#: inc/Elementor/Widgets/Fusion.php:162
+#: inc/Elementor/Widgets/Fusion.php:174
+#: inc/Elementor/Widgets/Playlist.php:89
+#: inc/Elementor/Widgets/Playlist.php:106
+#: inc/Elementor/Widgets/Simple.php:77
+#: inc/Elementor/Widgets/Simple.php:90
+#: inc/Elementor/Widgets/Simple.php:102
+#: inc/Elementor/Widgets/SimplePro.php:70
+#: inc/Elementor/Widgets/SimplePro.php:83
+#: inc/Elementor/Widgets/SimplePro.php:95
+#: inc/Elementor/Widgets/Stamp.php:83
+#: inc/Elementor/Widgets/Stamp.php:96
+#: inc/Elementor/Widgets/Stamp.php:108
+msgid "Yes"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Fusion.php:150
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Fusion.php:163
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Fusion.php:175
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:90
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:107
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Simple.php:78
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Simple.php:91
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Simple.php:103
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:71
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:84
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:96
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Stamp.php:84
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Stamp.php:97
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Stamp.php:109
+#: inc/Elementor/Widgets/Fusion.php:150
+#: inc/Elementor/Widgets/Fusion.php:163
+#: inc/Elementor/Widgets/Fusion.php:175
+#: inc/Elementor/Widgets/Playlist.php:90
+#: inc/Elementor/Widgets/Playlist.php:107
+#: inc/Elementor/Widgets/Simple.php:78
+#: inc/Elementor/Widgets/Simple.php:91
+#: inc/Elementor/Widgets/Simple.php:103
+#: inc/Elementor/Widgets/SimplePro.php:71
+#: inc/Elementor/Widgets/SimplePro.php:84
+#: inc/Elementor/Widgets/SimplePro.php:96
+#: inc/Elementor/Widgets/Stamp.php:84
+#: inc/Elementor/Widgets/Stamp.php:97
+#: inc/Elementor/Widgets/Stamp.php:109
+msgid "No"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Fusion.php:160
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Stamp.php:94
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:76
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:248
+#: inc/Elementor/Widgets/Fusion.php:160
+#: inc/Elementor/Widgets/Stamp.php:94
+#: inc/Field/AudioPlayer.php:76
+#: inc/Field/AudioPlayerPro.php:248
+msgid "Repeat"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Fusion.php:172
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Stamp.php:106
+#: inc/Elementor/Widgets/Fusion.php:172
+#: inc/Elementor/Widgets/Stamp.php:106
+msgid "Autoplay"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Fusion.php:186
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:557
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:567
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:589
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:598
+#: inc/Elementor/Widgets/Fusion.php:186
+#: inc/Field/AudioPlayer.php:557
+#: inc/Field/AudioPlayer.php:567
+#: inc/Field/AudioPlayerPro.php:589
+#: inc/Field/AudioPlayerPro.php:598
+msgid "Download Button"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Fusion.php:188
+#: inc/Elementor/Widgets/Fusion.php:188
+msgid "Show"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Fusion.php:189
+#: inc/Elementor/Widgets/Fusion.php:189
+msgid "Hide"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Fusion.php:200
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:187
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Stamp.php:140
+#: inc/Elementor/Widgets/Fusion.php:200
+#: inc/Elementor/Widgets/Playlist.php:187
+#: inc/Elementor/Widgets/Stamp.php:140
+msgid "Width"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Fusion.php:232
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Simple.php:113
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:106
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Stamp.php:121
+#: inc/Elementor/Widgets/Fusion.php:232
+#: inc/Elementor/Widgets/Simple.php:113
+#: inc/Elementor/Widgets/SimplePro.php:106
+#: inc/Elementor/Widgets/Stamp.php:121
+msgid "Seek Time"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Fusion.php:234
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Simple.php:115
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:108
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Stamp.php:123
+#: inc/Elementor/Widgets/Fusion.php:234
+#: inc/Elementor/Widgets/Simple.php:115
+#: inc/Elementor/Widgets/SimplePro.php:108
+#: inc/Elementor/Widgets/Stamp.php:123
+msgid "Input seek time here"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:16
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:40
+#: inc/Elementor/Widgets/Playlist.php:16
+#: inc/Elementor/Widgets/Playlist.php:40
+msgid "Playlist Audio Player"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:60
+#: inc/Elementor/Widgets/Playlist.php:60
+msgid "Player Skin"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:64
+#: inc/Elementor/Widgets/Playlist.php:64
+msgid "narrow"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:65
+#: inc/Elementor/Widgets/Playlist.php:65
+msgid "extensive"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:73
+#: inc/Elementor/Widgets/Playlist.php:73
+msgid "Player Theme"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:77
+#: inc/Elementor/Widgets/Playlist.php:77
+msgid "Dark"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:78
+#: inc/Elementor/Widgets/Playlist.php:78
+msgid "Light"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:79
+#: inc/Elementor/Widgets/Playlist.php:79
+msgid "Custom"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:87
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:351
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:360
+#: inc/Elementor/Widgets/Playlist.php:87
+#: inc/Field/AudioPlayer.php:351
+#: inc/Field/AudioPlayerPro.php:360
+msgid "Hide Download"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:104
+#: inc/Elementor/Widgets/Playlist.php:104
+msgid "Autoplay Next Track"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:119
+#: inc/Elementor/Widgets/Playlist.php:119
+msgid "Upload Audio File"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:143
+#: inc/Elementor/Widgets/Playlist.php:143
+msgid "Artist"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:156
+#: inc/Elementor/Widgets/Playlist.php:156
+msgid "Upload Poster"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:179
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Simple.php:125
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:236
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Stamp.php:133
+#: inc/Elementor/Widgets/Playlist.php:179
+#: inc/Elementor/Widgets/Simple.php:125
+#: inc/Elementor/Widgets/SimplePro.php:236
+#: inc/Elementor/Widgets/Stamp.php:133
+msgid "Style"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:219
+#: inc/Elementor/Widgets/Playlist.php:219
+msgid "Height"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:244
+#: inc/Elementor/Widgets/Playlist.php:244
+msgid "Poster Height"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:270
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:432
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:441
+#: inc/Elementor/Widgets/Playlist.php:270
+#: inc/Field/AudioPlayer.php:432
+#: inc/Field/AudioPlayerPro.php:441
+msgid "Brand Color"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:291
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Simple.php:183
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:294
+#: inc/Elementor/Widgets/Playlist.php:291
+#: inc/Elementor/Widgets/Simple.php:183
+#: inc/Elementor/Widgets/SimplePro.php:294
+msgid "Background Color"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:312
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:456
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:465
+#: inc/Elementor/Widgets/Playlist.php:312
+#: inc/Field/AudioPlayer.php:456
+#: inc/Field/AudioPlayerPro.php:465
+msgid "Item Text Color"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:333
+#: inc/Elementor/Widgets/Playlist.php:333
+msgid "Item Hover/Active Background Color"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:355
+#: inc/Elementor/Widgets/Playlist.php:355
+msgid "Item Hover/Active Text Color"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:377
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:487
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:496
+#: inc/Elementor/Widgets/Playlist.php:377
+#: inc/Field/AudioPlayer.php:487
+#: inc/Field/AudioPlayerPro.php:496
+msgid "Odd Item Background"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Playlist.php:398
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:494
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:503
+#: inc/Elementor/Widgets/Playlist.php:398
+#: inc/Field/AudioPlayer.php:494
+#: inc/Field/AudioPlayerPro.php:503
+msgid "Even Item Background"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Simple.php:23
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Simple.php:49
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:16
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:42
+#: inc/Elementor/Widgets/Simple.php:23
+#: inc/Elementor/Widgets/Simple.php:49
+#: inc/Elementor/Widgets/SimplePro.php:16
+#: inc/Elementor/Widgets/SimplePro.php:42
+msgid "Simple Audio Player"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Simple.php:165
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:276
+#: bundled/html5-audio-player/inc/Elementor/Widgets/Stamp.php:171
+#: inc/Elementor/Widgets/Simple.php:165
+#: inc/Elementor/Widgets/SimplePro.php:276
+#: inc/Elementor/Widgets/Stamp.php:171
+msgid "Primary Color"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:119
+#: inc/Elementor/Widgets/SimplePro.php:119
+msgid "Controls"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:127
+#: inc/Elementor/Widgets/SimplePro.php:127
+msgid "Restart"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:136
+#: inc/Elementor/Widgets/SimplePro.php:136
+msgid "Rewind"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:146
+#: inc/Elementor/Widgets/SimplePro.php:146
+msgid "Play"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:156
+#: inc/Elementor/Widgets/SimplePro.php:156
+msgid "Fast Forward"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:166
+#: inc/Elementor/Widgets/SimplePro.php:166
+msgid "Progressbar"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:176
+#: inc/Elementor/Widgets/SimplePro.php:176
+msgid "Current Time"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:186
+#: inc/Elementor/Widgets/SimplePro.php:186
+msgid "Duration"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:196
+#: inc/Elementor/Widgets/SimplePro.php:196
+msgid "Mute"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:206
+#: inc/Elementor/Widgets/SimplePro.php:206
+msgid "Volume"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:216
+#: inc/Elementor/Widgets/SimplePro.php:216
+msgid "Settings"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Elementor/Widgets/SimplePro.php:226
+#: inc/Elementor/Widgets/SimplePro.php:226
+msgid "Downlaod"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:68
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:141
+#: inc/Field/AudioPlayer.php:68
+#: inc/Field/AudioPlayerPro.php:141
+msgid "AutoPlay"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:89
+#: inc/Field/AudioPlayer.php:89
+msgid "Disable Loader"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:112
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:68
+#: inc/Field/AudioPlayer.php:112
+#: inc/Field/AudioPlayerPro.php:68
+msgid "Poster"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:113
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:69
+#: inc/Field/AudioPlayer.php:113
+#: inc/Field/AudioPlayerPro.php:69
+msgid "Add or Upload Poster Image"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:114
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:70
+#: inc/Field/AudioPlayer.php:114
+#: inc/Field/AudioPlayerPro.php:70
+msgid "Remove"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:115
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:71
+#: inc/Field/AudioPlayer.php:115
+#: inc/Field/AudioPlayerPro.php:71
+msgid "100x100 px photo is the standard poster size, accepted file type .png, .jpeg, .jpg "
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:128
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:90
+#: inc/Field/AudioPlayer.php:128
+#: inc/Field/AudioPlayerPro.php:90
+msgid "Enter the title of the audio"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:139
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:100
+#: inc/Field/AudioPlayer.php:139
+#: inc/Field/AudioPlayerPro.php:100
+msgid "Author"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:141
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:102
+#: inc/Field/AudioPlayer.php:141
+#: inc/Field/AudioPlayerPro.php:102
+msgid "Enter the author of the audio"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:172
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:562
+#: inc/Field/AudioPlayer.php:172
+#: inc/Field/AudioPlayerPro.php:562
+msgid "Disable Pause"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:343
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:352
+#: inc/Field/AudioPlayer.php:343
+#: inc/Field/AudioPlayerPro.php:352
+msgid "Autoplay next track"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:419
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:428
+#: inc/Field/AudioPlayer.php:419
+#: inc/Field/AudioPlayerPro.php:428
+msgid "Use forward/rewind button to change audio"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:444
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:82
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:453
+#: inc/Field/AudioPlayer.php:444
+#: inc/Field/AudioPlayerPro.php:82
+#: inc/Field/AudioPlayerPro.php:453
+msgid "Background"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:468
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:477
+#: inc/Field/AudioPlayer.php:468
+#: inc/Field/AudioPlayerPro.php:477
+msgid "Item Hover Background"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:480
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:489
+#: inc/Field/AudioPlayer.php:480
+#: inc/Field/AudioPlayerPro.php:489
+msgid "Item Hover Text Color"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Field/AudioPlayer.php:578
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:607
+#: inc/Field/AudioPlayer.php:578
+#: inc/Field/AudioPlayerPro.php:607
+msgid "Initial Volume"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:570
+#: inc/Field/AudioPlayerPro.php:570
+msgid "Disable Loading"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Field/AudioPlayerPro.php:579
+#: inc/Field/AudioPlayerPro.php:579
+msgid "Save State"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Field/SettingsPro.php:47
+#: inc/Field/SettingsPro.php:47
+msgid "Apply Html5 Audio Player for all previous Audios"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Model/GlobalChanges.php:41
+#: inc/Model/GlobalChanges.php:41
+msgid "Active Licence"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Model/GlobalChanges.php:45
+#: inc/Model/GlobalChanges.php:45
+msgid "Please enter the license key that you received in the email right after the purchase:"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Model/GlobalChanges.php:51
+#: inc/Model/GlobalChanges.php:51
+msgid "I agreed to send the website url, email, and the Licence key to Html5 Audio Player plugin server to verify the licence key."
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Model/GlobalChanges.php:56
+#: inc/Model/GlobalChanges.php:56
+msgid "Cancel"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Model/GlobalChanges.php:58
+#: inc/Model/GlobalChanges.php:58
+msgid "Deactive License"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Model/GlobalChanges.php:60
+#: inc/Model/GlobalChanges.php:60
+msgid "Active License"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/PostType/AudioListPro.php:42
+#: inc/PostType/AudioListPro.php:42
+msgid "Sorry, we couldn't find the Playlist you are looking for."
+msgstr ""
+
+#: bundled/html5-audio-player/inc/PostType/AudioPlayer.php:87
+#: inc/PostType/AudioPlayer.php:87
+msgid "HTML5 Audio Player"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/PostType/AudioPlayer.php:88
+#: inc/PostType/AudioPlayer.php:88
+msgid "Supports"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/PostType/AudioPlayer.php:91
+#: inc/PostType/AudioPlayer.php:91
+msgid "Shortcode"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/PostType/AudioPlayer.php:92
+#: inc/PostType/AudioPlayer.php:92
+msgid "Copy and paste this shortcode into your posts, pages and widget content:"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/PostType/AudioPlayer.php:96
+#: inc/PostType/AudioPlayer.php:96
+msgid "Template Include"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/PostType/AudioPlayer.php:97
+#: inc/PostType/AudioPlayer.php:97
+msgid "Copy and paste the PHP code into your template file:"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Widget/widget.php:19
+#: inc/Widget/widget.php:19
+msgid "No Plaer Selected"
+msgstr ""
+
+#: bundled/html5-audio-player/inc/Widget/widget.php:34
+#: inc/Widget/widget.php:34
+msgid "Player"
+msgstr ""
+
+#: blocks/playlist-narrow/block.json
+#: build/blocks/playlist-narrow/block.json
+#: bundled/html5-audio-player/blocks/playlist-narrow/block.json
+#: bundled/html5-audio-player/build/blocks/playlist-narrow/block.json
+msgctxt "block title"
+msgid "HTML5 Audio Playlist - Narrow"
+msgstr ""
+
+#: blocks/playlist-narrow/block.json
+#: build/blocks/playlist-narrow/block.json
+#: bundled/html5-audio-player/blocks/playlist-narrow/block.json
+#: bundled/html5-audio-player/build/blocks/playlist-narrow/block.json
+msgctxt "block description"
+msgid "sdf"
+msgstr ""
+
+#: blocks/playlist-narrow/block.json
+#: build/blocks/audioplaylist/block.json
+#: build/blocks/playlist-extensive/block.json
+#: build/blocks/playlist-narrow/block.json
+#: bundled/html5-audio-player/blocks/playlist-narrow/block.json
+#: bundled/html5-audio-player/build/blocks/audioplaylist/block.json
+#: bundled/html5-audio-player/build/blocks/playlist-extensive/block.json
+#: bundled/html5-audio-player/build/blocks/playlist-narrow/block.json
+msgctxt "block keyword"
+msgid "HTML5 Audio Playlist"
+msgstr ""
+
+#: blocks/playlist-narrow/block.json
+#: build/blocks/audioplayer/block.json
+#: build/blocks/audioplaylist/block.json
+#: build/blocks/playlist-extensive/block.json
+#: build/blocks/playlist-narrow/block.json
+#: bundled/html5-audio-player/blocks/playlist-narrow/block.json
+#: bundled/html5-audio-player/build/blocks/audioplayer/block.json
+#: bundled/html5-audio-player/build/blocks/audioplaylist/block.json
+#: bundled/html5-audio-player/build/blocks/playlist-extensive/block.json
+#: bundled/html5-audio-player/build/blocks/playlist-narrow/block.json
+msgctxt "block keyword"
+msgid "Media Player"
+msgstr ""
+
+#: blocks/playlist-narrow/block.json
+#: build/blocks/audioplayer/block.json
+#: build/blocks/audioplaylist/block.json
+#: build/blocks/playlist-extensive/block.json
+#: build/blocks/playlist-narrow/block.json
+#: bundled/html5-audio-player/blocks/playlist-narrow/block.json
+#: bundled/html5-audio-player/build/blocks/audioplayer/block.json
+#: bundled/html5-audio-player/build/blocks/audioplaylist/block.json
+#: bundled/html5-audio-player/build/blocks/playlist-extensive/block.json
+#: bundled/html5-audio-player/build/blocks/playlist-narrow/block.json
+msgctxt "block keyword"
+msgid "Audio Player"
+msgstr ""
+
+#: build/blocks/audioplayer/block.json
+#: bundled/html5-audio-player/build/blocks/audioplayer/block.json
+msgctxt "block title"
+msgid "HTML5 Audio Player"
+msgstr ""
+
+#: build/blocks/audioplayer/block.json
+#: bundled/html5-audio-player/build/blocks/audioplayer/block.json
+msgctxt "block keyword"
+msgid "HTML5 Audio Player"
+msgstr ""
+
+#: build/blocks/audioplaylist/block.json
+#: bundled/html5-audio-player/build/blocks/audioplaylist/block.json
+msgctxt "block title"
+msgid "HTML5 Audio Playlist"
+msgstr ""
+
+#: build/blocks/playlist-extensive/block.json
+#: bundled/html5-audio-player/build/blocks/playlist-extensive/block.json
+msgctxt "block title"
+msgid "HTML5 Audio Playlist - Extensive"
+msgstr ""

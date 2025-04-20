@@ -3,8 +3,8 @@ Contributors: bplugins, shehabulislam, freemius, abuhayat
 Tags:  audio, audio player, html5 player, mp3 player, Player
 Donate link: https://www.buymeacoffee.com/abuhayat/  
 Requires at least: 5.2
-Tested up to: 6.7
-Stable tag: 2.2.28
+Tested up to: 6.8
+Stable tag: 2.3.0
 Requires PHP: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -45,7 +45,7 @@ The plugin provides a simple shortcode: `[audio_player]`.
 **Basic Usage**  
 `[audio_player src="https://example.com/audio-file.mp3"]`
 
-**Custom Width**  
+**Custom Width**
 `[audio_player src="https://example.com/audio-file.mp3" width="300px"]`
 
 ### HTML5 Audio Player Features
@@ -172,6 +172,11 @@ e.g.
 
 
 == Changelog ==
+
+= 2.3.0 - 20 April, 2025 = 
+* Update: Improve Security
+* Added: New Playlist (Premium)
+* Fixed: shortcode Vulnerability
 
 = 2.2.28 - 27 Jan, 2025 = 
 * Update: Update Freemius WordPress SDK
