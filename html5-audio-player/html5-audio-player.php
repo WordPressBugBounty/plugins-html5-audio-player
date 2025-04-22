@@ -4,7 +4,7 @@
  * Plugin Name: Html5 Audio Player
  * Plugin URI:  https://bplugins.com/products/html5-audio-player/
  * Description: You can easily integrate html5 audio player in your WordPress website using this plugin.
- * Version: 2.3.0
+ * Version: 2.3.1
  * Author: bPlugins
  * Author URI: http://bPlugins.com
  * License: GPLv3
