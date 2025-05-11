@@ -4,7 +4,7 @@
  * Plugin Name: Html5 Audio Player
  * Plugin URI:  https://bplugins.com/products/html5-audio-player/
  * Description: You can easily integrate html5 audio player in your WordPress website using this plugin.
- * Version: 2.3.1
+ * Version: 2.3.2
  * Author: bPlugins
  * Author URI: http://bPlugins.com
  * License: GPLv3
@@ -13,6 +13,9 @@
 if ( function_exists( 'h5ap_fs' ) ) {
     h5ap_fs()->set_basename( false, __FILE__ );
 } else {
+    if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
+        require_once dirname( __FILE__ ) . '/vendor/autoload.php';
+    }
     // DO NOT REMOVE THIS IF, IT IS ESSENTIAL FOR THE `function_exists` CALL ABOVE TO PROPERLY WORK.
     if ( !function_exists( 'h5ap_fs' ) ) {
         if ( !function_exists( 'h5ap_fs' ) ) {
@@ -21,7 +24,6 @@ if ( function_exists( 'h5ap_fs' ) ) {
                 global $h5ap_fs;
                 if ( !isset( $h5ap_fs ) ) {
                     // Include Freemius SDK.
-                    require_once dirname( __FILE__ ) . '/freemius/start.php';
                     $h5ap_fs = fs_dynamic_init( array(
                         'id'              => '14260',
                         'slug'            => 'html5-audio-player',
@@ -53,11 +55,8 @@ if ( function_exists( 'h5ap_fs' ) ) {
     define( 'H5AP_PRO_PLUGIN_DIR', plugin_dir_url( __FILE__ ) );
     define( 'H5AP_PRO_FILE_BASENAME', plugin_basename( __FILE__ ) );
     define( 'H5AP_PRO_DIR_BASENAME', plugin_basename( __DIR__ ) );
-    define( 'H5AP_PRO_VERSION', ( $_SERVER['HTTP_HOST'] ?? null === 'localhost' ? time() : '2.3.0' ) );
+    define( 'H5AP_PRO_VERSION', ( $_SERVER['HTTP_HOST'] ?? null === 'localhost' ? time() : '2.3.2' ) );
     defined( 'H5AP_PRO_PATH' ) or define( 'H5AP_PRO_PATH', plugin_dir_path( __FILE__ ) );
-    if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
-        require_once dirname( __FILE__ ) . '/vendor/autoload.php';
-    }
     if ( !function_exists( 'h5ap_get_post_meta' ) ) {
         function h5ap_get_post_meta(  $id, $key  ) {
             $meta = get_post_meta( $id, $key, true );
@@ -67,7 +66,7 @@ if ( function_exists( 'h5ap_fs' ) ) {
                 $isBoolean = false,
                 $key2 = null
             ) use(&$meta) {
-                // If $key2 is provided, check for nested key
+                //If $key2 is provided, check for nested key
                 if ( $key2 !== null ) {
                     if ( isset( $meta[$key][$key2] ) ) {
                         return ( $isBoolean ? (bool) $meta[$key][$key2] : $meta[$key][$key2] );
@@ -83,6 +82,18 @@ if ( function_exists( 'h5ap_fs' ) ) {
         }
 
     }
+    if ( !function_exists( 'h5ap_get_settings' ) ) {
+        function h5ap_get_settings(  $key, $default = null  ) {
+            $settings = get_option( $key, $default );
+            return function ( $key, $default = null ) use(&$settings) {
+                if ( isset( $settings[$key] ) ) {
+                    return $settings[$key];
+                }
+                return $default;
+            };
+        }
+
+    }
     function h5ap_get_audio_type(  $src  ) {
         $ext = pathinfo( $src, PATHINFO_EXTENSION );
         if ( $ext === 'm4a' ) {
@@ -91,6 +102,12 @@ if ( function_exists( 'h5ap_fs' ) ) {
         return "audio/{$ext}";
     }
 
+    if ( !function_exists( 'h5ap__' ) ) {
+        function h5ap__(  $text, $domain = 'h5ap'  ) {
+            return $text;
+        }
+
+    }
     if ( !class_exists( 'CSF' ) ) {
         require_once 'admin/codestar-framework/codestar-framework.php';
     }

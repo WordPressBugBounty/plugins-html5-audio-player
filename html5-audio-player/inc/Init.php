@@ -12,7 +12,7 @@ class Init
             Base\GlobalAction::class,
             Base\HelpUsages::class,
             // Base\BlackFriday::class,
-            Base\Loader::class,
+            // Base\Loader::class, // deprecated
             Elementor\Widgets\Register::class,
             Elementor\Controls\Register::class,
             PostType\AudioPlayer::class,

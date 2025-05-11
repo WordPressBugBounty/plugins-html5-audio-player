@@ -8,7 +8,8 @@
   "keywords": [
     "HTML5 Audio Player",
     "Media Player",
-    "Audio Player"
+    "Audio Player",
+    "mp3 player"
   ],
   "textdomain": "h5ap",
   "attributes": {
@@ -34,7 +35,7 @@
     },
     "poster": {
       "type": "string",
-      "default": "poster"
+      "default": ""
     },
     "title": {
       "type": "string",
@@ -61,6 +62,10 @@
       "default": "#4a5464"
     },
     "bgColor": {
+      "type": "string",
+      "default": null
+    },
+    "textColor": {
       "type": "string",
       "default": null
     },
@@ -116,6 +121,25 @@
       "type": "string",
       "default": "0px"
     },
+    "i18n": {
+      "type": "object"
+    },
+    "speed": {
+      "type": "object",
+      "default": {
+        "selected": 1,
+        "speed": [
+          0.5,
+          0.75,
+          1,
+          1.25,
+          1.5,
+          1.75,
+          2,
+          4
+        ]
+      }
+    },
     "controls": {
       "type": "object",
       "default": {
@@ -142,6 +166,73 @@
     "CSS": {
       "type": "string",
       "default": ""
+    },
+    "multiple_audio": {
+      "type": "boolean",
+      "default": false
+    },
+    "defaultValue": {
+      "type": "object",
+      "default": {
+        "Default": {
+          "primaryColor": "#4A5464",
+          "controlColor": "#4A5464",
+          "bgColor": "#F5F5F5"
+        },
+        "Fusion": {
+          "primaryColor": "#fff",
+          "bgColor": "#161616"
+        },
+        "Stamp": {
+          "controlColor": "#fff",
+          "bgColor": "#161616"
+        },
+        "Wave": {
+          "primaryColor": "#fff",
+          "controlColor": "#fff",
+          "bgColor": "#161616"
+        },
+        "Card-1": {
+          "primaryColor": "#fff",
+          "controlColor": "#161616",
+          "bgColor": "#161616",
+          "textColor": "#fff"
+        },
+        "Card-2": {
+          "primaryColor": "#00FBF3",
+          "controlColor": "#fff",
+          "bgColor": "#161616",
+          "textColor": "#fff"
+        },
+        "Simple-1": {
+          "primaryColor": "#ffffff",
+          "controlColor": "#fff",
+          "bgColor": "#161616"
+        },
+        "Simple-2": {
+          "primaryColor": "#06F7FF00",
+          "controlColor": "#fff",
+          "bgColor": "#161616"
+        },
+        "Player9": {
+          "primaryColor": "#195FF6",
+          "controlColor": "#fff",
+          "bgColor": "#161616",
+          "textColor": "#EDEFF2"
+        },
+        "Player10": {
+          "primaryColor": "#195FF6",
+          "controlColor": "#fff",
+          "bgColor": "#161616",
+          "textColor": "#EDEFF2"
+        },
+        "Player11": {
+          "primaryColor": "#195FF6",
+          "controlColor": "#fff",
+          "bgColor": "#161616",
+          "textColor": "#fff"
+        }
+      }
     }
   },
   "supports": {

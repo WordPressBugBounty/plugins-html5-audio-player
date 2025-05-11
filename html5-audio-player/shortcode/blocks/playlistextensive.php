@@ -14,14 +14,11 @@ $block = [
     'blockName' => 'h5ap/playlistextensive',
     'attrs' => [
         'align'            => '',
-        'alignment'        => 'left',
+        'alignment'        => $meta('plp_align', 'left'),
         'audios'           => $tracks,
         'theme'            => $player_theme,
         'hideDownload'     => false,
-        'width'            => [
-            'number' => 100,
-            'unit'   => '%'
-        ],
+        'width'            => $plp_width . 'px',
         'brandColor'       => $narrow_custom_brand_color,
         'bgColor'          => $narrow_custom_bg,
         'textColor'        => $narrow_custom_color,
@@ -33,5 +30,5 @@ $block = [
     ],
     'innerBlocks' => [],
     'innerHTML' => '',
-    'innerContent' => ['sdfsdf'],
+    'innerContent' => [''],
 ];

@@ -8,13 +8,18 @@ class Shortcode
 {
     protected static $_instance = null;
 
+    public function __construct()
+    {
+        add_shortcode('audio_player', [$this, 'audioPlayer']);
+        add_shortcode('bypass_audio_player', [$this, 'audioPlayer']);
+    }
+
     /**
      * construct function
      */
     function register()
     {
-        add_shortcode('audio_player', [$this, 'audioPlayer']);
-        // add_shortcode('player', [$this, 'player']);
+        self::instance();
     }
 
     /**
@@ -31,26 +36,36 @@ class Shortcode
     /**
      * [audio_player] shotcode
      */
-    function audioPlayer($attrs)
+    public function audioPlayer($atts)
     {
         extract(shortcode_atts(array(
             'id' => null,
             'file' => null,
             'src' => null,
-            'width' => '100%',
-            'controls' => null
-        ), $attrs));
+            'width' => null,
+            'controls' => null,
+            'preload' => null,
+            'repeat' => null,
+            'start_time' => 0,
+        ), $atts));
 
-        wp_enqueue_style('h5ap-player');
-        wp_enqueue_script('h5ap-player');
-
-        $code_controls = $controls ? explode(',', $controls) : null;
 
         ob_start();
 
         if (empty($id)) {
             $id = uniqid();
         }
+
+        if (empty($file)) {
+            $file = get_post_meta($id, '_ahp_quick-audio-file', true);
+        }
+
+        $width = $width ? $width : Functions::settings('h5ap_player_width', ['width' => '100', 'unit' => '%']);
+        $repeat = $repeat ? ($repeat === 'true' ? ' loop' : '')  : (Functions::settings('h5ap_repeat', 'loop') === 'loop' ? ' loop ' : '');
+        $autoplay = Functions::settings('h5ap_autoplay', '0') === '1' ? ' autoplay ' : '';
+        $preload = $preload ? $preload : Functions::settings('h5ap_preload', 'metadata');
+        $muted = Functions::settings('h5ap_muted', '0') === '1' ? ' muted ' : '';
+        $stime = (int)Functions::settings('h5ap_seektime', '10');
 
         if ($file) {
             $src = $file;
@@ -60,93 +75,40 @@ class Shortcode
             return false;
         }
 
-        $repeat = '';
-        $autoplay = '';
-        $preload = 'metadata';
-        $muted = '';
-
-        $controls = ['play', 'progress', 'current-time', 'mute', 'volume', 'settings'];
-
-        $options = array(
-            'controls' => $controls,
-        );
-
-?>
-        <div class="skin_default" id="skin_default">
-            <div class="h5ap_quick_player" data-options='<?php echo esc_html(wp_json_encode($options)) ?>' style="width:<?php echo esc_html($width); ?>">
-                <audio playsinline controls class="player<?php echo esc_attr($id); ?>" preload="<?php echo esc_html($preload); ?>" <?php echo esc_html($repeat . $autoplay . $muted); ?>>
-                    <source src="<?php echo esc_html($src); ?>" type="audio/mp3">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        </div>
-        <?php $output = ob_get_clean();
-        return $output; ?>
-<?php
-    }
-
-    function player($atts)
-    {
-        extract(shortcode_atts(array(
-            'id' => null,
-        ), $atts));
-
-        $id = esc_html($id);
-
-        $post_id = esc_html($atts['id']);
-        $post = get_post($post_id);
-        if (!$post) {
-            return '';
-        }
-        if (post_password_required($post)) {
-            return get_the_password_form($post);
-        }
-        switch ($post->post_status) {
-            case 'publish':
-                return $this->displayContent($post);
-            case 'private':
-                if (current_user_can('read_private_posts')) {
-                    return $this->displayContent($post);
-                }
-                return '';
-            case 'draft':
-            case 'pending':
-            case 'future':
-                if (current_user_can('edit_post', $post_id)) {
-                    return $this->displayContent($post);
-                }
-                return '';
-            default:
-                return '';
-        }
-    }
-
-    public function displayContent($post_id)
-    {
-        $player_type = Functions::playerMeta($post_id, 'h5ap_player_type', 'opt-1');
-        if ($player_type === '') {
-            $player_type = 'opt-1';
+        if (is_array($width) && isset($width['width'])) {
+            if ($width['width'] === 0) {
+                $width = '100%';
+            } else {
+                $width = $width['width'] . $width['unit'];
+            }
         }
 
-        $align = Functions::playerMeta($post_id, 'plp_align', 'center');
-        $alignCSS = '';
-        if ($align === 'start') {
-            $alignCSS = "margin-left: 0;";
-        } else if ($align === 'end') {
-            $alignCSS = "margin-left: auto;";
-        } else if ($align === 'center') {
-            $alignCSS = "margin: 0 auto;";
-        }
-        ob_start();
+        $code_controls = $controls ? explode(',', $controls) : null;
+        $final_controls = [];
 
-        if (file_exists(__DIR__ . '/player/' . $player_type . '.php')) {
-            include __DIR__ . '/player/' . $player_type . '.php';
+        if (is_array($code_controls)) {
+            foreach ($code_controls as $control) {
+                array_push($final_controls, trim($control));
+            }
         }
 
-        wp_enqueue_style('h5ap-player');
-        wp_enqueue_script('h5ap-player');
+        $controls = $final_controls ? $final_controls : Functions::settings('h5ap_controls', ['play', 'progress', 'current-time', 'mute', 'volume', 'settings']);
 
-        $output = ob_get_clean();
-        return $output;
+        $block  = [
+            'blockName' => 'h5ap/audioplayer',
+            'attrs' => [
+                'source'        => $src,
+                'controls' => array_fill_keys($controls, true),
+                'width' => $width,
+                'seekTime' => $stime,
+                'repeat' => (bool)$repeat,
+                'autoplay' => $autoplay,
+                'preload' => $preload,
+                'muted' => $muted,
+                'startTime' => (int)$start_time
+            ]
+        ];
+
+        return render_block($block);
     }
 }

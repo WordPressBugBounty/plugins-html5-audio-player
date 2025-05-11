@@ -1,10 +1,15 @@
 <?php
+
+use H5APPlayer\Helper\LocalizeScript;
+
 extract($attributes);
 
 $uniqueId = wp_unique_id('h5ap-player-');
+$settings = h5ap_get_settings('h5ap_settings');
 
-// wp_enqueue_script('h5ap-player');
-// wp_enqueue_style('h5ap-player');
+$attributes['i18n'] = LocalizeScript::translatedText();
+$attributes['speed'] = ['selected' => 1, 'speed' => explode(',', $settings('h5ap_speed', '0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 4, 8'))];
+$attributes['multiple_audio'] = $settings('multipleAudio', false) === '1';
 
 ?>
 <div

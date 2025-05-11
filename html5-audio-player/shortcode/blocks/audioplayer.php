@@ -1,55 +1,69 @@
 <?php
 
-$autoplay = $meta('autoplay', false, true);
-$repeat = $meta('repeat', false, true);
+use H5APPlayer\Helper\LocalizeScript;
+
 $standard_skin = $meta('standard_skin');
-$color = $meta('color');
-$background = $meta('background');
-$controls = $meta('controls', ['play', 'progress', 'current-time', 'duration', 'mute', 'volume']);
-$seek_time = (int) $meta('seektime', 10);
-$start_time = (int)$meta('startTime', 0);
-$preload = $meta('preload', 'metadata', true);
-$radius = $meta('radius') . 'px';
-$disable_pause      = $meta('disable_pause', false, true);
-$disable_loader     = $meta('disable_loader', true, true);
+$background = $meta('background', '#161616');
 $sticky_simple_background     = $meta('sticky_simple_background');
+$control_color     = $meta('control_color', '#fff');
+$primary_color     = $meta('primary_color', '#195FF5');
+$sticky_download     = $meta('sticky_download', false);
+$download     = $meta('fusion_download', false, true);
+$sticky_skin = $meta('sticky_skin');
 
-$settings = get_option('h5ap_settings', []);
+// settings
+$settings = h5ap_get_settings('h5ap_settings', []);
+$settings_primary_color = $settings('h5ap_primary_color');
+$settings_background = $settings('h5ap_background_color');
 
 
+$bgColor = $background;
+if ($type === 'opt-3') {
+    $bgColor = $sticky_simple_background;
+    $download = $sticky_download;
+}
 
+if ($standard_skin === 'default' && $primary_color === '#195FF5') {
+    $bgColor = $settings_background;
+    $control_color = $settings_primary_color;
+}
 
 $block = [
     'blockName' => 'h5ap/audioplayer',
     'attrs' => [
-        'uniqueId'      => 'uniqueId',
+        'uniqueId'      => "player$post_id",
         'clientId'      => '',
         'align'         => '',
+        'alignment'         => $meta('plp_align', 'left'),
         'source'        => $h5vp_default_audio,
-        'poster'        => $sticky_poster,
-        'title'         => $title,
-        'artist'        => $author,
-        'color'         => $color,
-        'primaryColor'  => '#1aafff',
+        'poster'        => $meta('sticky_poster'),
+        'title'         => $meta('title'),
+        'artist'        => $meta('author'),
+        'color'         => $meta('color', '#fff'),
+        'textColor'     => $meta('color', '#fff'),
+        'primaryColor'  => $primary_color,
         'hoverColor'    => '#00B3FF',
-        'controlColor'  =>  $standard_skin != 'default' ?  $color : 'var(--plyr-audio-control-color,#4a5464)',
-        'bgColor'       => ($type === 'opt-1' || $type === 'opt-3') ? $sticky_simple_background : $background,
+        'controlColor'  =>  $control_color,
+        'bgColor'       => $bgColor,
         'skin'          => $type === 'opt-1' ? ucfirst($standard_skin) : ($sticky_skin === 'simple' ? 'Simple-3' : (ucfirst($sticky_skin))),
-        'repeat'        => $repeat,
-        'autoplay'      => $autoplay,
-        'isSticky'      => $type === 'opt-3' ? true : false,
+        'repeat'        => $meta('repeat', false, true),
+        'autoplay'      => $meta('autoplay', false, true),
+        'isSticky'      => $type === 'opt-3' || $meta('enable_sticky', false),
         'muted'         => false,
-        'loader'        => !$disable_loader,
-        'saveState'     => $save_state,
-        'seekTime'      => $seek_time,
-        'startTime'     => $start_time,
-        'preload'       => $preload,
-        'download'      => true,
+        'loader'        => !$meta('disable_loader', true, true),
+        'saveState'     => $meta('save_state', false, true),
+        'disablePause'  => $meta('disable_pause', false, true),
+        'seekTime'      => (int) $meta('seektime', 10),
+        'startTime'     => (int)$meta('startTime', 0),
+        'preload'       => $meta('preload', 'metadata', true),
+        'download'      => $download,
         'width'         => $width['width'] . $width['unit'],
-        'radius'        => $type === 'opt-3' ? 0 : $radius,
-        'controls'      => array_fill_keys($controls, true),
+        'radius'        => $type === 'opt-3' ? 0 : $meta('radius') . 'px',
+        'controls'      => array_fill_keys($meta('controls', ['play', 'progress', 'current-time', 'duration', 'mute', 'volume']), true),
         'style'         => null,
-        'CSS'           => ''
+        'CSS'           => '',
+        'i18n'          => LocalizeScript::translatedText(),
+        'speed'         =>  $settings('h5ap_speed', '0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 4'),
     ],
     'innerBlocks' => [],
     'innerHTML' => '',

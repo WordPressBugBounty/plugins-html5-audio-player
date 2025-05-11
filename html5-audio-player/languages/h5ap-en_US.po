@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Html5 Audio Player 2.3.0\n"
+"Project-Id-Version: Html5 Audio Player 2.3.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/html5-audio-player-pro\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-04-20T10:56:18+00:00\n"
+"POT-Creation-Date: 2025-05-11T05:18:09+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: h5ap\n"
@@ -111,14 +111,14 @@ msgstr ""
 
 #: inc/Elementor/Widgets/Fusion.php:41
 #: inc/Elementor/Widgets/Fusion.php:111
-#: inc/Elementor/Widgets/Stamp.php:45
+#: inc/Elementor/Widgets/Stamp.php:55
 msgid "Fusion Audio Player"
 msgstr ""
 
 #: inc/Elementor/Widgets/Fusion.php:118
 #: inc/Elementor/Widgets/Simple.php:66
 #: inc/Elementor/Widgets/SimplePro.php:59
-#: inc/Elementor/Widgets/Stamp.php:52
+#: inc/Elementor/Widgets/Stamp.php:62
 msgid "Upload or paste audio file"
 msgstr ""
 
@@ -126,8 +126,7 @@ msgstr ""
 #: inc/Elementor/Widgets/Playlist.php:130
 #: inc/Elementor/Widgets/Simple.php:74
 #: inc/Elementor/Widgets/SimplePro.php:67
-#: inc/Elementor/Widgets/Stamp.php:60
-#: inc/Field/AudioPlayerPro.php:97
+#: inc/Elementor/Widgets/Stamp.php:70
 #: inc/Widget/SearchForm.php:22
 #: inc/Widget/widget.php:32
 msgid "Title"
@@ -138,7 +137,7 @@ msgid "Choose Image"
 msgstr ""
 
 #: inc/Elementor/Widgets/Fusion.php:147
-#: inc/Elementor/Widgets/Stamp.php:81
+#: inc/Elementor/Widgets/Stamp.php:91
 msgid "Muted"
 msgstr ""
 
@@ -153,9 +152,9 @@ msgstr ""
 #: inc/Elementor/Widgets/SimplePro.php:80
 #: inc/Elementor/Widgets/SimplePro.php:93
 #: inc/Elementor/Widgets/SimplePro.php:105
-#: inc/Elementor/Widgets/Stamp.php:83
-#: inc/Elementor/Widgets/Stamp.php:96
-#: inc/Elementor/Widgets/Stamp.php:108
+#: inc/Elementor/Widgets/Stamp.php:93
+#: inc/Elementor/Widgets/Stamp.php:106
+#: inc/Elementor/Widgets/Stamp.php:118
 msgid "Yes"
 msgstr ""
 
@@ -170,26 +169,23 @@ msgstr ""
 #: inc/Elementor/Widgets/SimplePro.php:81
 #: inc/Elementor/Widgets/SimplePro.php:94
 #: inc/Elementor/Widgets/SimplePro.php:106
-#: inc/Elementor/Widgets/Stamp.php:84
-#: inc/Elementor/Widgets/Stamp.php:97
-#: inc/Elementor/Widgets/Stamp.php:109
+#: inc/Elementor/Widgets/Stamp.php:94
+#: inc/Elementor/Widgets/Stamp.php:107
+#: inc/Elementor/Widgets/Stamp.php:119
 msgid "No"
 msgstr ""
 
 #: inc/Elementor/Widgets/Fusion.php:160
-#: inc/Elementor/Widgets/Stamp.php:94
-#: inc/Field/AudioPlayerPro.php:266
+#: inc/Elementor/Widgets/Stamp.php:104
 msgid "Repeat"
 msgstr ""
 
 #: inc/Elementor/Widgets/Fusion.php:172
-#: inc/Elementor/Widgets/Stamp.php:106
+#: inc/Elementor/Widgets/Stamp.php:116
 msgid "Autoplay"
 msgstr ""
 
 #: inc/Elementor/Widgets/Fusion.php:186
-#: inc/Field/AudioPlayerPro.php:607
-#: inc/Field/AudioPlayerPro.php:616
 msgid "Download Button"
 msgstr ""
 
@@ -203,21 +199,21 @@ msgstr ""
 
 #: inc/Elementor/Widgets/Fusion.php:200
 #: inc/Elementor/Widgets/Playlist.php:187
-#: inc/Elementor/Widgets/Stamp.php:140
+#: inc/Elementor/Widgets/Stamp.php:150
 msgid "Width"
 msgstr ""
 
 #: inc/Elementor/Widgets/Fusion.php:232
 #: inc/Elementor/Widgets/Simple.php:123
 #: inc/Elementor/Widgets/SimplePro.php:116
-#: inc/Elementor/Widgets/Stamp.php:121
+#: inc/Elementor/Widgets/Stamp.php:131
 msgid "Seek Time"
 msgstr ""
 
 #: inc/Elementor/Widgets/Fusion.php:234
 #: inc/Elementor/Widgets/Simple.php:125
 #: inc/Elementor/Widgets/SimplePro.php:118
-#: inc/Elementor/Widgets/Stamp.php:123
+#: inc/Elementor/Widgets/Stamp.php:133
 msgid "Input seek time here"
 msgstr ""
 
@@ -255,7 +251,6 @@ msgid "Custom"
 msgstr ""
 
 #: inc/Elementor/Widgets/Playlist.php:87
-#: inc/Field/AudioPlayerPro.php:378
 msgid "Hide Download"
 msgstr ""
 
@@ -278,7 +273,7 @@ msgstr ""
 #: inc/Elementor/Widgets/Playlist.php:179
 #: inc/Elementor/Widgets/Simple.php:135
 #: inc/Elementor/Widgets/SimplePro.php:246
-#: inc/Elementor/Widgets/Stamp.php:133
+#: inc/Elementor/Widgets/Stamp.php:143
 msgid "Style"
 msgstr ""
 
@@ -291,7 +286,6 @@ msgid "Poster Height"
 msgstr ""
 
 #: inc/Elementor/Widgets/Playlist.php:270
-#: inc/Field/AudioPlayerPro.php:459
 msgid "Brand Color"
 msgstr ""
 
@@ -302,7 +296,6 @@ msgid "Background Color"
 msgstr ""
 
 #: inc/Elementor/Widgets/Playlist.php:312
-#: inc/Field/AudioPlayerPro.php:483
 msgid "Item Text Color"
 msgstr ""
 
@@ -315,12 +308,10 @@ msgid "Item Hover/Active Text Color"
 msgstr ""
 
 #: inc/Elementor/Widgets/Playlist.php:377
-#: inc/Field/AudioPlayerPro.php:514
 msgid "Odd Item Background"
 msgstr ""
 
 #: inc/Elementor/Widgets/Playlist.php:398
-#: inc/Field/AudioPlayerPro.php:521
 msgid "Even Item Background"
 msgstr ""
 
@@ -333,7 +324,7 @@ msgstr ""
 
 #: inc/Elementor/Widgets/Simple.php:175
 #: inc/Elementor/Widgets/SimplePro.php:286
-#: inc/Elementor/Widgets/Stamp.php:171
+#: inc/Elementor/Widgets/Stamp.php:181
 msgid "Primary Color"
 msgstr ""
 
@@ -385,100 +376,27 @@ msgstr ""
 msgid "Downlaod"
 msgstr ""
 
-#: inc/Field/AudioPlayerPro.php:77
-msgid "Poster"
-msgstr ""
-
-#: inc/Field/AudioPlayerPro.php:78
-msgid "Add or Upload Poster Image"
-msgstr ""
-
-#: inc/Field/AudioPlayerPro.php:79
-msgid "Remove"
-msgstr ""
-
-#: inc/Field/AudioPlayerPro.php:80
-msgid "100x100 px photo is the standard poster size, accepted file type .png, .jpeg, .jpg "
-msgstr ""
-
-#: inc/Field/AudioPlayerPro.php:91
-#: inc/Field/AudioPlayerPro.php:471
-msgid "Background"
-msgstr ""
-
-#: inc/Field/AudioPlayerPro.php:99
-msgid "Enter the title of the audio"
-msgstr ""
-
-#: inc/Field/AudioPlayerPro.php:109
-msgid "Author"
-msgstr ""
-
-#: inc/Field/AudioPlayerPro.php:111
-msgid "Enter the author of the audio"
-msgstr ""
-
-#: inc/Field/AudioPlayerPro.php:159
-msgid "AutoPlay"
-msgstr ""
-
-#: inc/Field/AudioPlayerPro.php:370
-msgid "Autoplay next track"
-msgstr ""
-
-#: inc/Field/AudioPlayerPro.php:446
-msgid "Use forward/rewind button to change audio"
-msgstr ""
-
-#: inc/Field/AudioPlayerPro.php:495
-msgid "Item Hover Background"
-msgstr ""
-
-#: inc/Field/AudioPlayerPro.php:507
-msgid "Item Hover Text Color"
-msgstr ""
-
-#: inc/Field/AudioPlayerPro.php:580
-msgid "Disable Pause"
-msgstr ""
-
-#: inc/Field/AudioPlayerPro.php:588
-msgid "Disable Loading"
-msgstr ""
-
-#: inc/Field/AudioPlayerPro.php:597
-msgid "Save State"
-msgstr ""
-
-#: inc/Field/AudioPlayerPro.php:625
-msgid "Initial Volume"
-msgstr ""
-
-#: inc/Field/SettingsPro.php:47
-msgid "Apply Html5 Audio Player for all previous Audios"
-msgstr ""
-
-#: inc/Model/GlobalChanges.php:41
+#: inc/Model/GlobalChanges.php:45
 msgid "Active Licence"
 msgstr ""
 
-#: inc/Model/GlobalChanges.php:45
+#: inc/Model/GlobalChanges.php:49
 msgid "Please enter the license key that you received in the email right after the purchase:"
 msgstr ""
 
-#: inc/Model/GlobalChanges.php:51
+#: inc/Model/GlobalChanges.php:55
 msgid "I agreed to send the website url, email, and the Licence key to Html5 Audio Player plugin server to verify the licence key."
 msgstr ""
 
-#: inc/Model/GlobalChanges.php:56
+#: inc/Model/GlobalChanges.php:60
 msgid "Cancel"
 msgstr ""
 
-#: inc/Model/GlobalChanges.php:58
+#: inc/Model/GlobalChanges.php:62
 msgid "Deactive License"
 msgstr ""
 
-#: inc/Model/GlobalChanges.php:60
+#: inc/Model/GlobalChanges.php:64
 msgid "Active License"
 msgstr ""
 
@@ -518,27 +436,16 @@ msgstr ""
 msgid "Player"
 msgstr ""
 
-#: blocks/playlist-narrow/block.json
-#: build/blocks/playlist-narrow/block.json
+#: build/blocks/audioplayer/block.json
 msgctxt "block title"
-msgid "HTML5 Audio Playlist - Narrow"
+msgid "HTML5 Audio Player"
 msgstr ""
 
-#: blocks/playlist-narrow/block.json
-#: build/blocks/playlist-narrow/block.json
-msgctxt "block description"
-msgid "sdf"
-msgstr ""
-
-#: blocks/playlist-narrow/block.json
-#: build/blocks/audioplaylist/block.json
-#: build/blocks/playlist-extensive/block.json
-#: build/blocks/playlist-narrow/block.json
+#: build/blocks/audioplayer/block.json
 msgctxt "block keyword"
-msgid "HTML5 Audio Playlist"
+msgid "HTML5 Audio Player"
 msgstr ""
 
-#: blocks/playlist-narrow/block.json
 #: build/blocks/audioplayer/block.json
 #: build/blocks/audioplaylist/block.json
 #: build/blocks/playlist-extensive/block.json
@@ -547,7 +454,6 @@ msgctxt "block keyword"
 msgid "Media Player"
 msgstr ""
 
-#: blocks/playlist-narrow/block.json
 #: build/blocks/audioplayer/block.json
 #: build/blocks/audioplaylist/block.json
 #: build/blocks/playlist-extensive/block.json
@@ -557,13 +463,8 @@ msgid "Audio Player"
 msgstr ""
 
 #: build/blocks/audioplayer/block.json
-msgctxt "block title"
-msgid "HTML5 Audio Player"
-msgstr ""
-
-#: build/blocks/audioplayer/block.json
 msgctxt "block keyword"
-msgid "HTML5 Audio Player"
+msgid "mp3 player"
 msgstr ""
 
 #: build/blocks/audioplaylist/block.json
@@ -571,7 +472,24 @@ msgctxt "block title"
 msgid "HTML5 Audio Playlist"
 msgstr ""
 
+#: build/blocks/audioplaylist/block.json
+#: build/blocks/playlist-extensive/block.json
+#: build/blocks/playlist-narrow/block.json
+msgctxt "block keyword"
+msgid "HTML5 Audio Playlist"
+msgstr ""
+
 #: build/blocks/playlist-extensive/block.json
 msgctxt "block title"
 msgid "HTML5 Audio Playlist - Extensive"
+msgstr ""
+
+#: build/blocks/playlist-narrow/block.json
+msgctxt "block title"
+msgid "HTML5 Audio Playlist - Narrow"
+msgstr ""
+
+#: build/blocks/playlist-narrow/block.json
+msgctxt "block description"
+msgid "Simple Audio Playlist Block for WordPress"
 msgstr ""

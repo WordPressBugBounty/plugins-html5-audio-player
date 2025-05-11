@@ -36,32 +36,10 @@ class EnqueueAssets
     {
         wp_enqueue_style('h5ap-public', H5AP_PRO_PLUGIN_DIR . 'assets/css/style.css', array(), H5AP_PRO_VERSION);
         wp_register_script('bplugins-plyrio', H5AP_PRO_PLUGIN_DIR . 'assets/js/plyr-v3.7.2.js', array('jquery'), H5AP_PRO_VERSION, false);
-        wp_register_script('h5ap-player', H5AP_PRO_PLUGIN_DIR . 'build/player.js', array('jquery'), H5AP_PRO_VERSION, true);
 
-        wp_register_script('h5ap-all', H5AP_PRO_PLUGIN_DIR . 'dist/h5ap-all.js', array(), H5AP_PRO_VERSION, true);
+        wp_register_script('h5ap-all', H5AP_PRO_PLUGIN_DIR . 'build/h5ap-all.js', array(), H5AP_PRO_VERSION, true);
 
         wp_register_style('bplugins-plyrio', H5AP_PRO_PLUGIN_DIR . 'assets/css/player.min.css', array(), H5AP_PRO_VERSION, 'all');
-        wp_register_style('h5ap-player', H5AP_PRO_PLUGIN_DIR . 'build/player.css', array('bplugins-plyrio'), H5AP_PRO_VERSION);
-
-        // playlist
-        wp_register_script('h5ap-playlist', H5AP_PRO_PLUGIN_DIR . 'dist/playlist.js', ['bplugins-plyrio'], H5AP_PRO_VERSION);
-        wp_register_style('h5ap-playlist', H5AP_PRO_PLUGIN_DIR . 'dist/playlist.css', ['bplugins-plyrio'], H5AP_PRO_VERSION);
-
-        wp_localize_script('h5ap-player', 'h5ap_i18n', LocalizeScript::translatedText());
-
-        wp_localize_script('h5ap-player', 'h5apPlayer', [
-            'speed' => explode(',', Functions::getSetting('speed', '0.5, 1, 1.5, 2.0, 2.5')),
-            'multipleAudio' => (bool) Functions::getSetting('multipleAudio', false),
-            'plyrio_js' => H5AP_PRO_PLUGIN_DIR . 'assets/js/plyr-v3.7.2.js',
-            'plyr_js' => H5AP_PRO_PLUGIN_DIR . 'dist/player.js',
-        ]);
-
-        wp_localize_script('h5ap-playlist', 'h5apPlayer', [
-            'speed' => explode(',', Functions::getSetting('speed', '0.5, 1, 1.5, 2.0, 2.5')),
-            'multipleAudio' => (bool) Functions::getSetting('multipleAudio', false),
-            'plyrio_js' => H5AP_PRO_PLUGIN_DIR . 'assets/js/plyr-v3.7.2.js',
-            'plyr_js' => H5AP_PRO_PLUGIN_DIR . 'dist/player.js',
-        ]);
 
         wp_localize_script('h5ap-all', 'h5apAll', [
             'speed' => explode(',', Functions::getSetting('speed', '0.5, 1, 1.5, 2.0, 2.5')),
@@ -72,6 +50,7 @@ class EnqueueAssets
                 'controls' => Functions::getSetting('h5ap_controls', []),
                 'preload' => Functions::getSetting('h5ap_preload', 'metadata'),
                 'seekTime' => (int) Functions::getSetting('h5ap_seektime', 10),
+                'loop' => ['active' => Functions::getSetting('h5ap_repeat', false) === '1'],
             ]
         ]);
 

@@ -4,7 +4,7 @@ Tags:  audio, audio player, html5 player, mp3 player, Player
 Donate link: https://www.buymeacoffee.com/abuhayat/  
 Requires at least: 5.2
 Tested up to: 6.8
-Stable tag: 2.3.1
+Stable tag: 2.3.2
 Requires PHP: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -14,6 +14,8 @@ Maximize your WordPress site's potential with our versatile HTML5 Audio Player p
 == Description ==
 
 You can add/embed and play almost all types of audio files in your post, page, and widgets areas as well as in the template files. HTML5 Audio Player has many options and features that fit your audio player needs. 
+
+https://youtu.be/6ZHKarDpllQ
 
 HTML5 Audio Player can play on all major browsers. Our audio player plugin is shortcode-driven, so adding audio players to any part of your website becomes easy. Also, the HTML5 audio player plugin is lightweight so it doesn’t put any pressure on your website speed and performance. 
 
@@ -30,7 +32,7 @@ Other features include customizable color options, fast forward/rewind buttons, 
 = How to use HTML5 Audio Player? =
 Get a quick video tutorial-
 
-https://www.youtube.com/watch?v=MbY9oyERJck
+https://youtu.be/n3B4SpbDS30
 
 == Shortcode Usage - Quick Embed ==
 
@@ -173,8 +175,8 @@ e.g.
 
 == Changelog ==
 
-= 2.3.1 - 22 April, 2025 = 
-* Fixed: "Protected Content" requires "Elementor" 
+= 2.3.2 - 11 May, 2025 = 
+* Fixed: Hide Download option worn't work (Pro)
 
 = 2.3.0 - 20 April, 2025 = 
 * Update: Improve Security
