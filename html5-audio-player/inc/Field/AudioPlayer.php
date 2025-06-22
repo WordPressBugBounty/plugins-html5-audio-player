@@ -7,6 +7,11 @@ class AudioPlayer
 
   public function register()
   {
+    add_action('init', [$this, 'init'], 0);
+  }
+
+  public function init()
+  {
     if (!class_exists('CSF')) {
       return false;
     }

@@ -205,9 +205,10 @@
           "textColor": "#fff"
         },
         "Simple-1": {
-          "primaryColor": "#ffffff",
+          "primaryColor": "#00dcff",
           "controlColor": "#fff",
-          "bgColor": "#161616"
+          "bgColor": "#161616",
+          "textColor": "#00dcff"
         },
         "Simple-2": {
           "primaryColor": "#06F7FF00",
@@ -259,7 +260,9 @@
   ],
   "viewScript": [
     "file:./view.js",
-    "bplugins-plyrio"
+    "bplugins-plyrio",
+    "react",
+    "react-dom"
   ],
   "style": [
     "file:./view.css",

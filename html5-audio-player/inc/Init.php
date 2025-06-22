@@ -15,17 +15,25 @@ class Init
             // Base\Loader::class, // deprecated
             Elementor\Widgets\Register::class,
             Elementor\Controls\Register::class,
-            PostType\AudioPlayer::class,
             PostType\AudioListPro::class,
+            PostType\AudioPlayer::class,
             Field\AudioPlayer::class,
             Field\AudioListPro::class,
-            Field\SettingsPro::class,
+            // Field\SettingsPro::class,
+
             Services\AdminNotice::class,
             Services\Shortcode::class,
             Services\EnqueueAssets::class,
             Model\GlobalChanges::class,
             Helper\Functions::class,
         ];
+    }
+
+    public static function register_post_type()
+    {
+
+        // self::instantiate('\H5APPlayer\PostType\AudioPlayer')->register();
+        // self::instantiate('\H5APPlayer\PostType\AudioListPro')->register();
     }
 
     public static function register_services()

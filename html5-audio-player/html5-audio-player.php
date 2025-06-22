@@ -4,7 +4,7 @@
  * Plugin Name: Html5 Audio Player
  * Plugin URI:  https://bplugins.com/products/html5-audio-player/
  * Description: You can easily integrate html5 audio player in your WordPress website using this plugin.
- * Version: 2.3.2
+ * Version: 2.3.3
  * Author: bPlugins
  * Author URI: http://bPlugins.com
  * License: GPLv3
@@ -55,7 +55,7 @@ if ( function_exists( 'h5ap_fs' ) ) {
     define( 'H5AP_PRO_PLUGIN_DIR', plugin_dir_url( __FILE__ ) );
     define( 'H5AP_PRO_FILE_BASENAME', plugin_basename( __FILE__ ) );
     define( 'H5AP_PRO_DIR_BASENAME', plugin_basename( __DIR__ ) );
-    define( 'H5AP_PRO_VERSION', ( $_SERVER['HTTP_HOST'] ?? null === 'localhost' ? time() : '2.3.2' ) );
+    define( 'H5AP_PRO_VERSION', ( $_SERVER['HTTP_HOST'] ?? null === 'localhost' ? time() : '2.3.3' ) );
     defined( 'H5AP_PRO_PATH' ) or define( 'H5AP_PRO_PATH', plugin_dir_path( __FILE__ ) );
     if ( !function_exists( 'h5ap_get_post_meta' ) ) {
         function h5ap_get_post_meta(  $id, $key  ) {
@@ -102,12 +102,6 @@ if ( function_exists( 'h5ap_fs' ) ) {
         return "audio/{$ext}";
     }
 
-    if ( !function_exists( 'h5ap__' ) ) {
-        function h5ap__(  $text, $domain = 'h5ap'  ) {
-            return $text;
-        }
-
-    }
     if ( !class_exists( 'CSF' ) ) {
         require_once 'admin/codestar-framework/codestar-framework.php';
     }
@@ -115,9 +109,6 @@ if ( function_exists( 'h5ap_fs' ) ) {
         H5APPlayer\Init::register_services();
     }
     add_action( 'plugins_loaded', function () {
-        // if (class_exists('H5APPlayer\\Init')) {
-        // 	H5APPlayer\Init::register_services();
-        // }
         require_once 'shortcode/player.php';
         // require_once (__DIR__.'/inc/Elementor/Widgets/Widgets.php');
         if ( h5ap_fs()->can_use_premium_code() ) {

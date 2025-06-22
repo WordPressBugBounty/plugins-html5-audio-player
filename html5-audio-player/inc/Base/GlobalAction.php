@@ -34,7 +34,7 @@ class GlobalAction
             }
 
             .h5ap_single_button {
-                height: <?php echo esc_attr($settings('dimention', ['height' => '50'])['width'] . $s_unit) ?>;
+                height: <?php echo esc_attr($settings('dimention', ['width' => '50'])['width'] . $s_unit) ?>;
             }
         </style>
     <?php

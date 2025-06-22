@@ -12,7 +12,7 @@ class AudioPlayer
     private $post_type = 'audioplayer';
     public function register()
     {
-        add_action('init', [$this, 'init']);
+        add_action('init', [$this, 'init'], 20);
         if (is_admin()) {
             add_filter('post_row_actions', [$this, 'h5ap_remove_row_actions'], 10, 2);
             add_action('edit_form_after_title', [$this, 'h5ap_shortcode_area']);

@@ -1,10 +1,10 @@
 === HTML5 Audio Player- Best WordPress Audio Player Plugin ===
 Contributors: bplugins, shehabulislam, freemius, abuhayat
-Tags:  audio, audio player, html5 player, mp3 player, Player
+Tags: mp3 player, audio, audio player, player, podcast
 Donate link: https://www.buymeacoffee.com/abuhayat/  
 Requires at least: 5.2
 Tested up to: 6.8
-Stable tag: 2.3.2
+Stable tag: 2.3.3
 Requires PHP: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,145 +13,171 @@ Maximize your WordPress site's potential with our versatile HTML5 Audio Player p
 
 == Description ==
 
-You can add/embed and play almost all types of audio files in your post, page, and widgets areas as well as in the template files. HTML5 Audio Player has many options and features that fit your audio player needs. 
-
-https://youtu.be/6ZHKarDpllQ
-
-HTML5 Audio Player can play on all major browsers. Our audio player plugin is shortcode-driven, so adding audio players to any part of your website becomes easy. Also, the HTML5 audio player plugin is lightweight so it doesn’t put any pressure on your website speed and performance. 
-
-HTML5 Audio Player plugin prioritizes user convenience with full control over buttons and compatibility across major browsers and iOS devices. 
-
-With responsiveness and a lightweight design, it's suitable for various uses such as podcast embedding and audio file previews. 
-
-Other features include customizable color options, fast forward/rewind buttons, preload options for enhanced page load speed, ad-free experience, and control over player elements like restart, download, play, progress bar, duration display, mute, volume, settings, and playback speed adjustment.
-
-**[See Live Demo](https://bplugins.com/products/html5-audio-player/ "Demo")** 
-**[Buy The Pro Version](https://bplugins.com/products/html5-audio-player/#pricing "Buy Pro version")** 
+[**HTML5 Audio Player**](https://bplugins.com/products/html5-audio-player/) | [**Documentation**](https://bplugins.com/docs/html5-audio-player/) | [**Pricing**](https://bplugins.com/products/html5-audio-player/#pricing) | [**Support**](https://bplugins.com/support/) | [**Demo**](https://bplugins.com/products/html5-audio-player/#demos)
 
 
-= How to use HTML5 Audio Player? =
-Get a quick video tutorial-
+[**HTML5 Audio Player**](https://bplugins.com/products/html5-audio-player/) is a powerful, lightweight, and fully responsive audio player plugin for WordPress. It lets you embed MP3 and OGG audio files into posts, pages, widget areas, or template files using shortcodes, no coding required.
 
-https://youtu.be/n3B4SpbDS30
+Built with modern HTML5 technology, this plugin works across all major browsers and iOS devices, ensuring reliable playback on any screen size. Its shortcode-based setup gives you full control over placement and player settings, making it suitable for podcasts, music tracks, audio previews, or online courses.
 
-== Shortcode Usage - Quick Embed ==
+### Key Features – Free Version
+**Embed Anywhere**: Add audio to posts, pages, widgets, and theme templates using shortcodes.
 
-The plugin provides a simple shortcode: `[audio_player]`.
+**Responsive & Lightweight**: Adapts to all devices and doesn’t slow down your site.
 
-**Attributes:**
-1. `src` (required) - The URL of the audio file to be played.
-2. `width` (optional, default: `100%`) - Sets the width of the audio player. You can use percentage or pixel values, e.g., `100%` or `300px`.
+**Cross-Browser Support**: Works smoothly on Chrome, Firefox, Safari, Edge, IE7–IE9, and more.
 
-### Examples
+**Inline Audio Playback**: Full support for HTML5 audio across mobile and desktop browsers.
 
-**Basic Usage**  
-`[audio_player src="https://example.com/audio-file.mp3"]`
+**Customizable Skins & Colors**: Match your player to your brand.
 
-**Custom Width**
-`[audio_player src="https://example.com/audio-file.mp3" width="300px"]`
+**Autoplay, Loop, Mute Options**: Define how your audio behaves.
 
-### HTML5 Audio Player Features
+**Great for Podcasts**: Perfect for embedding podcast episodes or audio courses.
 
-* Embed audio player in the post, page, widget area, and theme templates 
-* The audio player is compact so it does not take up a lot of space on your webpage.
-* Support play inline. 
-* Controls over all the buttons.
-* Shortcode driven. So it's more powerful and you can add an audio player anywhere on your website.
-* It's very easy to use which means you don't have to be an expert to use this plugin.
-* HTML5 compatible so the audio files embedded with this plugin will play on iOS devices
-* Works on all major browsers - IE7, IE8, IE9, Safari, Firefox, Chrome, edge
-* The audio player is responsive.
-* If you do podcasting then this audio player can be used to embed the audio files on your WordPress posts or pages
-* If you are selling audio files from your site then you can use this plugin to offer a preview for your users to see the file before purchasing
-* Use the autoplay option to play an audio/mp3 file as soon as the page loads
-* Ability to specify both the MP3 and Ogg versions of your audio files. The plugin will play the appropriate one based on the device of the user. 
-* Lightweight and user-friendly
+**Sell Audio Previews**: Let users listen before they buy.
+
+**Shortcode Powered**: Easy to use, yet flexible for advanced users.
+
+**MP3 & OGG Support**: Automatically loads the right format based on user’s device.
+
+**Lightweight & User-Friendly**: Clean, simple UI with powerful functionality.
 
 
-### HTML5 Audio Player Pro Version Features
+### Pro Version – Unlock Premium Audio Controls
+Upgrade to the [**Pro version**](https://bplugins.com/products/html5-audio-player/#pricing) for more control over design, behavior, and playback settings.
 
-Here are the pro features of this WordPress audio player for website-
+**What’s Included in Pro:**
 
-- Color-changing options. You can add different color customizations to the audio players
-- Show Fast Forward And Rewind Button
-- Increase Page load speed by changing Preload Options and improve performance
-- No Ads
-- Hide / Show Restart Button
-- Hide / Show Download Button
-- Hide / Show Play Button
-- Hide / Show the audio Progress bar
-- Hide / Show audio duration in the player
-- Hide / Show Mute Button
-- Hide / Show the volume Control
-- Show / Hide Setting button in the Player
-- Control the audio speed by setting a button
-- Audio Player with a single Play Button
+**Color Customization**: Set custom player colors to fit your site’s style.
+
+**Fast Forward & Rewind Buttons**: Set seek time for enhanced navigation.
+
+**Preload Controls**: Optimize page speed with Auto, Metadata, or None settings.
+
+**Ad-Free Experience**: No ads, ever.
+
+**Restart Button Toggle**: Choose whether users can restart audio.
+
+**Download Button Toggle**: Show or hide the download option.
+
+**Customize Playback Controls**: Control visibility of play, mute, progress, and duration elements.
+
+**Volume & Speed Control**: Let users adjust the playback experience.
+
+**Upload Poster Image**: Add a visual element to your player.
+
+**Title Support**: Display custom audio titles.
+
+**Player Skins**: Choose from Default, Fusion, Stamp, Wave, and more.
+
+**Disable Pause Option**: Keep audio playing without interruption.
+
+**Advanced Player Types**: Choose from Standard, Playlist, or Sticky Player.
+
+**Border Radius Control**: Style your player’s corners.
+
+**Single Button Player**: Minimalist design for single-action audio playback.
+
+[**Try the HTML5 Audio Player PRO**](https://bplugins.com/products/html5-audio-player/#pricing) – Unlock all premium features now!
 
 
-### HTML5 Audio Player step-by-step guide 
+### How to Use – Step-by-Step Setup
 
-- After installation, you can see a sidebar menu in the WordPress dashboard called "HTML5 Audio Player"
-- Add one or more players from there. 
-- You will get Shortcode for every player On the player list. 
-- Copy Shortcode for the player you wanna publish and add to your website
-- Past the shortcode in the post, page, and widget areas of your website to publish them. if you want to publish a player in a template file use <?php echo do_shortcode('PLAYER_SHORTCODE') ?>
-- You can also use this shortcode [audio_player src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" width="100%"] to publish a audio player
-- Enjoy!
+Getting started is quick and easy.
+
+https://youtube.com/watch?v=MbY9oyERJck	
+
+#### Step-by-Step Setup
+
+- Install and activate the plugin.
+
+- In the WordPress dashboard, go to the **HTML5 Audio Player** menu.
+
+- Add a new player and copy the generated shortcode.
+
+- Paste the shortcode into any post, page, or widget.
+
+- Done – enjoy seamless audio playback!
+
+**Gutenberg Block Support**
+
+Using the Block Editor? You’re covered.
+
+- Open a post/page editor.
+
+- Click the **+** icon, go to **Common Blocks**, and select **HTML5 Audio Player**.
+
+- Choose your audio player and hit the **Publish** button.
+
+Enjoy crystal-clear audio in just a few clicks!
 
 
-### Gutenberg Block 
+[**Live Demo**](https://bplugins.com/products/html5-audio-player/#demos) | [**Upgrade to Pro**](https://bplugins.com/products/html5-audio-player/#pricing)
 
-- HTML5 Audio Player plugin adds a Gutenberg Block Called HTML5 Audio Player Under the Common Category 
-- Go to your WordPress Admin interface and open a post or page editor.
-- Click the plus button in the top left corner of the body of your post/page.
-- Search or look for the block in the Common Block Category and select HTML5 Audio Player.
-- Click the Icon to add the player.
-- Select An Audio Player  
-- Publish and Enjoy!
-
-* For installation help click on Installation Tab
-
-	
 
 ### User Feedback 
 
-❛❛**_I bought a second license for another site because this plugin satisfied all my needs. I had a small problem on this new site and support solved the problem within hours of my request. Thank you so much. You are awesome._**❜❜ 
+❛❛**_I bought a second license for another site because this plugin satisfied all my needs. I had a small problem on this new site and support solved the problem within hours of my request. Thank you so much. You are awesome._**❜❜
 
 **_-pripyat51_**
 
 
-❛❛**_Loving the player and the support they have provided. The new features are exactly what we need. Thank you!_**❜❜ 
+❛❛**_Loving the player and the support they have provided. The new features are exactly what we need. Thank you!_**❜❜
 
 **_-hoffmaw_**
 
+Like that plugin? Hate it? Want a new feature? **[Send your feedback](https://bplugins.com/support)**
 
-Like that plugin? Hate it? Want a new feature?  [Send me some feedback](mailto: support@bplugins.com "Send feedback")  
 
+### Check out our other WordPress Plugins-
 
-= ⭐ Checkout our other WordPress Plugins- = 
+[**Html5 Video Player**](https://bplugins.com/products/html5-video-player/) – Display videos as single and playlist in multiple skins.
 
-🔥 **[Html5 Audio Player](https://audioplayerwp.com/)** – Best audio player plugin for WordPress.
+[**PDF Poster**](https://bplugins.com/products/pdf-poster/) – Display/Embed PDF files with different styles.
 
-🔥 **[PDF Poster](http://pdfposter.com/)** – A fully-featured PDF Viewer Plugin for WordPresss.
+[**StreamCast**](https://bplugins.com/products/streamcast-radio-player/) – Customizable radio player with different skins.
 
-🔥 **[StreamCast](https://wordpress.org/plugins/streamcast)** – A fully-featured Radio Player Plugin for WordPresss.
+[**3D Viewer**](https://bplugins.com/products/3d-viewer/) – Embed 3D models and 3D products with interaction.
 
-🔥 **[3D Viewer](https://3d-viewer.bplugins.com/)** – Display interactive 3D models on the webs. 
+[**Advanced Post Block**](https://bplugins.com/products/advanced-post-block/) – Show posts and custom posts in different layouts.
 
 
 == Frequently Asked Questions ==
 
-= How do I install this plugin? =
 
-You can install it as other regular WordPress plugins. No different way. Please see on installation tab.
+= How do I install this plugin?
+You can install the plugin directly from your WordPress dashboard. Go to Plugins > Add New, search for the plugin name, click "Install Now", and then activate it.
 
-= Can I play a video such as a mp4 file? =
-
-No, But you can try my other plugin called "HTML5 Video Player"
+= Can I play a video, such as an MP4 file? =
+No, but you can try our “[**HTML5 Video Player**](https://bplugins.com/products/html5-video-player/)” plugin.
 
 = What type of audio can I play? =
-
 You can play .mp3, .oog, and .wav audio files.
+
+= Does the player work on mobile devices? =
+Yes, audio players are fully responsive and work on smartphones and tablets, including iOS and Android.
+
+= Can I customize the look of the audio player? =
+Yes, you can adjust colors, skins, sizes, and more. The plugin includes options for customizing player appearance to match your website.
+
+= Is autoplay supported? =
+Yes, you can enable autoplay for audio. Note that some browsers may restrict autoplay behavior based on user settings.
+
+= Can I restrict downloads of the audio file? =
+Yes, the plugin offers an option to enable or disable the download button.
+
+= Can I show a preview or sample before full playback? =
+Yes, you can configure the player to show a sample or preview clip for digital products or paid content.
+
+= Can I use this plugin to sell audio files? =
+You can use the plugin to showcase previews and link to purchase/download pages. Integration with eCommerce plugins can be handled separately.
+
+= Does this plugin support playlists? =
+Yes, you can create playlists with multiple audio files. Different player types are available, including standard, playlist, and sticky player.
+
+= Will the plugin slow down my website? =
+The plugin is lightweight and optimized for performance. You can also adjust preload settings to improve page speed.
 
 
 == Installation ==
@@ -167,13 +193,26 @@ e.g.
 
 == Screenshots ==
 
-1. Sidebar menu
-2. UI
-3. Player configuration 
-4. Shortcode Generator 
+1. Add New Audio
+2. Player Configuration
+3. Preview
+4. Preview
+5. Preview
+6. Preview
+7. Add New Playlist
+8. Playlist Player Configuration
+9. Playlist Preview
+10. Settings
+11. Sticky Configuration
+12. Gutenberg Block
+13. Gutenberg Block Settings
 
 
 == Changelog ==
+
+= 2.3.3 - 22 June, 2025 =
+* Fixed: Fix Responsive issue. 
+* Improved: Code 
 
 = 2.3.2 - 11 May, 2025 = 
 * Fixed: Hide Download option worn't work (Pro)
@@ -257,6 +296,3 @@ e.g.
 
 = 2.2.23 - 15 May, 2024 = 
 * Fixed: Double player issue
-
-
-

@@ -60,7 +60,7 @@ if (!function_exists('h5ap_player_shortcode_content')) {
     $tracks = [];
 
 
-    if ($playlist_type !== 'create') {
+    if ($playlist_type !== 'create' && is_array($selected_audio)) {
       foreach ($selected_audio as $id) {
         $playlist_ids = get_post_meta($id, '_h5applaylist');
 
