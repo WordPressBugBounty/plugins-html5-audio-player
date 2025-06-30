@@ -12,6 +12,7 @@ class Shortcode
     {
         add_shortcode('audio_player', [$this, 'audioPlayer']);
         add_shortcode('bypass_audio_player', [$this, 'audioPlayer']);
+        add_shortcode('h5ap_radio_player', [$this, 'radio_player']);
     }
 
     /**
@@ -110,5 +111,51 @@ class Shortcode
         ];
 
         return render_block($block);
+    }
+    /**
+     * [audio_player] shotcode
+     */
+    public function radio_player($atts)
+    {
+        extract(shortcode_atts(array(
+            'id' => null,
+        ), $atts));
+
+        $post_id = esc_html($atts['id']);
+        $post = get_post($id);
+        if (!$post) {
+            return '';
+        }
+
+        if ($post->post_type !== 'radioplayer') {
+            return '';
+        }
+
+        if (post_password_required($post)) {
+            return get_the_password_form($post);
+        }
+
+        $content = $post->post_content ?? ' ';
+        $blocks = parse_blocks($content);
+
+
+        switch ($post->post_status) {
+            case 'publish':
+                return render_block($blocks[0]);
+            case 'private':
+                if (current_user_can('read_private_posts')) {
+                    return render_block($blocks[0]);
+                }
+                return '';
+            case 'draft':
+            case 'pending':
+            case 'future':
+                if (current_user_can('edit_post', $post_id)) {
+                    return render_block($blocks[0]);
+                }
+                return '';
+            default:
+                return '';
+        }
     }
 }

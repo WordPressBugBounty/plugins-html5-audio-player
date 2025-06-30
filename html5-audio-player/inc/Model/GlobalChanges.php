@@ -17,7 +17,6 @@ class GlobalChanges
 		add_action('wp_footer', [$this, 'h5ap_wp_head']);
 		add_action('wp_head', [$this, 'addCSS']);
 
-		// add_action('admin_footer', [$this, 'h5ap_admin_footer']);
 		add_action('admin_footer', [$this, 'h5ap_wp_head']);
 		if (is_admin()) {
 			add_action('admin_head-post.php', [$this, 'h5ap_hide_publishing_actions']);
@@ -26,58 +25,14 @@ class GlobalChanges
 	}
 
 
-	/**
-	 * License Activation Form
-	 */
-	function h5ap_admin_footer()
-	{
-		$page = get_current_screen();
-		if ($page->base === 'plugins') {
-			$key = Pipe::getPipeKey();
-			$active = h5ap_fs()->can_use_premium_code();
 
-?>
-			<div class="h5ap_licence_popup">
-				<div id="h5ap" class="popupWrapper">
-					<div class="overlay"></div>
-					<div class="licence_form">
-						<div class="popup_header">
-							<h2><?php _e("Active Licence", "h5ap") ?></h2>
-							<span class="h5ap_closer">x</span>
-						</div>
-						<div class="popup_body">
-							<p><?php _e('Please enter the license key that you received in the email right after the purchase:', 'h5ap') ?></p>
-							<input type="text" value="<?php echo $key; ?>" class="h5ap_licence_key" name="h5ap-licence-key" />
-							<div class="h5ap_licence_notice"></div>
-							<?php if (!$active): ?>
-								<div class="terms">
-									<input type="checkbox" id="h5ap_license_agreed" class="input h5ap_license_agreed">
-									<label for="h5ap_license_agreed"><?php _e("I agreed to send the website url, email, and the Licence key to Html5 Audio Player plugin server to verify the licence key.", "h5ap"); ?></label>
-								</div>
-							<?php endif; ?>
-						</div>
-						<div class="popup_footer">
-							<button class="button button-danger h5ap_closer" style="margin-right:20px;"><?php _e("Cancel", "h5ap") ?></button>
-							<?php if ($active): ?>
-								<input type="submit" class="button button-primary h5ap_deactive_license" value="<?php _e("Deactive License", "h5ap") ?>" />
-							<?php else: ?>
-								<input type="submit" disabled="true" class="button button-primary h5ap_active_license" value="<?php _e("Active License", "h5ap") ?>" />
-							<?php endif; ?>
-						</div>
-					</div>
-				</div>
-			</div>
-			</div>
-		<?php
-		}
-	}
 
 	/**
 	 * push repeat and suffle icon in head
 	 */
 	public function h5ap_wp_head()
 	{
-		?>
+?>
 		<svg width="0" height="0" class="h5ap_svg_hidden" style="display: none;">
 			<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.997 511.997" id="exchange">
 				<path d="M467.938 87.164L387.063 5.652c-7.438-7.495-19.531-7.54-27.02-.108s-7.54 19.525-.108 27.014l67.471 68.006-67.42 67.42c-7.464 7.457-7.464 19.557 0 27.014 3.732 3.732 8.616 5.598 13.507 5.598s9.781-1.866 13.513-5.591l80.876-80.876c7.443-7.44 7.463-19.495.056-26.965z"></path>
@@ -97,7 +52,6 @@ class GlobalChanges
 				const audio = item.querySelector("audio");
 				audio.volume = 0.6;
 				item.querySelector('.play').addEventListener("click", function() {
-					console.log('Audio');
 					single_player.forEach(player => {
 						player.querySelector("audio")?.pause();
 					})

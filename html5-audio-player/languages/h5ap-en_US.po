@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Html5 Audio Player 2.3.3\n"
+"Project-Id-Version: Html5 Audio Player 2.4.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/html5-audio-player-pro\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-06-22T04:39:12+00:00\n"
+"POT-Creation-Date: 2025-06-30T10:41:48+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: h5ap\n"
@@ -127,7 +127,7 @@ msgstr ""
 #: inc/Elementor/Widgets/Simple.php:74
 #: inc/Elementor/Widgets/SimplePro.php:67
 #: inc/Elementor/Widgets/Stamp.php:70
-#: inc/Field/AudioPlayerPro.php:102
+#: inc/Field/AudioPlayerPro.php:107
 #: inc/Widget/SearchForm.php:22
 #: inc/Widget/widget.php:32
 msgid "Title"
@@ -178,7 +178,7 @@ msgstr ""
 
 #: inc/Elementor/Widgets/Fusion.php:160
 #: inc/Elementor/Widgets/Stamp.php:104
-#: inc/Field/AudioPlayerPro.php:297
+#: inc/Field/AudioPlayerPro.php:302
 msgid "Repeat"
 msgstr ""
 
@@ -188,8 +188,8 @@ msgid "Autoplay"
 msgstr ""
 
 #: inc/Elementor/Widgets/Fusion.php:186
-#: inc/Field/AudioPlayerPro.php:639
-#: inc/Field/AudioPlayerPro.php:649
+#: inc/Field/AudioPlayerPro.php:644
+#: inc/Field/AudioPlayerPro.php:654
 msgid "Download Button"
 msgstr ""
 
@@ -255,7 +255,7 @@ msgid "Custom"
 msgstr ""
 
 #: inc/Elementor/Widgets/Playlist.php:87
-#: inc/Field/AudioPlayerPro.php:411
+#: inc/Field/AudioPlayerPro.php:416
 msgid "Hide Download"
 msgstr ""
 
@@ -291,7 +291,7 @@ msgid "Poster Height"
 msgstr ""
 
 #: inc/Elementor/Widgets/Playlist.php:270
-#: inc/Field/AudioPlayerPro.php:490
+#: inc/Field/AudioPlayerPro.php:495
 msgid "Brand Color"
 msgstr ""
 
@@ -302,7 +302,7 @@ msgid "Background Color"
 msgstr ""
 
 #: inc/Elementor/Widgets/Playlist.php:312
-#: inc/Field/AudioPlayerPro.php:514
+#: inc/Field/AudioPlayerPro.php:519
 msgid "Item Text Color"
 msgstr ""
 
@@ -315,12 +315,12 @@ msgid "Item Hover/Active Text Color"
 msgstr ""
 
 #: inc/Elementor/Widgets/Playlist.php:377
-#: inc/Field/AudioPlayerPro.php:545
+#: inc/Field/AudioPlayerPro.php:550
 msgid "Odd Item Background"
 msgstr ""
 
 #: inc/Elementor/Widgets/Playlist.php:398
-#: inc/Field/AudioPlayerPro.php:552
+#: inc/Field/AudioPlayerPro.php:557
 msgid "Even Item Background"
 msgstr ""
 
@@ -385,101 +385,82 @@ msgstr ""
 msgid "Downlaod"
 msgstr ""
 
-#: inc/Field/AudioPlayerPro.php:82
+#: inc/Field/AudioPlayer.php:300
+#: inc/Field/AudioPlayerPro.php:689
+msgid " "
+msgstr ""
+
+#: inc/Field/AudioPlayerPro.php:87
 msgid "Poster"
 msgstr ""
 
-#: inc/Field/AudioPlayerPro.php:83
+#: inc/Field/AudioPlayerPro.php:88
 msgid "Add or Upload Poster Image"
 msgstr ""
 
-#: inc/Field/AudioPlayerPro.php:84
+#: inc/Field/AudioPlayerPro.php:89
 msgid "Remove"
 msgstr ""
 
-#: inc/Field/AudioPlayerPro.php:85
+#: inc/Field/AudioPlayerPro.php:90
 msgid "100x100 px photo is the standard poster size, accepted file type .png, .jpeg, .jpg "
 msgstr ""
 
-#: inc/Field/AudioPlayerPro.php:96
-#: inc/Field/AudioPlayerPro.php:502
+#: inc/Field/AudioPlayerPro.php:101
+#: inc/Field/AudioPlayerPro.php:507
 msgid "Background"
 msgstr ""
 
-#: inc/Field/AudioPlayerPro.php:104
+#: inc/Field/AudioPlayerPro.php:109
 msgid "Enter the title of the audio"
 msgstr ""
 
-#: inc/Field/AudioPlayerPro.php:113
+#: inc/Field/AudioPlayerPro.php:118
 msgid "Author"
 msgstr ""
 
-#: inc/Field/AudioPlayerPro.php:115
+#: inc/Field/AudioPlayerPro.php:120
 msgid "Enter the author of the audio"
 msgstr ""
 
-#: inc/Field/AudioPlayerPro.php:191
+#: inc/Field/AudioPlayerPro.php:196
 msgid "AutoPlay"
 msgstr ""
 
-#: inc/Field/AudioPlayerPro.php:477
+#: inc/Field/AudioPlayerPro.php:482
 msgid "Use forward/rewind button to change audio"
 msgstr ""
 
-#: inc/Field/AudioPlayerPro.php:526
+#: inc/Field/AudioPlayerPro.php:531
 msgid "Item Hover Background"
 msgstr ""
 
-#: inc/Field/AudioPlayerPro.php:538
+#: inc/Field/AudioPlayerPro.php:543
 msgid "Item Hover Text Color"
 msgstr ""
 
-#: inc/Field/AudioPlayerPro.php:612
+#: inc/Field/AudioPlayerPro.php:617
 msgid "Disable Pause"
 msgstr ""
 
-#: inc/Field/AudioPlayerPro.php:620
+#: inc/Field/AudioPlayerPro.php:625
 msgid "Disable Loading"
 msgstr ""
 
-#: inc/Field/AudioPlayerPro.php:629
+#: inc/Field/AudioPlayerPro.php:634
 msgid "Save State"
 msgstr ""
 
-#: inc/Field/AudioPlayerPro.php:658
+#: inc/Field/AudioPlayerPro.php:663
 msgid "Enable Sticky"
 msgstr ""
 
-#: inc/Field/AudioPlayerPro.php:667
+#: inc/Field/AudioPlayerPro.php:672
 msgid "Initial Volume"
 msgstr ""
 
 #: inc/Field/SettingsPro.php:50
 msgid "Apply Html5 Audio Player for all previous Audios"
-msgstr ""
-
-#: inc/Model/GlobalChanges.php:45
-msgid "Active Licence"
-msgstr ""
-
-#: inc/Model/GlobalChanges.php:49
-msgid "Please enter the license key that you received in the email right after the purchase:"
-msgstr ""
-
-#: inc/Model/GlobalChanges.php:55
-msgid "I agreed to send the website url, email, and the Licence key to Html5 Audio Player plugin server to verify the licence key."
-msgstr ""
-
-#: inc/Model/GlobalChanges.php:60
-msgid "Cancel"
-msgstr ""
-
-#: inc/Model/GlobalChanges.php:62
-msgid "Deactive License"
-msgstr ""
-
-#: inc/Model/GlobalChanges.php:64
-msgid "Active License"
 msgstr ""
 
 #: inc/PostType/AudioListPro.php:48
@@ -532,6 +513,7 @@ msgstr ""
 #: build/blocks/audioplaylist/block.json
 #: build/blocks/playlist-extensive/block.json
 #: build/blocks/playlist-narrow/block.json
+#: build/blocks/radio-player/block.json
 msgctxt "block keyword"
 msgid "Media Player"
 msgstr ""
@@ -545,6 +527,7 @@ msgid "Audio Player"
 msgstr ""
 
 #: build/blocks/audioplayer/block.json
+#: build/blocks/radio-player/block.json
 msgctxt "block keyword"
 msgid "mp3 player"
 msgstr ""
@@ -574,4 +557,19 @@ msgstr ""
 #: build/blocks/playlist-narrow/block.json
 msgctxt "block description"
 msgid "Simple Audio Playlist Block for WordPress"
+msgstr ""
+
+#: build/blocks/radio-player/block.json
+msgctxt "block title"
+msgid "HTML5 Radio Player"
+msgstr ""
+
+#: build/blocks/radio-player/block.json
+msgctxt "block keyword"
+msgid "HTML5 Radio Player"
+msgstr ""
+
+#: build/blocks/radio-player/block.json
+msgctxt "block keyword"
+msgid "Radio Player"
 msgstr ""

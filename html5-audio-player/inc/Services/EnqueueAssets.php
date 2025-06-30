@@ -66,7 +66,7 @@ class EnqueueAssets
     {
         $current_screen = get_current_screen();
 
-        if ($current_screen->post_type === 'audioplayer' || $screen === 'plugins.php') {
+        if ($current_screen->post_type === 'audioplayer' || $current_screen->post_type === 'radioplayer' || $screen === 'plugins.php') {
             wp_enqueue_style('h5ap-admin', H5AP_PRO_PLUGIN_DIR . 'assets/css/style.css', array(), H5AP_PRO_VERSION);
             wp_enqueue_script('h5ap-admin',  H5AP_PRO_PLUGIN_DIR . 'build/admin.js');
             wp_localize_script('h5ap-admin', 'h5apAdmin', array(

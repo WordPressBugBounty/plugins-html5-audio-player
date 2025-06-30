@@ -15,6 +15,7 @@ class ShortcodePro extends Shortcode
         add_shortcode('audio_player', [$this, 'audioPlayer']);
         add_shortcode('bypass_audio_player', [$this, 'audioPlayer']);
         add_shortcode('single_button', [$this, 'h5ap_single_button_shortcode']);
+        add_shortcode('h5ap_radio_player', [$this, 'radio_player']);
     }
 
     public function register()

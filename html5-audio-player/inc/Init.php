@@ -17,10 +17,11 @@ class Init
             Elementor\Controls\Register::class,
             PostType\AudioListPro::class,
             PostType\AudioPlayer::class,
+            PostType\RadioPlayer::class,
             Field\AudioPlayer::class,
             Field\AudioListPro::class,
             // Field\SettingsPro::class,
-
+            Core\Ajax::class,
             Services\AdminNotice::class,
             Services\Shortcode::class,
             Services\EnqueueAssets::class,
