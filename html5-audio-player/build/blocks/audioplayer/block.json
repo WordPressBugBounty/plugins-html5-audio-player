@@ -5,6 +5,7 @@
   "description": "",
   "category": "media",
   "icon": "format-audio",
+  "version": "2.5.0",
   "keywords": [
     "HTML5 Audio Player",
     "Media Player",
@@ -181,7 +182,8 @@
         },
         "Fusion": {
           "primaryColor": "#fff",
-          "bgColor": "#161616"
+          "bgColor": "#161616",
+          "controlColor": "#fff"
         },
         "Stamp": {
           "controlColor": "#fff",
@@ -190,7 +192,8 @@
         "Wave": {
           "primaryColor": "#fff",
           "controlColor": "#fff",
-          "bgColor": "#161616"
+          "bgColor": "#161616",
+          "textColor": "#fff"
         },
         "Card-1": {
           "primaryColor": "#fff",
@@ -247,7 +250,9 @@
   },
   "editorStyle": [
     "file:./style-index.css",
-    "file:./index.css"
+    "file:./index.css",
+    "bplugins-plyrio",
+    "file:./view.css"
   ],
   "editorScript": [
     "file:./index.js",
@@ -264,7 +269,7 @@
     "react",
     "react-dom"
   ],
-  "style": [
+  "viewStyle": [
     "file:./view.css",
     "bplugins-plyrio"
   ],

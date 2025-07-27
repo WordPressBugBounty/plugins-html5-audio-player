@@ -39,7 +39,7 @@ if (!function_exists('h5ap_player_shortcode_content')) {
   {
 
     $meta = h5ap_get_post_meta($post_id, '_h5ap_plyr');
-    $type = $meta('h5ap_player_type');
+    $type = $meta('h5ap_player_type', 'opt-1');
     $player_theme = $meta('player_theme');
     $player_skin = $meta('player_skin'); // playlist
     $h5vp_default_audio = $meta('h5vp_default_audio');

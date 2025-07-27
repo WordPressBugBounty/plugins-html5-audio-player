@@ -39,13 +39,13 @@ class EnqueueAssets
 
         wp_register_script('h5ap-all', H5AP_PRO_PLUGIN_DIR . 'build/h5ap-all.js', array(), H5AP_PRO_VERSION, true);
 
-        wp_register_style('bplugins-plyrio', H5AP_PRO_PLUGIN_DIR . 'assets/css/player.min.css', array(), H5AP_PRO_VERSION, 'all');
+        wp_register_style('bplugins-plyrio', H5AP_PRO_PLUGIN_DIR . 'assets/css/plyr-v3.7.2.css', array(), H5AP_PRO_VERSION, 'all');
 
         wp_localize_script('h5ap-all', 'h5apAll', [
             'speed' => explode(',', Functions::getSetting('speed', '0.5, 1, 1.5, 2.0, 2.5')),
             'multipleAudio' => (bool) Functions::getSetting('multipleAudio', false),
             'plyrio_js' => H5AP_PRO_PLUGIN_DIR . 'assets/js/plyr-v3.7.2.js',
-            'plyrio_css' => H5AP_PRO_PLUGIN_DIR . 'assets/css/player.min.css',
+            'plyrio_css' => H5AP_PRO_PLUGIN_DIR . 'assets/css/plyr-v3.7.2.css',
             'options' => [
                 'controls' => Functions::getSetting('h5ap_controls', []),
                 'preload' => Functions::getSetting('h5ap_preload', 'metadata'),
@@ -66,7 +66,7 @@ class EnqueueAssets
     {
         $current_screen = get_current_screen();
 
-        if ($current_screen->post_type === 'audioplayer' || $current_screen->post_type === 'radioplayer' || $screen === 'plugins.php') {
+        if (strpos($screen, 'html5-audio-player') !== false || $current_screen->post_type === 'audioplayer' || $current_screen->post_type === 'radioplayer' || $screen === 'plugins.php') {
             wp_enqueue_style('h5ap-admin', H5AP_PRO_PLUGIN_DIR . 'assets/css/style.css', array(), H5AP_PRO_VERSION);
             wp_enqueue_script('h5ap-admin',  H5AP_PRO_PLUGIN_DIR . 'build/admin.js');
             wp_localize_script('h5ap-admin', 'h5apAdmin', array(
@@ -81,7 +81,7 @@ class EnqueueAssets
             wp_localize_script('jquery', 'cm_settings', $cm_settings);
             wp_enqueue_script('wp-theme-plugin-editor');
             wp_enqueue_style('wp-codemirror');
-            wp_enqueue_script('h5ap-codemirror', H5AP_PRO_PLUGIN_DIR . 'admin/js/codemirror-init.js', array('jquery'), H5AP_PRO_VERSION, true);
+            // wp_enqueue_script('h5ap-codemirror', H5AP_PRO_PLUGIN_DIR . 'admin/js/codemirror-init.js', array('jquery'), H5AP_PRO_VERSION, true);
         }
 
         $settings = get_option('h5ap_settings', []);

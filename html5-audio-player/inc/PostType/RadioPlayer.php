@@ -62,21 +62,24 @@ class RadioPlayer
                 'show_ui' => true,
                 'publicly_queryable' => true,
                 'exclude_from_search' => true,
-                'menu_position' => 14,
-                'menu_icon' => H5AP_PRO_PLUGIN_DIR . '/assets/images/icn.png',
+                'menu_position' => 5,
+                // 'menu_icon' => H5AP_PRO_PLUGIN_DIR . '/assets/images/icn.png',
                 'has_archive' => false,
                 'hierarchical' => false,
                 'capability_type' => 'page',
                 'rewrite' => array('slug' => 'radioplayer'),
                 'supports' => array('title', 'editor'),
                 'show_in_rest' => true,
-                'show_in_menu' => 'edit.php?post_type=audioplayer',
+                'show_in_menu' => 'html5-audio-player',
                 'template' => [
                     ['h5ap/radio-player']
                 ],
                 'template_lock' => 'all',
             )
         );
+
+        h5ap_register_taxonomy('radioplayer-category', $this->post_type, true, 'Category');
+        h5ap_register_taxonomy('radioplayer-tags', $this->post_type, false, 'Tag');
     }
 
     public function forceGutenberg($use, $post)
@@ -113,7 +116,9 @@ class RadioPlayer
     function h5ap_columns_content_only_radioplayer($column_name, $post_ID)
     {
         if ($column_name == 'shortcode') {
-            echo "<div class='h5ap_front_shortcode'><input style='text-align: center; border: none; outline: none; background-color: #1e8cbe; color: #fff; padding: 4px 10px; border-radius: 3px;width:220px;' value='[h5ap_radio_player id=$post_ID]' /><span class='htooltip'>Copy To Clipboard</span></div>";
+?>
+            <div class='h5ap_front_shortcode'><input style='text-align: center; border: none; outline: none; background-color: #1e8cbe; color: #fff; padding: 4px 10px; border-radius: 3px;width:220px;' value='[h5ap_radio_player id="<?php echo esc_attr($post_ID) ?>"]' /><span class='htooltip'>Copy To Clipboard</span></div>
+<?php
         }
     }
 
@@ -204,6 +209,7 @@ class RadioPlayer
             * duplicate all post meta just in two SQL queries
             */
             $post_meta_infos = $wpdb->get_results("SELECT meta_key, meta_value FROM $wpdb->postmeta WHERE post_id=$post_id");
+
             if (count($post_meta_infos) != 0) {
                 $sql_query = "INSERT INTO $wpdb->postmeta (post_id, meta_key, meta_value) ";
                 foreach ($post_meta_infos as $meta_info) {
@@ -223,7 +229,7 @@ class RadioPlayer
             wp_redirect(admin_url('post.php?action=edit&post=' . $new_post_id));
             exit;
         } else {
-            wp_die('Post creation failed, could not find original post: ' . $post_id);
+            wp_die('Post creation failed, could not find original post: ' . esc_html($post_id));
         }
     }
 }

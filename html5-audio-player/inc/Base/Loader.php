@@ -44,7 +44,7 @@ class Loader
                     },
                     {
                         id: 'bplugins-plyrio-css',
-                        source: 'assets/css/player.min.css',
+                        source: 'assets/css/plyr-v3.7.2.css',
                         type: 'css'
                     },
                     {

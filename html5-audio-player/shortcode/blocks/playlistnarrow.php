@@ -17,7 +17,7 @@ $block = [
         'oddBgColor'       => $meta('narrow_odd_bg'),
         'evenBgColor'      => $meta('narrow_even_bg'),
         'borderRadius'     => ['top' => $meta('narrow_radius') . 'px'],
-        'controls'     => array_fill_keys($meta('narrow_controls', []), true),
+        'controls'     => array_fill_keys($meta('narrow_controls', ['play', 'progress', 'current-time', 'mute', 'volume', 'settings']), true),
         'options' => [
             'volume' => $meta('plp_volume'),
         ],

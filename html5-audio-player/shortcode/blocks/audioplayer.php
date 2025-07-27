@@ -2,14 +2,14 @@
 
 use H5APPlayer\Helper\LocalizeScript;
 
-$standard_skin = $meta('standard_skin');
-$background = $meta('background', '#161616');
+$standard_skin = $meta('standard_skin', "Default");
+$background = $meta('background', '#f2f2f2');
 $sticky_simple_background     = $meta('sticky_simple_background');
-$control_color     = $meta('control_color', '#fff');
+$control_color     = $meta('control_color', '#4a5464');
 $primary_color     = $meta('primary_color', '#195FF5');
 $sticky_download     = $meta('sticky_download', false);
 $download     = $meta('fusion_download', false, true);
-$sticky_skin = $meta('sticky_skin');
+$sticky_skin = $meta('sticky_skin', 'Fusion');
 
 // settings
 $settings = h5ap_get_settings('h5ap_settings', []);
@@ -58,7 +58,7 @@ $block = [
         'preload'       => $meta('preload', 'metadata', true),
         'download'      => $download,
         'width'         => $width['width'] . $width['unit'],
-        'radius'        => $type === 'opt-3' ? 0 : $meta('radius') . 'px',
+        'radius'        => $type === 'opt-3' ? 0 : $meta('radius', '5') . 'px',
         'controls'      => array_fill_keys($meta('controls', ['play', 'progress', 'current-time', 'duration', 'mute', 'volume']), true),
         'style'         => null,
         'CSS'           => '',

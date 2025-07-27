@@ -68,7 +68,7 @@ final class Register
 	{
 		// library
 		wp_register_script('bplugins-plyrio', H5AP_PRO_PLUGIN_DIR . 'assets/js/plyr-v3.7.2.js', array('jquery'), H5AP_PRO_VERSION, false);
-		wp_register_style('bplugins-plyrio', H5AP_PRO_PLUGIN_DIR . 'assets/css/player.min.css', array(), H5AP_PRO_VERSION, 'all');
+		wp_register_style('bplugins-plyrio', H5AP_PRO_PLUGIN_DIR . 'assets/css/plyr-v3.7.2.css', array(), H5AP_PRO_VERSION, 'all');
 
 		// player
 		wp_register_script('h5ap-player', H5AP_PRO_PLUGIN_DIR . 'build/player.js', array('jquery', 'bplugins-plyrio'), time(), true);

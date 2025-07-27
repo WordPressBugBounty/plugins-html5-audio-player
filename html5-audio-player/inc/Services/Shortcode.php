@@ -39,19 +39,7 @@ class Shortcode
      */
     public function audioPlayer($atts)
     {
-        extract(shortcode_atts(array(
-            'id' => null,
-            'file' => null,
-            'src' => null,
-            'width' => null,
-            'controls' => null,
-            'preload' => null,
-            'repeat' => null,
-            'start_time' => 0,
-        ), $atts));
-
-
-        ob_start();
+        extract(shortcode_atts($this->audio_player_attrs(), $atts));
 
         if (empty($id)) {
             $id = uniqid();
@@ -103,6 +91,7 @@ class Shortcode
                 'width' => $width,
                 'seekTime' => $stime,
                 'repeat' => (bool)$repeat,
+                'skin' => isset($atts['skin']) ? $skin : 'Default',
                 'autoplay' => $autoplay,
                 'preload' => $preload,
                 'muted' => $muted,
@@ -112,6 +101,22 @@ class Shortcode
 
         return render_block($block);
     }
+
+    function audio_player_attrs()
+    {
+        return array(
+            'id' => null,
+            'file' => null,
+            'src' => null,
+            'width' => null,
+            'controls' => null,
+            // 'skin' => 'Default',
+            'preload' => null,
+            'repeat' => null,
+            'start_time' => 0,
+        );
+    }
+
     /**
      * [audio_player] shotcode
      */

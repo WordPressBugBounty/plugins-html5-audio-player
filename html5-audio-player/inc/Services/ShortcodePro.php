@@ -47,7 +47,6 @@ class ShortcodePro extends Shortcode
         $id = 'h5aps' . uniqid();
 
         ob_start();
-        // print_r($atts);
 ?>
         <style>
             <?php echo esc_html("#$id ") ?>form {
@@ -120,5 +119,20 @@ class ShortcodePro extends Shortcode
         <?php $output = ob_get_clean();
         return $output; ?>
 <?php
+    }
+
+    function audio_player_attrs()
+    {
+        return array(
+            'id' => null,
+            'file' => null,
+            'src' => null,
+            'width' => null,
+            'controls' => null,
+            'skin' => 'Default',
+            'preload' => null,
+            'repeat' => null,
+            'start_time' => 0,
+        );
     }
 }

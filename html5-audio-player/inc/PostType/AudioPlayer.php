@@ -46,7 +46,7 @@ class AudioPlayer
             'audioplayer',
             array(
                 'labels' => array(
-                    'name' => __('Html5 Audio Player'),
+                    'name' => __('Audio Player'),
                     'singular_name' => __('Audio Player'),
                     'add_new' => __('Add Audio Player'),
                     'add_new_item' => __('Add New Player'),
@@ -60,8 +60,9 @@ class AudioPlayer
                 'show_ui' => true,
                 'publicly_queryable' => true,
                 'exclude_from_search' => true,
-                'menu_position' => 14,
+                'menu_position' => 1,
                 'menu_icon' => H5AP_PRO_PLUGIN_DIR . '/assets/images/icn.png',
+                'show_in_menu' => 'html5-audio-player',
                 'has_archive' => false,
                 'hierarchical' => false,
                 'capability_type' => 'page',
@@ -70,6 +71,10 @@ class AudioPlayer
                 'show_in_rest' => true,
             )
         );
+
+        // Register taxonomy for audio player
+        h5ap_register_taxonomy('audio-player-category', 'audioplayer', true, 'Category');
+        h5ap_register_taxonomy('audio-player-tags', 'audioplayer', false, 'Tag');
     }
 
     /**
@@ -92,22 +97,22 @@ class AudioPlayer
 ?>
             <div class="h5ap_playlist_shortcode">
                 <div class="shortcode-heading">
-                    <div class="icon"><span class="dashicons dashicons-format-audio"></span> <?php _e("HTML5 Audio Player", "h5ap") ?></div>
-                    <div class="text"> <a href="https://bplugins.com/support/" target="_blank"><?php _e("Supports", "h5ap") ?></a></div>
+                    <div class="icon"><span class="dashicons dashicons-format-audio"></span> <?php echo esc_html__("HTML5 Audio Player", "h5ap") ?></div>
+                    <div class="text"> <a href="https://bplugins.com/support/" target="_blank"><?php echo esc_html__("Supports", "h5ap") ?></a></div>
                 </div>
                 <div class="shortcode-left">
-                    <h3><?php _e("Shortcode", "h5ap") ?></h3>
-                    <p><?php _e("Copy and paste this shortcode into your posts, pages and widget content:", "h5ap") ?></p>
-                    <div class="shortcode" selectable>[player id='<?php echo $post->ID; ?>']</div>
+                    <h3><?php echo esc_html__("Shortcode", "h5ap") ?></h3>
+                    <p><?php echo esc_html__("Copy and paste this shortcode into your posts, pages and widget content:", "h5ap") ?></p>
+                    <div class="shortcode" selectable>[player id='<?php echo esc_attr($post->ID); ?>']</div>
                 </div>
                 <div class="shortcode-right">
-                    <h3><?php _e("Template Include", "h5ap") ?></h3>
-                    <p><?php _e("Copy and paste the PHP code into your template file:", "h5ap"); ?></p>
-                    <div class="shortcode">&lt;?php echo do_shortcode('[player id="<?php echo $post->ID; ?>"]');
+                    <h3><?php echo esc_html__("Template Include", "h5ap") ?></h3>
+                    <p><?php echo esc_html__("Copy and paste the PHP code into your template file:", "h5ap"); ?></p>
+                    <div class="shortcode">&lt;?php echo do_shortcode('[player id="<?php echo esc_attr($post->ID); ?>"]');
                         ?&gt;</div>
                 </div>
             </div>
-<?php
+        <?php
         }
     }
 
@@ -122,8 +127,9 @@ class AudioPlayer
 
     function h5ap_columns_content_only_audioplayer($column_name, $post_ID)
     {
-        if ($column_name == 'shortcode') {
-            echo "<div class='h5ap_front_shortcode'><input style='text-align: center; border: none; outline: none; background-color: #1e8cbe; color: #fff; padding: 4px 10px; border-radius: 3px;' value='[player id=$post_ID]' ><span class='htooltip'>Copy To Clipboard</span></div>";
+        if ($column_name == 'shortcode') { ?>
+            <div class='h5ap_front_shortcode'><input style='text-align: center; border: none; outline: none; background-color: #1e8cbe; color: #fff; padding: 4px 10px; border-radius: 3px;' value='[player id="<?php echo esc_attr($post_ID) ?>"]'><span class='htooltip'>Copy To Clipboard</span></div>
+<?php
         }
     }
 
@@ -233,7 +239,7 @@ class AudioPlayer
             wp_redirect(admin_url('post.php?action=edit&post=' . $new_post_id));
             exit;
         } else {
-            wp_die('Post creation failed, could not find original post: ' . $post_id);
+            wp_die('Post creation failed, could not find original post: ' . esc_html($post_id));
         }
     }
 }

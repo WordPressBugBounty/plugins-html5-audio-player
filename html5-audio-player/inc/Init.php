@@ -10,18 +10,18 @@ class Init
     {
         return [
             Base\GlobalAction::class,
-            Base\HelpUsages::class,
             // Base\BlackFriday::class,
             // Base\Loader::class, // deprecated
             Elementor\Widgets\Register::class,
             Elementor\Controls\Register::class,
-            PostType\AudioListPro::class,
             PostType\AudioPlayer::class,
             PostType\RadioPlayer::class,
+            PostType\AudioListPro::class,
             Field\AudioPlayer::class,
             Field\AudioListPro::class,
-            // Field\SettingsPro::class,
+            Field\SettingsPro::class,
             Core\Ajax::class,
+            Core\Page::class,
             Services\AdminNotice::class,
             Services\Shortcode::class,
             Services\EnqueueAssets::class,

@@ -113,28 +113,28 @@ class GlobalChanges
 
 			#skin_default .plyr__control,
 			#skin_default .plyr__time {
-				color: <?php echo $primary_color; ?>
+				color: <?php echo esc_html($primary_color); ?>
 			}
 
 			#skin_default .plyr__control:hover {
-				background: <?php echo $hover_color; ?>;
-				color: <?php echo $bg_color; ?>
+				background: <?php echo esc_html($hover_color); ?>;
+				color: <?php echo esc_html($bg_color); ?>
 			}
 
 			#skin_default .plyr__controls {
-				background: <?php echo $bg_color; ?>
+				background: <?php echo esc_html($bg_color); ?>
 			}
 
 			#skin_default .plyr__controls__item input {
-				color: <?php echo $hover_color; ?>
+				color: <?php echo esc_html($hover_color); ?>
 			}
 
 			.plyr {
-				--plyr-color-main: <?php echo $primary_color; ?>
+				--plyr-color-main: <?php echo esc_html($primary_color); ?>
 			}
 
 			/* Custom Css */
-			<?php echo Functions::getSetting('h5ap_custom_css'); ?>
+			<?php echo esc_html(Functions::getSetting('h5ap_custom_css')); ?>
 		</style>
 <?php
 	}

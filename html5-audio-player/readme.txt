@@ -1,10 +1,10 @@
-=== HTML5 Audio Player- Best WordPress Audio Player Plugin ===
+=== HTML5 Audio Player - The Ultimate No-Code Podcast, MP3 & Audio Player ===
 Contributors: bplugins, shehabulislam, freemius, abuhayat
 Tags: mp3 player, audio, audio player, player, podcast
 Donate link: https://www.buymeacoffee.com/abuhayat/  
 Requires at least: 5.2
 Tested up to: 6.8
-Stable tag: 2.4.0
+Stable tag: 2.5.0
 Requires PHP: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -211,6 +211,12 @@ e.g.
 
 
 == Changelog ==
+
+= 2.5.0 - 21 July, 2025 =
+* New: Dashboard page
+* Improved: Code,
+* Fixed: Disapear Player
+
 
 = 2.4.0 - 29 June, 2025 =
 * New Block: HTML5 Radio Player
