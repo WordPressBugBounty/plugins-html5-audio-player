@@ -14,7 +14,9 @@ class GlobalAction
     public function css_for_player()
     {
         $settings = h5ap_get_settings('h5ap_settings', []);
-        $s_unit = $settings('dimention', ['unit' => '50'])['unit'];
+        $dimention = $settings('dimention', ['unit' => 'px', 'width' => '50']);
+        $s_unit = isset($dimention['unit']) ? $dimention['unit'] : 'px';
+        $s_width = isset($dimention['width']) ? $dimention['width'] : '50';
 ?>
         <style>
             .mejs-container:has(.plyr) {
@@ -34,7 +36,7 @@ class GlobalAction
             }
 
             .h5ap_single_button {
-                height: <?php echo esc_attr($settings('dimention', ['width' => '50'])['width'] . $s_unit) ?>;
+                height: <?php echo esc_attr($s_width . $s_unit) ?>;
             }
         </style>
     <?php

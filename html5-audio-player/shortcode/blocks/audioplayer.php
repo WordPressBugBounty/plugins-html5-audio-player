@@ -5,7 +5,7 @@ use H5APPlayer\Helper\LocalizeScript;
 $standard_skin = $meta('standard_skin', "Default");
 $background = $meta('background', '#f2f2f2');
 $sticky_simple_background     = $meta('sticky_simple_background');
-$control_color     = $meta('control_color', '#4a5464');
+$control_color     = $meta('control_color', $standard_skin === 'default' ? '#fff' : '#4a5464');
 $primary_color     = $meta('primary_color', '#195FF5');
 $sticky_download     = $meta('sticky_download', false);
 $download     = $meta('fusion_download', false, true);

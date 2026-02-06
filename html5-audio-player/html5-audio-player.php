@@ -4,7 +4,7 @@
  * Plugin Name: Html5 Audio Player
  * Plugin URI:  https://bplugins.com/products/html5-audio-player/
  * Description: You can easily integrate html5 audio player in your WordPress website using this plugin.
- * Version: 2.5.0
+ * Version: 2.5.3
  * Author: bPlugins
  * Author URI: http://bPlugins.com
  * License: GPLv3
@@ -13,6 +13,12 @@
 if ( function_exists( 'h5ap_fs' ) ) {
     h5ap_fs()->set_basename( false, __FILE__ );
 } else {
+    /*Some Set-up*/
+    define( 'H5AP_PRO_PLUGIN_DIR', plugin_dir_url( __FILE__ ) );
+    define( 'H5AP_PRO_FILE_BASENAME', plugin_basename( __FILE__ ) );
+    define( 'H5AP_PRO_DIR_BASENAME', plugin_basename( __DIR__ ) );
+    define( 'H5AP_PRO_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && $_SERVER['HTTP_HOST'] === 'dev.local' ? time() : '2.5.3' ) );
+    defined( 'H5AP_PRO_PATH' ) or define( 'H5AP_PRO_PATH', plugin_dir_path( __FILE__ ) );
     if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
         require_once dirname( __FILE__ ) . '/vendor/autoload.php';
     }
@@ -56,12 +62,6 @@ if ( function_exists( 'h5ap_fs' ) ) {
             do_action( 'h5ap_fs_loaded' );
         }
     }
-    /*Some Set-up*/
-    define( 'H5AP_PRO_PLUGIN_DIR', plugin_dir_url( __FILE__ ) );
-    define( 'H5AP_PRO_FILE_BASENAME', plugin_basename( __FILE__ ) );
-    define( 'H5AP_PRO_DIR_BASENAME', plugin_basename( __DIR__ ) );
-    define( 'H5AP_PRO_VERSION', ( $_SERVER['HTTP_HOST'] ?? null === 'localhost' ? time() : '2.5.0' ) );
-    defined( 'H5AP_PRO_PATH' ) or define( 'H5AP_PRO_PATH', plugin_dir_path( __FILE__ ) );
     if ( !class_exists( 'CSF' ) ) {
         require_once 'admin/codestar-framework/codestar-framework.php';
     }
@@ -96,3 +96,13 @@ if ( function_exists( 'h5ap_fs' ) ) {
         /*UPDATE: there was a missing ";" after $template*/
     } );
 }
+// add_action('wp_footer', function () {
+// 	require ABSPATH . 'wp-admin/includes/plugin-install.php';
+// 	echo 'loading...';
+// 	$plugin_information  = plugins_api('plugin_information', array('slug' => 'horizontal-slider-with-scroll'));
+// 	unset($plugin_information->sections);
+// 	// echo wp_json_encode($hot_tags);
+// 	echo '<pre>';
+// 	print_r($plugin_information);
+// 	echo '</pre>';
+// });

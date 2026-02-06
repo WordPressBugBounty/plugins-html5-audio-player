@@ -10,6 +10,7 @@ var fileselectItemView = elementor.modules.controls.BaseData.extend({
             text: "Get Link",
           },
           multiple: false,
+          // type: 'audio'
         })
         .on("select", function () {
           var attachment = tnc_file_uploader.state().get("selection").first().toJSON();

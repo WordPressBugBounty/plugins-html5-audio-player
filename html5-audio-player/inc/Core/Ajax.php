@@ -12,19 +12,31 @@ class Ajax
 
     public function getStreamData()
     {
-        $nonce = sanitize_text_field(stripslashes($_POST['nonce']));
-        if (!wp_verify_nonce($nonce, 'wp_rest')) {
+        $nonce = sanitize_text_field(wp_unslash($_POST['nonce']));
+
+        if (!wp_verify_nonce($nonce, 'h5ap_radio_player_rest')) {
             wp_send_json_error('Invalid nonce');
         }
-        // wp_send_json_success('success');
-        $streamUrl = sanitize_url(stripslashes($_POST['url']));
+
+        $streamUrl = sanitize_url(wp_unslash($_POST['url']));
+
+        $settings = get_option('h5ap_settings', []);
+        $allowed_domains = isset($settings['white_listed_stream_url']) ? $settings['white_listed_stream_url'] : [];
+        $allowed_domains = array_map(function($item){
+            return $item['url'];
+        }, $allowed_domains);
+
+        if(!\H5APPlayer\Helper\Functions::isDomainAllowed($streamUrl, $allowed_domains)){
+            wp_send_json_error('Domain not allowed');
+        }
 
         $stream = new Stream();
         $streamData = $stream->getStreamData($streamUrl);
+
         if ($streamData) {
             wp_send_json_success($streamData);
         }
-        // $streamData = [];
+
         wp_send_json_success($streamUrl);
     }
 }

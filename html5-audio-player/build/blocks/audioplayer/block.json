@@ -269,7 +269,7 @@
     "react",
     "react-dom"
   ],
-  "viewStyle": [
+  "style": [
     "file:./view.css",
     "bplugins-plyrio"
   ],

@@ -80,6 +80,22 @@ class RadioPlayer
 
         h5ap_register_taxonomy('radioplayer-category', $this->post_type, true, 'Category');
         h5ap_register_taxonomy('radioplayer-tags', $this->post_type, false, 'Tag');
+
+        register_post_meta('', 'h5ap_radio_sources', [
+            'type'              => 'object',
+            'single'            => true,
+            'sanitize_callback' => function ($value) {
+                // sanitize each dynamic field
+                if (! is_array($value)) return [];
+                return array_map('sanitize_url', $value);
+            },
+            'show_in_rest'      => [
+                'schema' => [
+                    'type' => 'object',
+                    'additionalProperties' => ['type' => 'string'],
+                ],
+            ],
+        ]);
     }
 
     public function forceGutenberg($use, $post)

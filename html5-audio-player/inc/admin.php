@@ -43,19 +43,75 @@ if (!class_exists('H5APAdmin')) {
 				[$this, 'dashboardPage'],
 				0
 			);
+
+			add_submenu_page(
+				'html5-audio-player',
+				__('Add New', 'h5ap'),
+				__(' &#8627; Add New', 'h5ap'),
+				'edit_posts',
+				'html5-audio-player-add-new',
+				[$this, 'redirectToAddNew'],
+				2
+			);
+
+			add_submenu_page(
+				'html5-audio-player',
+				__('Add New', 'h5ap'),
+				__(' &#8627; Add New', 'h5ap'),
+				'edit_posts',
+				'html5-radio-player-add-new',
+				[$this, 'redirectToAddNewRadio'],
+				4
+			);
 		}
 
 		function dashboardPage()
 		{ ?>
-			<div id='h5apAdminDashboard' data-info=<?php echo esc_attr(wp_json_encode([
-														'version' => H5AP_PRO_VERSION
-													])); ?>></div>
+			<div
+				id='h5apAdminDashboard'
+				data-info='<?php echo esc_attr(wp_json_encode([
+								'version' => H5AP_PRO_VERSION,
+								'isPremium' => h5ap_fs()->can_use_premium_code(),
+								'hasPro' => true
+							])); ?>'></div>
 		<?php }
 
 		function upgradePage()
 		{ ?>
 			<div id='h5apAdminUpgrade'>Coming soon...</div>
-<?php }
+			<?php }
+
+		/**	
+		 * Redirect to add new Model Viewer
+		 * */
+		function redirectToAddNew()
+		{
+			if (function_exists('headers_sent') && headers_sent()) {
+			?>
+				<script>
+					window.location.href = "<?php echo esc_url(admin_url('post-new.php?post_type=audioplayer')); ?>";
+				</script>
+			<?php
+			} else {
+				wp_redirect(admin_url('post-new.php?post_type=audioplayer'));
+			}
+		}
+
+		/**	
+		 * Redirect to add new Model Viewer
+		 * */
+		function redirectToAddNewRadio()
+		{
+			if (function_exists('headers_sent') && headers_sent()) {
+			?>
+				<script>
+					window.location.href = "<?php echo esc_url(admin_url('post-new.php?post_type=radioplayer')); ?>";
+				</script>
+<?php
+			} else {
+				wp_redirect(admin_url('post-new.php?post_type=radioplayer'));
+			}
+		}
 	}
 	new H5APAdmin;
 }

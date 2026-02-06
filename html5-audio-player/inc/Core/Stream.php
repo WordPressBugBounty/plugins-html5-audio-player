@@ -7,7 +7,6 @@ class Stream
 
     public function getStreamData($streamUrl)
     {
-        $streamData = [];
         $data =  $this->getIcyMetadata($streamUrl);
 
         return ['trackTitle' => $data];
@@ -16,6 +15,7 @@ class Stream
 
     function getIcyMetadata($url)
     {
+        $url = sanitize_url($url);
         $opts = [
             "http" => [
                 "method" => "GET",

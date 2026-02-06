@@ -15,6 +15,12 @@
   ],
   "textdomain": "h5ap",
   "attributes": {
+    "postId": {
+      "type": "number"
+    },
+    "uniqueId": {
+      "type": "string"
+    },
     "align": {
       "type": "string",
       "default": ""
@@ -182,7 +188,7 @@
     "react-dom",
     "wp-util"
   ],
-  "viewStyle": [
+  "style": [
     "file:./view.css",
     "bplugins-plyrio"
   ],

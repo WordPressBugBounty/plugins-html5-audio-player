@@ -16,10 +16,10 @@ class Init
             Elementor\Controls\Register::class,
             PostType\AudioPlayer::class,
             PostType\RadioPlayer::class,
-            PostType\AudioListPro::class,
+            PostType\AudioList::class,
             Field\AudioPlayer::class,
-            Field\AudioListPro::class,
-            Field\SettingsPro::class,
+            Field\AudioList::class,
+            Field\Settings::class,
             Core\Ajax::class,
             Core\Page::class,
             Services\AdminNotice::class,
@@ -30,12 +30,7 @@ class Init
         ];
     }
 
-    public static function register_post_type()
-    {
-
-        // self::instantiate('\H5APPlayer\PostType\AudioPlayer')->register();
-        // self::instantiate('\H5APPlayer\PostType\AudioListPro')->register();
-    }
+   
 
     public static function register_services()
     {

@@ -81,6 +81,8 @@ class Shortcode
             }
         }
 
+        // return $width;
+
         $controls = $final_controls ? $final_controls : Functions::settings('h5ap_controls', ['play', 'progress', 'current-time', 'mute', 'volume', 'settings']);
 
         $block  = [

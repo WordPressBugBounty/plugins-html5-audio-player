@@ -1,10 +1,10 @@
 === HTML5 Audio Player - The Ultimate No-Code Podcast, MP3 & Audio Player ===
-Contributors: bplugins, shehabulislam, freemius, abuhayat
+Contributors: bplugins, shehabulislam, freemius, abuhayat, farazi1
 Tags: mp3 player, audio, audio player, player, podcast
 Donate link: https://www.buymeacoffee.com/abuhayat/  
 Requires at least: 5.2
-Tested up to: 6.8
-Stable tag: 2.5.0
+Tested up to: 6.9
+Stable tag: 2.5.3
 Requires PHP: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -15,14 +15,16 @@ Maximize your WordPress site's potential with our versatile HTML5 Audio Player p
 
 **The Ultimate No-Code Podcast, MP3 & Audio Player Plugin for WordPress**
 
-[**HTML5 Audio Player**](https://bplugins.com/products/html5-audio-player/) | [**Documentation**](https://bplugins.com/docs/html5-audio-player/) | [**Pricing**](https://bplugins.com/products/html5-audio-player/#pricing) | [**Support**](https://bplugins.com/support/) | [**Demo**](https://bplugins.com/products/html5-audio-player/#demos)
+[**HTML5 Audio Player**](https://bplugins.com/products/html5-audio-player/) | [**Documentation**](https://bplugins.com/docs/html5-audio-player/) | [**Pricing**](https://bplugins.com/products/html5-audio-player/pricing) | [**Support**](https://bplugins.com/support/) | [**Demo**](https://bplugins.com/products/html5-audio-player/#demos)
 
+https://youtube.com/watch?v=6ZHKarDpllQ
 
 [**HTML5 Audio Player**](https://bplugins.com/products/html5-audio-player/) is a powerful, lightweight, and fully responsive audio player plugin for WordPress. It lets you embed MP3 and OGG audio files into posts, pages, widget areas, or template files using shortcodes, no coding required.
 
 Built with modern HTML5 technology, this plugin works across all major browsers and iOS devices, ensuring reliable playback on any screen size. Its shortcode-based setup gives you full control over placement and player settings, making it suitable for podcasts, music tracks, audio previews, or online courses.
 
 ### Key Features – Free Version
+
 - **Embed Anywhere**: Add audio to posts, pages, widgets, and theme templates using shortcodes.
 
 - **Responsive & Lightweight**: Adapts to all devices and doesn’t slow down your site.
@@ -47,7 +49,7 @@ Built with modern HTML5 technology, this plugin works across all major browsers 
 
 
 ### Pro Version – Unlock Premium Audio Controls
-Upgrade to the [**Pro version**](https://bplugins.com/products/html5-audio-player/#pricing) for more control over design, behavior, and playback settings.
+Upgrade to the [**Pro version**](https://bplugins.com/products/html5-audio-player/pricing) for more control over design, behavior, and playback settings.
 
 **What’s Included in Pro:**
 
@@ -81,14 +83,14 @@ Upgrade to the [**Pro version**](https://bplugins.com/products/html5-audio-playe
 
 - **Single Button Player**: Minimalist design for single-action audio playback.
 
-[**Try the HTML5 Audio Player PRO**](https://bplugins.com/products/html5-audio-player/#pricing) – Unlock all premium features now!
+[**Try the HTML5 Audio Player PRO**](https://bplugins.com/products/html5-audio-player/pricing) – Unlock all premium features now!
 
 
 ### How to Use – Step-by-Step Setup
 
 Getting started is quick and easy.
 
-https://youtube.com/watch?v=MbY9oyERJck	
+https://youtu.be/B7HnUaAm9Xs
 
 #### Step-by-Step Setup
 
@@ -115,7 +117,7 @@ Using the Block Editor? You’re covered.
 Enjoy crystal-clear audio in just a few clicks!
 
 
-[**Live Demo**](https://bplugins.com/products/html5-audio-player/#demos) | [**Upgrade to Pro**](https://bplugins.com/products/html5-audio-player/#pricing)
+[**Live Demo**](https://bplugins.com/products/html5-audio-player/#demos) | [**Upgrade to Pro**](https://bplugins.com/products/html5-audio-player/pricing)
 
 
 ### User Feedback 
@@ -181,6 +183,9 @@ Yes, you can create playlists with multiple audio files. Different player types 
 = Will the plugin slow down my website? =
 The plugin is lightweight and optimized for performance. You can also adjust preload settings to improve page speed.
 
+= Where do I report security bugs found in this plugin? =
+Please report security bugs found in the source code of the Html5 Audio Player plugin through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/9e5fb647-1b45-475d-8541-fb20b0d6a5a0). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
+
 
 == Installation ==
 
@@ -212,10 +217,21 @@ e.g.
 
 == Changelog ==
 
+= 2.5.3 - 15 Dec, 2025 =
+* Fixed: Undefined array key "postId"
+
+= 2.5.2 - 15 Dec, 2025 =
+* Improved: Added settings to add whitelist domains list to protect against random URL requests in the radio player.
+* Update: Freemius SDK
+
+= 2.5.1 - 13 Nov, 2025 =
+* Update: Dashboard
+* Improved: Code
+
 = 2.5.0 - 21 July, 2025 =
 * New: Dashboard page
 * Improved: Code,
-* Fixed: Disapear Player
+* Fixed: Disappear Player
 
 
 = 2.4.0 - 29 June, 2025 =
@@ -227,7 +243,7 @@ e.g.
 * Improved: Code 
 
 = 2.3.2 - 11 May, 2025 = 
-* Fixed: Hide Download option worn't work (Pro)
+* Fixed: Hide Download option won't work (Pro)
 
 = 2.3.0 - 20 April, 2025 = 
 * Update: Improve Security

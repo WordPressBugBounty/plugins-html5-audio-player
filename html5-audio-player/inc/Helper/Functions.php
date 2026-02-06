@@ -186,5 +186,21 @@ class Functions{
         }
         return $default;
     }
+
+    static function isDomainAllowed($url, $allowed_domains) {
+    // 1. Extract the host from the URL
+    $host = parse_url($url, PHP_URL_HOST);
+
+    // Handle cases where parse_url might fail (e.g., missing scheme in some older PHP versions)
+    if ($host === false || $host === null) {
+        return false;
+    }
+
+    // Optional: Remove "www." prefix for consistent matching if necessary
+    $domain_name = str_ireplace('www.', '', $host);
+
+    // 2. Check if the extracted domain is in the allowed list
+    return in_array($domain_name, $allowed_domains);
+}
 }
 
