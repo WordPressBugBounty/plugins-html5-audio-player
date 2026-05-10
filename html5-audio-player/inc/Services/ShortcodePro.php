@@ -2,6 +2,10 @@
 
 namespace H5APPlayer\Services;
 
+if (!defined('ABSPATH')) {
+    exit;
+}
+
 class ShortcodePro extends Shortcode
 {
     protected static $_instance = null;
@@ -18,36 +22,27 @@ class ShortcodePro extends Shortcode
         add_shortcode('h5ap_radio_player', [$this, 'radio_player']);
     }
 
-    public function register()
-    {
+    public function register(){
         self::instance();
     }
 
-    /**
-     * Create instance function
-     */
-    public static function instance()
-    {
+    public static function instance() {
         if (self::$_instance === null) {
             self::$_instance = new self();
         }
         return self::$_instance;
     }
 
-    /**
-     * search form
-     */
-    public function searchForm($atts)
-    {
+    public function searchForm($atts){
         extract(shortcode_atts([
             'placeholder' => 'Search Audio',
             'width' => '400px'
         ], $atts, 'h5ap_search_form'));
-        $query = $_GET['bps'] ?? '';
+        $query = isset($_GET['bps']) ? sanitize_text_field(wp_unslash($_GET['bps'])) : '';
         $id = 'h5aps' . uniqid();
 
         ob_start();
-?>
+        ?>
         <style>
             <?php echo esc_html("#$id ") ?>form {
                 width: <?php echo esc_html($width); ?>;
@@ -56,9 +51,20 @@ class ShortcodePro extends Shortcode
         <div id="<?php echo esc_html($id); ?>">
             <form action="#" id="h5ap_search_form">
                 <input type="text" name="bps" placeholder="<?php echo esc_html($placeholder) ?>" value="<?php echo esc_html($query) ?>">
-                <button type="submit" value=''><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                <button type="submit" value=''>
+                    <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
                         <path fill="#444444" d="M15.7 14.3l-4.2-4.2c-0.2-0.2-0.5-0.3-0.8-0.3 0.8-1 1.3-2.4 1.3-3.8 0-3.3-2.7-6-6-6s-6 2.7-6 6 2.7 6 6 6c1.4 0 2.8-0.5 3.8-1.4 0 0.3 0 0.6 0.3 0.8l4.2 4.2c0.2 0.2 0.5 0.3 0.7 0.3s0.5-0.1 0.7-0.3c0.4-0.3 0.4-0.9 0-1.3zM6 10.5c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2 4.5-4.5 4.5z"></path>
-                    </svg></button>
+                    </svg> -->
+
+                    <svg viewBox="0 0 24 24" width="18" height="18">
+                        <path d="M5 12h14M13 6l6 6-6 6"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                    </svg>
+                </button>
             </form>
         </div>
     <?php

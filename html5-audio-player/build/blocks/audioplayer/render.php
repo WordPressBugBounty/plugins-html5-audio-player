@@ -15,18 +15,19 @@ if (!isset($attributes['bgColor']) && !isset($attributes['textColor']) && isset(
     $attributes = wp_parse_args($attributes['defaultValue'][$skin], $attributes);
 }
 
+$encoded_attributes = esc_attr(wp_json_encode($attributes, JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS));
+$wrapper_attributes = get_block_wrapper_attributes(['class' => 'wp-block-h5ap-tailwind']);
+
 ?>
 <div
-    id="<?php echo esc_attr($uniqueId) ?>"
-    data-id="<?php echo esc_attr($uniqueId) ?>"
-    data-attributes="<?php echo esc_attr(wp_json_encode($attributes)) ?>"
-    <?php echo wp_kses(get_block_wrapper_attributes(['class' => 'wp-block-h5ap-tailwind']), []); ?>>
-    <?php if ($loader) {
-    ?>
+    id="<?php echo esc_attr($uniqueId); ?>"
+    data-id="<?php echo esc_attr($uniqueId); ?>"
+    data-attributes="<?php echo esc_attr($encoded_attributes); ?>"
+    <?php echo $wrapper_attributes; ?>>
+    <?php if ($loader) { ?>
         <div class='h5ap_lp'>
             <div class='bar bar-1'></div>
             <div class='bar bar-1'></div>
         </div>
-    <?php
-    } ?>
+    <?php } ?>
 </div>

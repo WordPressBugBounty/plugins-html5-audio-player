@@ -3,7 +3,7 @@
         'name' => 'raju/html5-audio-player-pro',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '79a27efad105bf83c9026e8cdeb7d49afbb7a604',
+        'reference' => 'f87c49271e5dcd6236eb357dec36167b56b5a3cc',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'raju/html5-audio-player-pro' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '79a27efad105bf83c9026e8cdeb7d49afbb7a604',
+            'reference' => 'f87c49271e5dcd6236eb357dec36167b56b5a3cc',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

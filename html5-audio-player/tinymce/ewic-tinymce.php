@@ -1,9 +1,18 @@
 <?php
+if (!defined('ABSPATH')) {
+    exit;
+}
+
 /*-------------------------------------------------------------------------------*/
 /*   AJAX Get Slider List
 /*-------------------------------------------------------------------------------*/
 function ewic_grab_slider_list_ajax()
 {
+	check_ajax_referer('ewic_slider_nonce', 'nonce');
+
+	if (!current_user_can('edit_posts')) {
+		wp_die();
+	}
 
 	if (!isset($_POST['grabslider'])) {
 		wp_die();
@@ -58,6 +67,7 @@ if (strstr($_SERVER['REQUEST_URI'], 'wp-admin/post-new.php') || strstr($_SERVER[
 
 			wp_enqueue_style('ewic-tinymcecss');
 			wp_enqueue_script('ewic-tinymcejs');
+			wp_localize_script('ewic-tinymcejs', 'ewic_ajax', array('nonce' => wp_create_nonce('ewic_slider_nonce')));
 
 ?>
 		<?php
@@ -74,7 +84,8 @@ if (strstr($_SERVER['REQUEST_URI'], 'wp-admin/post-new.php') || strstr($_SERVER[
 		$context = '
 			<a class="thickbox button" id="ewic_shortcode_button" title="' . $title . '" style="outline: medium none !important; cursor: pointer;" >
 			<img src="' . $img . '" alt="" width="20" height="20" style="position:relative; top:-1px"/>Html5 audio player</a>';
-		echo $context;
+		
+		echo wp_kses_post($context);
 	}
 }
 

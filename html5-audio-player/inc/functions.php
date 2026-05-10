@@ -3,20 +3,21 @@
 if (!function_exists('h5ap_register_taxonomy')) {
     function h5ap_register_taxonomy($slug, $post_type, $is_hierarchical, $title)
     {
+        $plural = $title === 'Category' ? 'Categories' : $title . 's';
         register_taxonomy(
             $slug,
             $post_type,
             array(
                 'labels' => array(
-                    'name' => $title . 's',
+                    'name' => $plural,
                     'singular_name' => $title,
-                    'search_items' => "Search " . $title . "s",
-                    'all_items' => "All " . $title . "s",
+                    'search_items' => "Search " . $plural,
+                    'all_items' => "All " . $plural,
                     'edit_item' => "Edit $title",
                     'update_item' => "Update $title",
                     'add_new_item' => "Add New $title",
                     'new_item_name' => "New $title Name",
-                    'menu_name' =>  $title . 's'
+                    'menu_name' =>  $plural
                 ),
                 'hierarchical' => $is_hierarchical,
                 'show_ui' => true,

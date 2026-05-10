@@ -41,7 +41,7 @@ if (!function_exists('h5ap_player_shortcode_content')) {
     $meta = h5ap_get_post_meta($post_id, '_h5ap_plyr');
     $type = $meta('h5ap_player_type', 'opt-1');
     $player_theme = $meta('player_theme');
-    $player_skin = $meta('player_skin'); // playlist
+    $player_skin = $meta('player_skin');
     $h5vp_default_audio = $meta('h5vp_default_audio');
     $width = $meta('width', ['width' =>  '100', 'unit' =>  '%']);
     $playlist_type = $meta('playlist_type');
@@ -52,7 +52,6 @@ if (!function_exists('h5ap_player_shortcode_content')) {
     $plp_width                      = $meta('plp_width', ['width' => '100', 'unit' => '%']);
     $plp_align                      = $meta('plp_align');
     $plp_volume                     = $meta('plp_volume');
-    // $save_state                     = $meta('save_state', false, true);
     $sticky_download                = $meta('sticky_download');
     $sticky_volume                  = $meta('sticky_volume');
     $selected_audio                 = $meta('selected_audio');
@@ -82,8 +81,7 @@ if (!function_exists('h5ap_player_shortcode_content')) {
             'artist' => $audio['pl_audio_artist']
           ];
         }
-      } // if array is not empty (has data)
-      // if(!empty($playlist_in_metabox)) // if array is not empty (has data) 
+      } 
     }
 
 
@@ -94,11 +92,9 @@ if (!function_exists('h5ap_player_shortcode_content')) {
       'opt-3' => 'audioplayer',
     ];
 
-    // return __DIR__ . '/blocks/' . $block_types[$type] . '.php';
     if (file_exists(__DIR__ . '/blocks/' . $block_types[$type] . '.php')) {
       $block = [];
       include __DIR__ . '/blocks/' . $block_types[$type] . '.php';
-      // return $narrow_radius;
       return render_block($block);
     }
   }

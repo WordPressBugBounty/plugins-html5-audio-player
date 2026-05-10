@@ -80,7 +80,7 @@ final class Register
 			'multipleAudio' => (bool) Functions::getSetting('multipleAudio', false),
 			'plyrio_js' => H5AP_PRO_PLUGIN_DIR . 'assets/js/plyr-v3.7.2.js',
 			'plyr_js' => H5AP_PRO_PLUGIN_DIR . 'build/player.js',
-			'isPipe' => h5ap_fs()->can_use_premium_code()
+			'isPipe' => false
 		]);
 	}
 

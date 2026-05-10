@@ -1,7 +1,10 @@
 <?php 
+if (!defined('ABSPATH')) {
+    exit;
+}
 
 get_header();
-$query = $_GET['bps'] ?? '';
+$query = isset($_GET['bps']) ? sanitize_text_field(wp_unslash($_GET['bps'])) : '';
 $loop = new WP_Query( array(
     'post_type' => 'audioplayer',
     'posts_per_page' => 12,

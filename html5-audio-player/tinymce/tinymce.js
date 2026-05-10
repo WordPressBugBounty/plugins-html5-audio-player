@@ -52,6 +52,7 @@ jQuery(document).ready(function ($) {
       data: {
         action: "ewic_grab_slider_list_ajax",
         grabslider: "yes",
+        nonce: ewic_ajax.nonce,
       },
       dataType: "JSON",
       type: "POST",

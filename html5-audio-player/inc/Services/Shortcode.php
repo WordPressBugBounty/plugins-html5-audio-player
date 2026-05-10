@@ -37,8 +37,7 @@ class Shortcode
     /**
      * [audio_player] shotcode
      */
-    public function audioPlayer($atts)
-    {
+    public function audioPlayer($atts) {
         extract(shortcode_atts($this->audio_player_attrs(), $atts));
 
         if (empty($id)) {
@@ -51,9 +50,11 @@ class Shortcode
 
         $width = $width ? $width : Functions::settings('h5ap_player_width', ['width' => '100', 'unit' => '%']);
         $repeat = $repeat ? ($repeat === 'true' ? ' loop' : '')  : (Functions::settings('h5ap_repeat', 'loop') === 'loop' ? ' loop ' : '');
-        $autoplay = Functions::settings('h5ap_autoplay', '0') === '1' ? ' autoplay ' : '';
+        // $autoplay = Functions::settings('h5ap_autoplay', '0') === '1' ? ' autoplay ' : '';
+        // $muted = Functions::settings('h5ap_muted', '0') === '1' ? ' muted ' : '';
+        $autoplay = Functions::settings('h5ap_autoplay', '0') === '1';
+        $muted = Functions::settings('h5ap_muted', '0') === '1';
         $preload = $preload ? $preload : Functions::settings('h5ap_preload', 'metadata');
-        $muted = Functions::settings('h5ap_muted', '0') === '1' ? ' muted ' : '';
         $stime = (int)Functions::settings('h5ap_seektime', '10');
 
         if ($file) {
@@ -84,6 +85,8 @@ class Shortcode
         // return $width;
 
         $controls = $final_controls ? $final_controls : Functions::settings('h5ap_controls', ['play', 'progress', 'current-time', 'mute', 'volume', 'settings']);
+        $shuffle = $shuffle ? ($shuffle === 'true') : (Functions::settings('h5ap_shuffle', '0') === '1');
+
 
         $block  = [
             'blockName' => 'h5ap/audioplayer',
@@ -93,10 +96,11 @@ class Shortcode
                 'width' => $width,
                 'seekTime' => $stime,
                 'repeat' => (bool)$repeat,
+                'shuffle' => (bool)$shuffle,
                 'skin' => isset($atts['skin']) ? $skin : 'Default',
                 'autoplay' => $autoplay,
-                'preload' => $preload,
                 'muted' => $muted,
+                'preload' => $preload,
                 'startTime' => (int)$start_time
             ]
         ];
@@ -104,8 +108,7 @@ class Shortcode
         return render_block($block);
     }
 
-    function audio_player_attrs()
-    {
+    function audio_player_attrs() {
         return array(
             'id' => null,
             'file' => null,
@@ -115,6 +118,7 @@ class Shortcode
             // 'skin' => 'Default',
             'preload' => null,
             'repeat' => null,
+            'shuffle' => null,
             'start_time' => 0,
         );
     }

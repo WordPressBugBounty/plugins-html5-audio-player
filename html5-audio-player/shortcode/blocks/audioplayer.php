@@ -3,11 +3,12 @@
 use H5APPlayer\Helper\LocalizeScript;
 
 $standard_skin = $meta('standard_skin', "Default");
-$background = $meta('background', '#f2f2f2');
+// $background = $meta('background', '#f2f2f2');
+$background     = $meta('background', $standard_skin === 'wave' ? '#000' : '#f2f2f2');
 $sticky_simple_background     = $meta('sticky_simple_background');
 $control_color     = $meta('control_color', $standard_skin === 'default' ? '#fff' : '#4a5464');
 $primary_color     = $meta('primary_color', '#195FF5');
-$sticky_download     = $meta('sticky_download', false);
+$sticky_download     = $meta('sticky_download', false, true);
 $download     = $meta('fusion_download', false, true);
 $sticky_skin = $meta('sticky_skin', 'Fusion');
 
@@ -28,6 +29,17 @@ if ($standard_skin === 'default' && $primary_color === '#195FF5') {
     $control_color = $settings_primary_color;
 }
 
+$controls = $meta('controls', []);
+
+if (!is_array($controls)) {
+    $controls = [];
+}
+
+// force play always ON
+$controls[] = 'play';
+
+$controls = array_unique($controls);
+
 $block = [
     'blockName' => 'h5ap/audioplayer',
     'attrs' => [
@@ -36,8 +48,8 @@ $block = [
         'align'         => '',
         'alignment'         => $meta('plp_align', 'left'),
         'source'        => $h5vp_default_audio,
-        'poster'        => $meta('sticky_poster'),
-        'title'         => $meta('title'),
+        'poster'        => $type === 'opt-3' ? $meta('poster_sticky') : $meta('sticky_poster'),
+        'title'         => $type === 'opt-3' ? $meta('title_sticky') : $meta('title'),
         'artist'        => $meta('author'),
         'color'         => $meta('color', '#fff'),
         'textColor'     => $meta('color', '#fff'),
@@ -45,11 +57,11 @@ $block = [
         'hoverColor'    => '#00B3FF',
         'controlColor'  =>  $control_color,
         'bgColor'       => $bgColor,
-        'skin'          => $type === 'opt-1' ? ucfirst($standard_skin) : ($sticky_skin === 'simple' ? 'Simple-3' : (ucfirst($sticky_skin))),
+        'skin'          => $type === 'opt-1' ? ucfirst($standard_skin) : ucfirst($sticky_skin),
         'repeat'        => $meta('repeat', false, true),
         'autoplay'      => $meta('autoplay', false, true),
         'isSticky'      => $type === 'opt-3' || $meta('enable_sticky', false),
-        'muted'         => false,
+        'muted'         => $meta('muted', false, true),
         'loader'        => !$meta('disable_loader', true, true),
         'saveState'     => $meta('save_state', false, true),
         'disablePause'  => $meta('disable_pause', false, true),
@@ -59,7 +71,10 @@ $block = [
         'download'      => $download,
         'width'         => $width['width'] . $width['unit'],
         'radius'        => $type === 'opt-3' ? 0 : $meta('radius', '5') . 'px',
-        'controls'      => array_fill_keys($meta('controls', ['play', 'progress', 'current-time', 'duration', 'mute', 'volume']), true),
+        'controls' => array_fill_keys(array_unique($controls), true),
+        'options'       => [
+            'volume' => $meta('volume'),
+        ],
         'style'         => null,
         'CSS'           => '',
         'i18n'          => LocalizeScript::translatedText(),

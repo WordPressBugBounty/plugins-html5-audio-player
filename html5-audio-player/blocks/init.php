@@ -1,16 +1,21 @@
 <?php
+
 add_action('init', function () {
     // Register block editor script for backend.
-    wp_register_script('h5ap_block_free-js', H5AP_PRO_PLUGIN_DIR . '/blocks/dist/blocks.build.js', array('wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor'), null, true);
+    wp_register_script(
+        'h5ap_block_free-js', 
+        H5AP_PRO_PLUGIN_DIR . '/blocks/dist/blocks.build.js', 
+        array('wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor'), 
+        null, 
+        true
+    );
 
-    // WP Localized globals. Use dynamic PHP stuff in JavaScript via `cgbGlobal` object.
     wp_localize_script(
         'h5ap_block_free-js',
-        'cgbGlobal', // Array containing dynamic data for a JS Global.
+        'cgbGlobal', 
         [
             'pluginDirPath' => plugin_dir_path(__DIR__),
             'pluginDirUrl'  => plugin_dir_url(__DIR__),
-            // Add more data here that you want to access from `cgbGlobal` object.
         ]
     );
 
@@ -26,8 +31,7 @@ add_action('init', function () {
     ]);
 });
 
-function h5ap_pro_render_h5ap_block_free_existing($attributes)
-{
+function h5ap_pro_render_h5ap_block_free_existing($attributes){
     extract($attributes);
 
     isset($selectedPlayer) ? $selectedPlayer : $selectedPlayer = 'empty';

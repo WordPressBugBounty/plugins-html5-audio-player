@@ -22,7 +22,7 @@ if (!class_exists('H5AP_Block')) {
                 'multipleAudio' => (bool) Functions::getSetting('multipleAudio', false),
                 'plyrio_js' => H5AP_PRO_PLUGIN_DIR . 'assets/js/plyr-v3.7.2.js',
                 'plyr_js' => H5AP_PRO_PLUGIN_DIR . 'build/player.js',
-                'isPipe' => h5ap_fs()->can_use_premium_code()
+                'isPipe' => false
             ]);
         }
 
@@ -33,15 +33,9 @@ if (!class_exists('H5AP_Block')) {
             wp_register_style('bplugins-plyrio', H5AP_PRO_PLUGIN_DIR . 'assets/css/plyr-v3.7.2.css', array(), '3.7.2', 'all');
         }
 
-        function init()
-        {
+        function init() {
             register_block_type(__DIR__ . '/build/blocks/audioplayer');
             register_block_type(__DIR__ . '/build/blocks/radio-player');
-            if (h5ap_fs()->can_use_premium_code()) {
-                register_block_type(__DIR__ . '/build/blocks/audioplaylist');
-                register_block_type(__DIR__ . '/build/blocks/playlist-narrow');
-                register_block_type(__DIR__ . '/build/blocks/playlist-extensive');
-            }
         }
     }
 

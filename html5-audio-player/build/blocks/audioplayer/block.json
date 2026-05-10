@@ -2,10 +2,10 @@
   "apiVersion": 3,
   "name": "h5ap/audioplayer",
   "title": "HTML5 Audio Player",
-  "description": "",
+  "description": "A responsive HTML5 audio player with customizable skins and controls.",
   "category": "media",
   "icon": "format-audio",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "keywords": [
     "HTML5 Audio Player",
     "Media Player",
@@ -155,6 +155,12 @@
         "volume": true,
         "settings": true,
         "download": false
+      }
+    },
+    "options": {
+      "type": "object",
+      "default": {
+        "volume": 0.5
       }
     },
     "isSticky": {

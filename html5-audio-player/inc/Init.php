@@ -2,23 +2,16 @@
 
 namespace H5APPlayer;
 
+class Init {
 
-class Init
-{
-
-    public static function get_services()
-    {
+    public static function get_services() {
         return [
             Base\GlobalAction::class,
-            // Base\BlackFriday::class,
-            // Base\Loader::class, // deprecated
             Elementor\Widgets\Register::class,
             Elementor\Controls\Register::class,
             PostType\AudioPlayer::class,
             PostType\RadioPlayer::class,
-            PostType\AudioList::class,
             Field\AudioPlayer::class,
-            Field\AudioList::class,
             Field\Settings::class,
             Core\Ajax::class,
             Core\Page::class,
@@ -32,8 +25,7 @@ class Init
 
    
 
-    public static function register_services()
-    {
+    public static function register_services() {
         foreach (self::get_services() as $class) {
             $services = self::instantiate($class);
             if (method_exists($services, 'register')) {
@@ -42,11 +34,7 @@ class Init
         }
     }
 
-    private static function instantiate($class)
-    {
-        if (class_exists($class . "Pro") && h5ap_fs()->can_use_premium_code()) {
-            $class = $class . "Pro";
-        }
+    private static function instantiate($class) {
         if (class_exists($class)) {
             return new $class();
         }

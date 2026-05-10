@@ -1,10 +1,10 @@
 === HTML5 Audio Player - The Ultimate No-Code Podcast, MP3 & Audio Player ===
-Contributors: bplugins, shehabulislam, freemius, abuhayat, farazi1
+Contributors: bplugins, abuhayat, freemius, shamim10, farazi1
 Tags: mp3 player, audio, audio player, player, podcast
 Donate link: https://www.buymeacoffee.com/abuhayat/  
-Requires at least: 5.2
-Tested up to: 6.9
-Stable tag: 2.5.3
+Requires at least: 5.8
+Tested up to: 6.9.4
+Stable tag: 2.6.0
 Requires PHP: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -24,64 +24,34 @@ https://youtube.com/watch?v=6ZHKarDpllQ
 Built with modern HTML5 technology, this plugin works across all major browsers and iOS devices, ensuring reliable playback on any screen size. Its shortcode-based setup gives you full control over placement and player settings, making it suitable for podcasts, music tracks, audio previews, or online courses.
 
 ### Key Features – Free Version
-
+- **Advanced Player Types**: Choose from Standard or Sticky Player (New in Free!).
+- **Standard Player Skins**: Access Default, Fusion, Stamp, and Wave skins for free.
+- **Sticky Player Skins**: Access Simple and Fusion skins for free.
 - **Embed Anywhere**: Add audio to posts, pages, widgets, and theme templates using shortcodes.
-
 - **Responsive & Lightweight**: Adapts to all devices and doesn’t slow down your site.
-
-- **Cross-Browser Support**: Works smoothly on Chrome, Firefox, Safari, Edge, IE7–IE9, and more.
-
-- **Inline Audio Playback**: Full support for HTML5 audio across mobile and desktop browsers.
-
-- **Customizable Skins & Colors**: Match your player to your brand.
-
-- **Autoplay, Loop, Mute Options**: Define how your audio behaves.
-
+- **Customization Options**: Adjust width, border radius, and poster images.
+- **Title & Author Support**: Display custom audio titles and author names.
+- **Autoplay, Preload & Mute Options**: Define how your audio behaves upon loading.
+- **Repeat Control**: Loop your audio seamlessly.
 - **Great for Podcasts**: Perfect for embedding podcast episodes or audio courses.
-
-- **Sell Audio Previews**: Let users listen before they buy.
-
-- **Shortcode Powered**: Easy to use, yet flexible for advanced users.
-
 - **MP3 & OGG Support**: Automatically loads the right format based on user’s device.
-
-- **Lightweight & User-Friendly**: Clean, simple UI with powerful functionality.
-
+- **Cross-Browser Support**: Works smoothly on Chrome, Firefox, Safari, Edge, IE7–IE9, and more.
 
 ### Pro Version – Unlock Premium Audio Controls
 Upgrade to the [**Pro version**](https://bplugins.com/products/html5-audio-player/pricing) for more control over design, behavior, and playback settings.
 
 **What’s Included in Pro:**
-
-- **Color Customization**: Set custom player colors to fit your site’s style.
-
-- **Fast Forward & Rewind Buttons**: Set seek time for enhanced navigation.
-
-- **Preload Controls**: Optimize page speed with Auto, Metadata, or None settings.
-
-- **Ad-Free Experience**: No ads, ever.
-
-- **Restart Button Toggle**: Choose whether users can restart audio.
-
-- **Download Button Toggle**: Show or hide the download option.
-
-- **Customize Playback Controls**: Control visibility of play, mute, progress, and duration elements.
-
-- **Volume & Speed Control**: Let users adjust the playback experience.
-
-- **Upload Poster Image**: Add a visual element to your player.
-
-- **Title Support**: Display custom audio titles.
-
-- **Player Skins**: Choose from Default, Fusion, Stamp, Wave, and more.
-
+- **The Playlist Player**: Unlock the fully-featured Playlist Player with Narrow and Extensive list designs.
+- **7 Additional Premium Skins**: Access Card 1, Card 2, Simple 1, Simple 2, Player 9, Player 10, and Player 11.
+- **Color Customization**: Set custom primary and background colors to perfectly fit your site’s branding.
+- **Download buttons**: Add download buttons to your player.
+- **Fast Forward & Rewind Buttons**: Enhance navigation with custom seek time settings.
+- **Start Time Settings**: Specify exactly when the audio should start playing.
 - **Disable Pause Option**: Keep audio playing without interruption.
-
-- **Advanced Player Types**: Choose from Standard, Playlist, or Sticky Player.
-
-- **Border Radius Control**: Style your player’s corners.
-
+- **Save State Functionality**: Save the player's time state so it resumes from where the user left off.
+- **Premium Sticky Player Features**: Unlock Background Color, Repeat, Save State, Initial Volume, and Download Button for Sticky Players.
 - **Single Button Player**: Minimalist design for single-action audio playback.
+- **Ad-Free Experience**: No ads, ever.
 
 [**Try the HTML5 Audio Player PRO**](https://bplugins.com/products/html5-audio-player/pricing) – Unlock all premium features now!
 
@@ -118,6 +88,30 @@ Enjoy crystal-clear audio in just a few clicks!
 
 
 [**Live Demo**](https://bplugins.com/products/html5-audio-player/#demos) | [**Upgrade to Pro**](https://bplugins.com/products/html5-audio-player/pricing)
+
+
+== Source Code ==
+
+You can find the source code, report bugs, and contribute to the development of this plugin on our GitHub repository: 
+[**HTML5 Audio Player on GitHub**](https://github.com/bPlugins/html5-audio-player-free)
+
+== Third-Party Libraries ==
+
+This plugin bundles the following third-party JavaScript/PHP libraries.
+
+= Codestar Framework =
+
+* **Source:** [http://codestarframework.com/](http://codestarframework.com/)
+* **GitHub:** [https://github.com/Codestar/codestar-framework](https://github.com/Codestar/codestar-framework)
+* **License:** GPLv2 or later – [https://github.com/Codestar/codestar-framework/blob/master/LICENSE.md](https://github.com/Codestar/codestar-framework/blob/master/LICENSE.md)
+* **Purpose:** Provides the options framework for the plugin's settings and shortcode generator.
+
+= Freemius SDK =
+
+* **Source:** [https://freemius.com/](https://freemius.com/)
+* **GitHub:** [https://github.com/Freemius/wordpress-sdk](https://github.com/Freemius/wordpress-sdk)
+* **License:** GPLv3 – [https://github.com/Freemius/wordpress-sdk/blob/master/LICENSE.txt](https://github.com/Freemius/wordpress-sdk/blob/master/LICENSE.txt)
+* **Purpose:** Provides opt-in usage tracking and analytics to help improve the plugin.
 
 
 ### User Feedback 
@@ -217,6 +211,21 @@ e.g.
 
 == Changelog ==
 
+= 2.6.0 - 10 May, 2026 =
+* **New:** Users can now turn shuffle on or off from Gutenberg and dashboard settings.
+* **Update:** Massive structural update unlocking several previously PRO features to the Free version (Sticky player, standard skins, poster images, border radius, repeat, and more).
+* **Update:** Cleaned up the free dashboard to neatly present premium-only settings via intuitive notice cards.
+* **Update:** Fully redesigned the Playlist Premium unlock notice block.
+* **Update:** Update brand new Dashboard.
+* **Fix:** Printing Garbage / Raw JSON on the Page. 
+* **Fix:** Not Possible to Customise PRO Playlist Skin. 
+* **Fix:** Fix the player controls in Gutenberg Block Editor.
+* **Fix:** Fix shuffle mode track mismatch issue.
+* **Fix:** Resolved "Player not loading" issue on public/live WordPress websites caused by a JavaScript compatibility error (ReactDOM is not defined).
+* **Fix:** Applied the fix across all player types — Fusion Player, Standard Player, Playlist (Narrow & Extensive), and Radio Player.
+* **Improvement:** Improved Quick Player Settings with Documentation Link & Search Form Shortcode UI.
+* **Improvement:** Completely revamped the HTML5 Audio Player. "Playback Speed" menu with a premium, elegant design and custom scrollbars.
+
 = 2.5.3 - 15 Dec, 2025 =
 * Fixed: Undefined array key "postId"
 
@@ -231,7 +240,7 @@ e.g.
 = 2.5.0 - 21 July, 2025 =
 * New: Dashboard page
 * Improved: Code,
-* Fixed: Disappear Player
+* Fixed: Disapear Player
 
 
 = 2.4.0 - 29 June, 2025 =
@@ -243,7 +252,7 @@ e.g.
 * Improved: Code 
 
 = 2.3.2 - 11 May, 2025 = 
-* Fixed: Hide Download option won't work (Pro)
+* Fixed: Hide Download option worn't work (Pro)
 
 = 2.3.0 - 20 April, 2025 = 
 * Update: Improve Security

@@ -32,8 +32,7 @@ class EnqueueAssets
     /**
      * Public Assets
      */
-    public function publicAssets()
-    {
+    public function publicAssets() {
         wp_enqueue_style('h5ap-public', H5AP_PRO_PLUGIN_DIR . 'assets/css/style.css', array(), H5AP_PRO_VERSION);
         wp_register_script('bplugins-plyrio', H5AP_PRO_PLUGIN_DIR . 'assets/js/plyr-v3.7.2.js', array('jquery'), H5AP_PRO_VERSION, false);
 
@@ -54,16 +53,12 @@ class EnqueueAssets
             ]
         ]);
 
-        if (Functions::getSetting('all_h5vp', false) && h5ap_fs()->can_use_premium_code()) {
-            wp_enqueue_script('h5ap-all');
-        }
     }
 
     /**
      * Admin Assets
      */
-    public function adminAssets($screen)
-    {
+    public function adminAssets($screen) {
         $current_screen = get_current_screen();
 
         if (strpos($screen, 'html5-audio-player') !== false || $current_screen->post_type === 'audioplayer' || $current_screen->post_type === 'radioplayer' || $screen === 'plugins.php') {
@@ -81,8 +76,45 @@ class EnqueueAssets
             wp_localize_script('jquery', 'cm_settings', $cm_settings);
             wp_enqueue_script('wp-theme-plugin-editor');
             wp_enqueue_style('wp-codemirror');
-            // wp_enqueue_script('h5ap-codemirror', H5AP_PRO_PLUGIN_DIR . 'admin/js/codemirror-init.js', array('jquery'), H5AP_PRO_VERSION, true);
         }
+
+        // clipboard start
+        global $post;
+		if ($screen === 'post.php' || $screen === 'post-new.php') {
+			if (isset($post) && $post->post_type === 'audioplayer') {
+				wp_add_inline_script('jquery-core', "
+                    document.addEventListener('click', function(e){
+                        var el = e.target.closest('.shortcode_copy');
+                        if(!el) return;
+
+                        if (navigator.clipboard && window.isSecureContext) {
+                            navigator.clipboard.writeText(el.dataset.code);
+                        } else {
+                            var textArea = document.createElement('textarea');
+                            textArea.value = el.dataset.code;
+                            textArea.style.position = 'absolute';
+                            textArea.style.left = '-999999px';
+                            document.body.prepend(textArea);
+                            textArea.select();
+                            try {
+                                document.execCommand('copy');
+                            } catch (error) {
+                                console.error(error);
+                            } finally {
+                                textArea.remove();
+                            }
+                        }
+
+                        var original = el.innerHTML;
+                        el.innerHTML = 'Copied!';
+                        setTimeout(function(){
+                            el.innerHTML = original;
+                        }, 1000);
+                    });
+                ");
+			}
+		}
+        // clipboard end
 
         $settings = get_option('h5ap_settings', []);
 
@@ -93,4 +125,5 @@ class EnqueueAssets
             ]
         ]);
     }
+
 }

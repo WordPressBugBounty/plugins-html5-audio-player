@@ -3,10 +3,10 @@
   "apiVersion": 3,
   "name": "h5ap/radio-player",
   "title": "HTML5 Radio Player",
-  "description": "",
+  "description": "Add a live radio player or audio stream with customizable skins.",
   "category": "media",
   "icon": "format-audio",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "keywords": [
     "HTML5 Radio Player",
     "Media Player",
@@ -57,7 +57,8 @@
       "type": "object",
       "default": {
         "playIcon": {
-          "bg": "#fff"
+          "bg": "#fff",
+          "color": "black"
         },
         "trackColor": null,
         "radioIconColor": "#0D77F8",
