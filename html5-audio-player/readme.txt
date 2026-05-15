@@ -4,7 +4,7 @@ Tags: mp3 player, audio, audio player, player, podcast
 Donate link: https://www.buymeacoffee.com/abuhayat/  
 Requires at least: 5.8
 Tested up to: 6.9.4
-Stable tag: 2.6.0
+Stable tag: 2.6.1
 Requires PHP: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -113,6 +113,12 @@ This plugin bundles the following third-party JavaScript/PHP libraries.
 * **License:** GPLv3 – [https://github.com/Freemius/wordpress-sdk/blob/master/LICENSE.txt](https://github.com/Freemius/wordpress-sdk/blob/master/LICENSE.txt)
 * **Purpose:** Provides opt-in usage tracking and analytics to help improve the plugin.
 
+= bpl-tools =
+* Source / GitHub: https://github.com/bPlugins/bpl-tools
+* License: GPL-2.0-or-later – https://www.gnu.org/licenses/gpl-2.0.html
+* Purpose: Shared utility library providing admin dashboard components and common Gutenberg editor controls.
+* External Services: The library may connect to bPlugins, WordPress.org, and Freemius services for product data and checkout functionality. See full details: https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made
+
 
 ### User Feedback 
 
@@ -210,6 +216,9 @@ e.g.
 
 
 == Changelog ==
+
+= 2.6.1 - 15 May, 2026 =
+* **Fix:** Fixed the issue where the Fusion skin of the standard player was not appearing due to a NaN volume value issue.
 
 = 2.6.0 - 10 May, 2026 =
 * **New:** Users can now turn shuffle on or off from Gutenberg and dashboard settings.
