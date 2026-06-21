@@ -35,6 +35,11 @@ if ($standard_skin === 'default' && $primary_color === '#195FF5') {
 
 $controls = $meta('controls', []);
 
+$lazy_load_meta = $meta('lazy_load', 'default');
+if ($lazy_load_meta === null || $lazy_load_meta === '') {
+    $lazy_load_meta = 'default';
+}
+
 if (!is_array($controls)) {
     $controls = [];
 }
@@ -75,6 +80,7 @@ $block = [
         'download'      => $download,
         'width'         => $width['width'] . $width['unit'],
         'radius'        => $type === 'opt-3' ? 0 : $meta('radius', '5') . 'px',
+        'lazyLoad'      => $lazy_load_meta,
         'controls' => array_fill_keys(array_unique($controls), true),
         'options'       => [
             'volume' => (float) $meta($type === 'opt-3' ? 'sticky_volume' : 'plp_volume', 0.5),

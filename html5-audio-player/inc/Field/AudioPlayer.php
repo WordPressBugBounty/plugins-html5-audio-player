@@ -31,7 +31,7 @@ class AudioPlayer
 
   public function configure($prefix) {
 
-    $h5ap_crown_icon = '<span class="h5ap-crown-icon" style="display: inline-flex; width: 18px; height: 18px; vertical-align: middle; margin-right: 5px; align-items: center; justify-content: center;"><img src="' . H5AP_PRO_PLUGIN_DIR . 'assets/images/crown.png" alt="pro-icon" style="width: 18px; height: 16px; display: block;" /></span>';
+    $h5ap_crown_icon = '<span class="h5ap-crown-icon" style="display: inline-flex; width: 18px; height: 18px; vertical-align: middle; margin-right: 5px; align-items: center; justify-content: center;"><img src="' . H5AP_PLUGIN_DIR . 'assets/images/crown.png" alt="pro-icon" style="width: 18px; height: 16px; display: block;" /></span>';
 
      \CSF::createSection($prefix, array(
       'fields' => array(
@@ -168,7 +168,22 @@ class AudioPlayer
           'default' => false,
           'dependency' => array('h5ap_player_type', '==', 'opt-1')
         ),
-
+        array(
+          'id'      => 'lazy_load',
+          'type'    => 'button_set',
+          'title'   => \__('Lazy Load', 'html5-audio-player'),
+          'desc' => \__('Load player only when in viewport. (Unavailable when "Enable Sticky" is active).', 'html5-audio-player'),
+          'options' => array(
+            'default' => \__('Inherit (Global Settings)', 'html5-audio-player'),
+            'on'      => \__('Enable', 'html5-audio-player'),
+            'off'     => \__('Disable', 'html5-audio-player'),
+          ),
+          'default' => 'default',
+          'dependency' => array(
+            array('h5ap_player_type', '==', 'opt-1'),
+            array('enable_sticky', '!=', '1'),
+          )
+        ),
         array(
           'id' => 'width',
           'type' => 'dimensions',
@@ -273,7 +288,7 @@ class AudioPlayer
                                 </div>
                             </div>
                             <div style="flex-shrink: 0; max-width: 400px; width: 100%; margin-top:-70px;">
-                                <img src="' . H5AP_PRO_PLUGIN_DIR . 'assets/images/skins/playlist.png" alt="Playlist Skins" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                                <img src="' . H5AP_PLUGIN_DIR . 'assets/images/skins/playlist.png" alt="Playlist Skins" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
                             </div>
                         </div>
                     </div>
@@ -312,7 +327,7 @@ class AudioPlayer
           'id' => 'enable_sticky',
           'type' => 'switcher',
           'title' => \__('Enable Sticky', 'html5-audio-player'),
-          'desc' => 'Enable this to attach a sticky version of the player to the page so it remains visible while scrolling.',
+          'desc' => \__('Keep player visible while scrolling. (Hides Lazy Load since sticky players must load immediately).', 'html5-audio-player'),
           'default' => false,
           'dependency' => array(
             array('h5ap_player_type|standard_skin', '==|any', 'opt-1|default,fusion,stamp,wave,Simple-1,Simple-2')
@@ -379,19 +394,19 @@ class AudioPlayer
           <div class="h5ap-skin-box">
           <style>.h5ap-skin-box {text-align:center;} img{max-width:100%;} h3 {margin-bottom:5px;text-align:center;}</style>
             <h3>Card 1</h3>
-            <img src="' . H5AP_PRO_PLUGIN_DIR . 'assets/images/skins/card-1.png" alt="Standard">
+            <img src="' . H5AP_PLUGIN_DIR . 'assets/images/skins/card-1.png" alt="Standard">
             <h3>Card 2</h3>
-            <img src="' . H5AP_PRO_PLUGIN_DIR . 'assets/images/skins/card-2.png" alt="Standard">
+            <img src="' . H5AP_PLUGIN_DIR . 'assets/images/skins/card-2.png" alt="Standard">
             <h3>Simple 1</h3>
-            <img src="' . H5AP_PRO_PLUGIN_DIR . 'assets/images/skins/simple-1.png" alt="Standard">
+            <img src="' . H5AP_PLUGIN_DIR . 'assets/images/skins/simple-1.png" alt="Standard">
             <h3>Simple 2</h3>
-            <img src="' . H5AP_PRO_PLUGIN_DIR . 'assets/images/skins/simple-2.png" alt="Standard">
+            <img src="' . H5AP_PLUGIN_DIR . 'assets/images/skins/simple-2.png" alt="Standard">
             <h3>Player 9</h3>
-            <img src="' . H5AP_PRO_PLUGIN_DIR . 'assets/images/skins/player-9.png" alt="Standard">
+            <img src="' . H5AP_PLUGIN_DIR . 'assets/images/skins/player-9.png" alt="Standard">
             <h3>Player 10</h3>
-            <img src="' . H5AP_PRO_PLUGIN_DIR . 'assets/images/skins/player-10.png" alt="Standard">
+            <img src="' . H5AP_PLUGIN_DIR . 'assets/images/skins/player-10.png" alt="Standard">
             <h3>Player 11</h3>
-            <img src="' . H5AP_PRO_PLUGIN_DIR . 'assets/images/skins/player-11.png" alt="Standard">
+            <img src="' . H5AP_PLUGIN_DIR . 'assets/images/skins/player-11.png" alt="Standard">
           </div>  
           ',
         )
