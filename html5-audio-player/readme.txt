@@ -4,7 +4,7 @@ Tags: mp3 player, audio, audio player, player, podcast
 Donate link: https://www.buymeacoffee.com/abuhayat/  
 Requires at least: 6.5
 Tested up to: 7.0
-Stable tag: 2.7.4
+Stable tag: 2.7.5
 Requires PHP: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -33,10 +33,12 @@ Built with modern HTML5 technology, this plugin works across all major browsers 
 - **Customization Options**: Adjust width, border radius, and poster images.
 - **Title & Author Support**: Display custom audio titles and author names.
 - **Autoplay, Preload & Mute Options**: Define how your audio behaves upon loading.
+- **Radio Player: Autoplay & Browser Policy Handling**: Dedicated autoplay settings with Autoplay Muted fallback for modern browser compliance.
+- **Radio Player: HLS (m3u8) Streaming Support**: Stream live audio broadcasts seamlessly using modern HLS protocols.
+- **Radio Player: Connecting, Buffering & Offline Indicators**: Instant visual status updates ("Connecting...", "Buffering...", "Offline") on live streams.
 - **Repeat Control**: Loop your audio seamlessly.
-- **Lazy Load Support**: Optimize page load speed by loading the player and audio resources only when they enter the viewport.
 - **Great for Podcasts**: Perfect for embedding podcast episodes or audio courses.
-- **MP3 & OGG Support**: Automatically loads the right format based on user’s device.
+- **MP3, OGG & FLAC Support**: Play high-quality lossless FLAC audio files seamlessly alongside MP3 and OGG formats with native Media Library upload support.
 - **Google Drive Audio Support**: Seamlessly play audio files directly from Google Drive. Our built-in smart proxy bypasses Google's restrictions and CORS errors, ensuring smooth playback and accurate duration display.
 - **SoundCloud Streaming Support**: Stream tracks seamlessly by pasting their page URLs directly. Bypasses strict access rules, authorization requirements, and expiring CDN URLs for a smooth visitor experience.
 - **Cross-Browser Support**: Works smoothly on Chrome, Firefox, Safari, Edge, IE7–IE9, and more.
@@ -45,12 +47,15 @@ Built with modern HTML5 technology, this plugin works across all major browsers 
 Upgrade to the [**Pro version**](https://bplugins.com/products/html5-audio-player/pricing) for more control over design, behavior, and playback settings.
 
 **What’s Included in Pro:**
+- **Radio Player: Multiple Radio Stations Playlist**: Allow users to switch between multiple radio stations/channels directly inside a unified bottom playlist.
+- **Radio Player: Backup / Fallback Stream URL**: Secure continuous playback by automatically switching to a backup stream URL if the primary stream fails.
+- **Radio Player: Recently Played History**: Show track/song timelines fetched dynamically from Icecast/Shoutcast server metadata.
 - **Advanced Playlist Designs & Custom Skins**: Unlock additional premium designs (like Narrow and Extensive playlist skins) and custom settings.
 - **7 Additional Premium Skins**: Access Card 1, Card 2, Simple 1, Simple 2, Player 9, Player 10, and Player 11.
 - **Color Customization**: Set custom primary and background colors to perfectly fit your site’s branding.
 - **Download buttons**: Add download buttons to your player.
 - **Fast Forward & Rewind Buttons**: Enhance navigation with custom seek time settings.
-- **Start & End Time Settings**: Specify exactly when the audio should start and stop playing.
+- **Start Time Settings**: Specify exactly when the audio should start playing.
 - **Disable Pause Option**: Keep audio playing without interruption.
 - **Save State Functionality**: Save the player's time state so it resumes from where the user left off.
 - **Premium Sticky Player Features**: Unlock Background Color, Repeat, Save State, Initial Volume, and Download Button for Sticky Players.
@@ -220,6 +225,16 @@ e.g.
 
 
 == Changelog ==
+
+= 2.7.5 - 19 July, 2026 =
+* **New:** Added Autoplay & Browser Policy Handling (Autoplay Muted fallback) to bypass modern browser audio playback blocks.
+* **New:** Added HLS (m3u8) streaming protocol support to play live streams seamlessly on iOS and modern web browsers.
+* **New:** Added live buffering and connection status indicator showing "Connecting...", "Buffering...", and "Offline" status notifications.
+* **New (Pro):** Added Multiple Radio Stations playlist supporting channel switching directly in the player.
+* **New (Pro):** Added Backup / Fallback Stream URL for automatic failover switching if the primary server goes offline.
+* **New (Pro):** Added Recently Played Track History to display track timelines via Icecast/Shoutcast metadata.
+* **Improvement:** Native FLAC file upload support in WordPress Media Library.
+* **Improvement:** Improved Stream Whitelist settings with step-by-step examples and added automatic URL hostname extraction.
 
 = 2.7.4 - 11 July, 2026 =
 * **Fix:** Resolved player wrapper z-index stacking issue to prevent the player interface from overlapping with site navigation headers, dropdown menus, and overlays.
