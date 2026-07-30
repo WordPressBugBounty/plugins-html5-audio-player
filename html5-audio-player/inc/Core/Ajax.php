@@ -489,7 +489,8 @@ class Ajax
             wp_send_json_error('URL is empty');
         }
 
-        $limit = 5; // Free version is strictly capped to 5 episodes
+        // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Public endpoint for fetching podcast feed.
+        $limit = isset($_POST['limit']) ? intval($_POST['limit']) : 0;
 
         $tracks = Podcast::parse_feed($url, $limit);
 
