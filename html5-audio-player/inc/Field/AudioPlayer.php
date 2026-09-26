@@ -88,12 +88,11 @@ class AudioPlayer
         array(
           'id' => 'h5vp_default_audio',
           'type' => 'upload',
-          'title' => 'Audio source',
-          'desc' => 'Upload or select the main audio file you want to play.',
+          'title' => 'Audio File',
+          'desc' => 'Upload or select an audio file to play.',
           'library' => 'audio',
           'dependency' => array('h5ap_player_type', 'any', 'opt-1,opt-3'),
-          'placeholder' => 'http://',
-          'button_title' => 'Add Audio',
+          'button_title' => 'Upload Audio',
           'remove_title' => 'Remove Audio',
         ),
         array(
@@ -297,6 +296,19 @@ class AudioPlayer
           'desc' => 'Enable this to automatically loop the audio playback once it finishes.',
           'default' => '0',
           'dependency' => array('h5ap_player_type', '==', 'opt-1', 'all'),
+        ),
+        array(
+          'id'         => 'preload',
+          'type'       => 'radio',
+          'title'      => \__('Preload Strategy', 'html5-audio-player'),
+          'desc'       => \__('Specify how much audio data browser preloads on page load.', 'html5-audio-player'),
+          'options'    => array(
+            'auto'     => 'Auto - Preload entire audio file when page loads.',
+            'metadata' => 'Metadata - Preload only audio metadata (duration, headers) when page loads.',
+            'none'     => 'None - Do not preload audio until user clicks Play.',
+          ),
+          'default'    => 'metadata',
+          'dependency' => array('h5ap_player_type', '==', 'opt-1')
         ),
         array(
           'id' => 'disable_loader',
