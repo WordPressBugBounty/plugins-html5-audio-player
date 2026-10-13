@@ -34,6 +34,13 @@ if (
     $attributes['controls'] = $default_controls;
 }
 
+// Plain-text fields are rendered by JS skins; strip any markup coming from post authors.
+foreach (['title', 'subtitle', 'artist', 'statusText'] as $h5ap_text_key) {
+    if (isset($attributes[$h5ap_text_key]) && is_string($attributes[$h5ap_text_key])) {
+        $attributes[$h5ap_text_key] = sanitize_text_field($attributes[$h5ap_text_key]);
+    }
+}
+
 extract($attributes);
 
 $uniqueId = wp_unique_id('h5ap-player-');
@@ -49,7 +56,7 @@ if ($lazy_load_attr === 'default') {
     $lazy_load = $lazy_load_attr === 'on';
 }
 $attributes['lazyLoad'] = $lazy_load;
-if (!isset($attributes['bgColor']) && !isset($attributes['textColor']) && isset($attributes['skin'])) {
+if (!isset($attributes['bgColor']) && !isset($attributes['textColor']) && isset($attributes['skin'], $attributes['defaultValue'][$skin])) {
     $attributes = wp_parse_args($attributes['defaultValue'][$skin], $attributes);
 }
 
@@ -61,6 +68,7 @@ $wrapper_attributes = get_block_wrapper_attributes(['class' => 'wp-block-h5ap-ta
     id="<?php echo esc_attr($uniqueId); ?>"
     data-id="<?php echo esc_attr($uniqueId); ?>"
     data-attributes="<?php echo esc_attr($encoded_attributes); ?>"
+    <?php echo class_exists('\H5APPlayer\Analytics\Analytics') ? \H5APPlayer\Analytics\Analytics::ref_attr($attributes) : ''; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- value escaped inside ref_attr(). ?>
     <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
     <?php if ($loader) { ?>
         <div class='h5ap_lp'>

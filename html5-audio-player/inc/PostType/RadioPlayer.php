@@ -131,9 +131,7 @@ class RadioPlayer
     function h5ap_columns_content_only_radioplayer($column_name, $post_ID)
     {
         if ($column_name == 'shortcode') {
-?>
-            <div class='h5ap_front_shortcode'><input style='text-align: center; border: none; outline: none; background-color: #1e8cbe; color: #fff; padding: 4px 10px; border-radius: 3px;width:220px;' value='[h5ap_radio_player id="<?php echo esc_attr($post_ID) ?>"]' /><span class='htooltip'>Copy To Clipboard</span></div>
-<?php
+            echo \H5APPlayer\Helper\ShortcodeChip::html('[h5ap_radio_player id="' . absint($post_ID) . '"]'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped inside ShortcodeChip.
         }
     }
 
@@ -146,7 +144,7 @@ class RadioPlayer
     // Add a "Duplicate" link to the action links for a custom post type
     function add_duplicate_post_link($actions, $post)
     {
-        if (current_user_can('edit_posts') && $post->post_type == $this->post_type) {
+        if (current_user_can('edit_post', $post->ID) && $post->post_type == $this->post_type) {
             $actions['duplicate'] = '<a href="' . wp_nonce_url('admin.php?action=bp_duplicate_post_as_draft&post=' . $post->ID, basename(__FILE__), 'duplicate_nonce') . '" title="Duplicate this item" rel="permalink">Duplicate</a>';
         }
         return $actions;
@@ -171,10 +169,26 @@ class RadioPlayer
         * get the original post id
         */
         $post_id = (isset($_GET['post']) ? absint($_GET['post']) : absint($_POST['post']));
+
+        if (!$post_id) {
+            return;
+        }
+
         /*
         * and all the original post data then
         */
         $post = get_post($post_id);
+
+        if (!$post || $post->post_type !== $this->post_type) {
+            return;
+        }
+
+        /*
+        * Check capability
+        */
+        if (!current_user_can('edit_post', $post_id)) {
+            wp_die(esc_html__('You are not allowed to duplicate this item.', 'html5-audio-player'));
+        }
 
         /*
         * if you don't want current user to be the new post author,

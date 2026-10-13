@@ -6,6 +6,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 use H5APPlayer\Helper\Functions;
 
+// Plain-text fields are rendered by JS skins; strip any markup coming from post authors.
+foreach (['title', 'subtitle', 'artist', 'statusText'] as $h5ap_text_key) {
+    if (isset($attributes[$h5ap_text_key]) && is_string($attributes[$h5ap_text_key])) {
+        $attributes[$h5ap_text_key] = sanitize_text_field($attributes[$h5ap_text_key]);
+    }
+}
+
 extract($attributes);
 
 $uniqueId = wp_unique_id('h5ap-player-');
@@ -30,6 +37,7 @@ $wrapper_attributes = get_block_wrapper_attributes();
     id="<?php echo esc_attr($uniqueId); ?>"
     data-id="<?php echo esc_attr($uniqueId); ?>"
     data-attributes="<?php echo esc_attr($encoded_attributes); ?>"
+    <?php echo class_exists('\H5APPlayer\Analytics\Analytics') ? \H5APPlayer\Analytics\Analytics::ref_attr($attributes) : ''; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- value escaped inside ref_attr(). ?>
     data-nonce="<?php echo esc_attr(wp_create_nonce('h5ap_radio_player_rest')); ?>"
     <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
     <?php if ($loader) { ?>

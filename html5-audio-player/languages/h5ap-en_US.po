@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: HTML5 Audio Player - The Ultimate No-Code Podcast, MP3 & Audio Player 2.8.8\n"
+"Project-Id-Version: HTML5 Audio Player - The Ultimate No-Code Podcast, MP3 & Audio Player 2.9.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/html5-audio-player\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-03T08:42:02+00:00\n"
+"POT-Creation-Date: 2026-10-13T15:52:08+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: html5-audio-player\n"
@@ -39,72 +39,158 @@ msgstr ""
 msgid "http://bPlugins.com"
 msgstr ""
 
-#: inc/admin.php:35
 #: inc/admin.php:36
+#: inc/admin.php:37
 msgid "HTML5 Audio Player"
 msgstr ""
 
-#: inc/admin.php:46
-#: inc/admin.php:219
+#: inc/admin.php:47
+#: inc/admin.php:222
 msgid "Help & Demos"
-msgstr ""
-
-#: inc/admin.php:56
-#: inc/admin.php:66
-msgid "Add New"
 msgstr ""
 
 #: inc/admin.php:57
 #: inc/admin.php:67
+msgid "Add New"
+msgstr ""
+
+#: inc/admin.php:58
+#: inc/admin.php:68
 msgid " &#8627; Add New"
 msgstr ""
 
-#: inc/admin.php:76
 #: inc/admin.php:77
-#: inc/admin.php:214
+#: inc/admin.php:78
+#: inc/admin.php:215
 msgid "Categories"
 msgstr ""
 
-#: inc/admin.php:85
 #: inc/admin.php:86
-#: inc/admin.php:216
+#: inc/admin.php:87
+#: inc/admin.php:217
 msgid "Tags"
 msgstr ""
 
-#: inc/admin.php:204
+#: inc/admin.php:205
 msgid "All players"
 msgstr ""
 
-#: inc/admin.php:206
+#: inc/admin.php:207
 msgid "Add player"
 msgstr ""
 
-#: inc/admin.php:209
+#: inc/admin.php:210
 msgid "Radio players"
 msgstr ""
 
-#: inc/admin.php:211
+#: inc/admin.php:212
 msgid "Add radio"
 msgstr ""
 
-#: inc/admin.php:221
+#: inc/admin.php:224
 msgid "Settings"
 msgstr ""
 
-#: inc/admin.php:275
+#: inc/admin.php:279
 msgid "Audio Player Categories"
 msgstr ""
 
-#: inc/admin.php:278
+#: inc/admin.php:282
 msgid "Radio Categories"
 msgstr ""
 
-#: inc/admin.php:292
+#: inc/admin.php:296
 msgid "Audio Player Tags"
 msgstr ""
 
-#: inc/admin.php:295
+#: inc/admin.php:299
 msgid "Radio Tags"
+msgstr ""
+
+#: inc/Analytics/Analytics.php:52
+#: inc/Analytics/Analytics.php:59
+msgid "New"
+msgstr ""
+
+#: inc/Analytics/Analytics.php:111
+#: inc/Analytics/Analytics.php:112
+#: inc/Analytics/Options.php:51
+msgid "Analytics"
+msgstr ""
+
+#: inc/Analytics/Analytics.php:155
+#: build/analytics.js:1
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: inc/Analytics/Analytics.php:164
+#: build/analytics.js:1
+msgid "Tracking on"
+msgstr ""
+
+#: inc/Analytics/Analytics.php:164
+#: build/analytics.js:1
+msgid "Tracking paused"
+msgstr ""
+
+#: inc/Analytics/Analytics.php:165
+msgid "Pro plan"
+msgstr ""
+
+#: inc/Analytics/Analytics.php:165
+#: build/analytics.js:1
+msgid "Free plan"
+msgstr ""
+
+#: inc/Analytics/Analytics.php:167
+#: build/analytics.js:1
+msgid "Audio Analytics"
+msgstr ""
+
+#: inc/Analytics/Analytics.php:168
+#: build/analytics.js:1
+msgid "See how your audio and radio players perform: plays, listening time and where people stop."
+msgstr ""
+
+#: inc/Analytics/Analytics.php:175
+#: build/analytics.js:1
+msgid "Loading analytics…"
+msgstr ""
+
+#: inc/Analytics/Analytics.php:287
+msgid "This site counts how often audio and radio players are played and for how long, using the HTML5 Audio Player plugin. No cookies are set and IP addresses are not stored. A short identifier is derived from the IP address and browser and changes every day, so visitors cannot be followed over time. The page, device type, browser and referring website are recorded together with listening time."
+msgstr ""
+
+#: inc/Analytics/Options.php:74
+msgid "Enable Analytics"
+msgstr ""
+
+#: inc/Analytics/Options.php:75
+msgid "Count plays and listening time for every player. No cookies are used and IP addresses are never stored."
+msgstr ""
+
+#: inc/Analytics/Options.php:81
+msgid "Exclude administrators"
+msgstr ""
+
+#: inc/Analytics/Options.php:82
+msgid "Do not count plays from logged-in administrators."
+msgstr ""
+
+#: inc/Analytics/Options.php:89
+msgid "Delete old listen records after"
+msgstr ""
+
+#: inc/Analytics/Options.php:90
+msgid "Keeps the database small. Totals, charts and reports are never deleted. Between 30 and 730 days."
+msgstr ""
+
+#: inc/Analytics/Options.php:91
+msgid "days"
+msgstr ""
+
+#: inc/Analytics/Rest.php:64
+msgid "Analytics storage is not ready yet. Reload this page to finish setting it up."
 msgstr ""
 
 #: inc/Core/Ajax.php:96
@@ -129,12 +215,13 @@ msgid "Upload or paste audio file"
 msgstr ""
 
 #: inc/Elementor/Widgets/Simple.php:74
-#: inc/Field/AudioPlayer.php:115
+#: inc/Field/AudioPlayer.php:102
+#: inc/Field/AudioPlayer.php:134
 msgid "Title"
 msgstr ""
 
 #: inc/Elementor/Widgets/Simple.php:85
-#: inc/Field/AudioPlayer.php:287
+#: inc/Field/AudioPlayer.php:317
 msgid "Muted"
 msgstr ""
 
@@ -151,7 +238,7 @@ msgid "No"
 msgstr ""
 
 #: inc/Elementor/Widgets/Simple.php:98
-#: inc/Field/AudioPlayer.php:295
+#: inc/Field/AudioPlayer.php:325
 msgid "Repeat"
 msgstr ""
 
@@ -203,100 +290,129 @@ msgstr ""
 msgid "1. Audio Source &amp; Metadata"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:117
+#: inc/Field/AudioPlayer.php:104
+#: inc/Field/AudioPlayer.php:136
 msgid "Enter the title of the audio"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:126
-msgid "Author"
-msgstr ""
-
-#: inc/Field/AudioPlayer.php:128
-msgid "Enter the author of the audio"
-msgstr ""
-
-#: inc/Field/AudioPlayer.php:138
+#: inc/Field/AudioPlayer.php:111
+#: inc/Field/AudioPlayer.php:157
 msgid "Poster"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:139
+#: inc/Field/AudioPlayer.php:112
+#: inc/Field/AudioPlayer.php:158
 msgid "Add or Upload Poster Image"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:140
+#: inc/Field/AudioPlayer.php:113
+#: inc/Field/AudioPlayer.php:159
 msgid "Remove"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:141
+#: inc/Field/AudioPlayer.php:114
+#: inc/Field/AudioPlayer.php:160
 msgid "100x100 px photo is the standard poster size, accepted file type .png, .jpeg, .jpg "
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:150
+#: inc/Field/AudioPlayer.php:145
+msgid "Author"
+msgstr ""
+
+#: inc/Field/AudioPlayer.php:147
+msgid "Enter the author of the audio"
+msgstr ""
+
+#: inc/Field/AudioPlayer.php:169
+msgid "Hide Poster Image <span class=\"h5ap-new-badge\" style=\"background:#2563eb;color:#fff;font-size:10px;padding:2px 6px;border-radius:4px;margin-left:6px;font-weight:600;\">NEW</span>"
+msgstr ""
+
+#: inc/Field/AudioPlayer.php:170
+msgid "Show the Fusion player without any image (the default image is not loaded either)."
+msgstr ""
+
+#: inc/Field/AudioPlayer.php:180
 msgid "Waveform Style <span class=\"h5ap-new-badge\" style=\"background:#2563eb;color:#fff;font-size:10px;padding:2px 6px;border-radius:4px;margin-left:6px;font-weight:600;\">NEW</span>"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:151
+#: inc/Field/AudioPlayer.php:181
 msgid "Choose between dynamic jumping equalizer bars or a SoundCloud-style static waveform."
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:174
+#: inc/Field/AudioPlayer.php:204
 msgid "2. Controls &amp; Components"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:209
+#: inc/Field/AudioPlayer.php:239
 msgid "3. Theme, Colors &amp; Styling"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:272
+#: inc/Field/AudioPlayer.php:302
 msgid "4. Playback Behavior &amp; Options"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:279
+#: inc/Field/AudioPlayer.php:309
 msgid "AutoPlay"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:303
+#: inc/Field/AudioPlayer.php:333
 msgid "Preload Strategy"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:304
+#: inc/Field/AudioPlayer.php:334
 msgid "Specify how much audio data browser preloads on page load."
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:316
+#: inc/Field/AudioPlayer.php:346
 msgid "Disable Loading"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:324
+#: inc/Field/AudioPlayer.php:354
 msgid "Lazy Load"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:325
+#: inc/Field/AudioPlayer.php:355
 msgid "Load player only when in viewport. (Unavailable when \"Enable Sticky\" is active)."
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:327
+#: inc/Field/AudioPlayer.php:357
 msgid "Inherit (Global Settings)"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:328
+#: inc/Field/AudioPlayer.php:358
 msgid "Enable"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:329
+#: inc/Field/AudioPlayer.php:359
 msgid "Disable"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:340
+#: inc/Field/AudioPlayer.php:370
 msgid "Enable Sticky"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:341
+#: inc/Field/AudioPlayer.php:371
 msgid "Keep player visible while scrolling. (Hides Lazy Load since sticky players must load immediately)."
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:441
+#: inc/Field/AudioPlayer.php:471
 msgid "The following skins are available in the pro version."
+msgstr ""
+
+#: inc/Helper/ShortcodeChip.php:23
+msgid "Copy shortcode"
+msgstr ""
+
+#: inc/Helper/ShortcodeChip.php:24
+msgid "Copied!"
+msgstr ""
+
+#: inc/Helper/ShortcodeChip.php:33
+msgid "Shortcode"
+msgstr ""
+
+#: inc/Helper/ShortcodeChip.php:34
+msgid "Copy this shortcode and paste it into your post, page, or text widget content:"
 msgstr ""
 
 #: inc/PostType/AudioPlayer.php:42
@@ -338,13 +454,14 @@ msgstr ""
 msgid "Sorry, we couldn't find the Player you are looking for."
 msgstr ""
 
-#: inc/PostType/AudioPlayer.php:134
-msgid "Copy this shortcode and paste it into your post, page, or text widget content:"
+#: inc/PostType/AudioPlayer.php:105
+#: inc/PostType/RadioPlayer.php:140
+msgid "Player updated "
 msgstr ""
 
-#: inc/PostType/AudioPlayer.php:148
-#: inc/PostType/RadioPlayer.php:142
-msgid "Player updated "
+#: inc/PostType/AudioPlayer.php:155
+#: inc/PostType/RadioPlayer.php:190
+msgid "You are not allowed to duplicate this item."
 msgstr ""
 
 #: inc/PostType/RadioPlayer.php:50
@@ -354,6 +471,235 @@ msgstr ""
 
 #: inc/PostType/RadioPlayer.php:52
 msgid "Add Radio Player"
+msgstr ""
+
+#: build/analytics.js:1
+#, js-format
+msgid "%1$dh %2$dm"
+msgstr ""
+
+#: build/analytics.js:1
+#, js-format
+msgid "%1$dm %2$ds"
+msgstr ""
+
+#: build/analytics.js:1
+#, js-format
+msgid "%ds"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Plays"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Plays per day"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Listening time"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Listening time per day"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Available in Pro"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Show on the chart"
+msgstr ""
+
+#: build/analytics.js:1
+#, js-format
+msgid "Best day: %1$s · %2$s"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Chart metric"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Pro"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Could not load tracks."
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Top Tracks"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Your 5 most played tracks in this period."
+msgstr ""
+
+#: build/analytics.js:1
+msgid "No plays in this period yet"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Plays appear here after someone listens for at least 3 seconds."
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Track"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Avg. listen"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Completion"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Radio"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Audio"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "See every track (including each track inside playlists), sort by listening time or completion, and open detailed reports with Pro."
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Action needed"
+msgstr ""
+
+#: build/analytics.js:1
+#, js-format
+msgid "%d audio file failed to play for several visitors in the last 2 days."
+msgid_plural "%d audio files failed to play for several visitors in the last 2 days."
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/analytics.js:1
+msgid "The file may have been moved or deleted. Upgrade to Pro to see which files are affected."
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Dismiss"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Today"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "7 days"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "30 days"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "90 days"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Custom"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Could not load analytics."
+msgstr ""
+
+#: build/analytics.js:1
+#, js-format
+msgid "Today: <b>%1$s play</b> and <b>%2$s</b> of listening"
+msgid_plural "Today: <b>%1$s plays</b> and <b>%2$s</b> of listening"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/analytics.js:1
+#, js-format
+msgid "Last 7 days: <b>%1$s play</b> and <b>%2$s</b> of listening"
+msgid_plural "Last 7 days: <b>%1$s plays</b> and <b>%2$s</b> of listening"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/analytics.js:1
+msgid "Period"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Analytics is turned off, so new plays are not being counted."
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Turn it on in Settings"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Analytics is being set up. Reload this page in a moment."
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Total Plays"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Listened for at least 3 seconds"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Listening Time"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Total time spent listening"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Avg. Listen Time"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Completion Rate"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Privacy friendly: no cookies, no outside services, and IP addresses are never stored."
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Analytics settings"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Delete all analytics data"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Delete all analytics data?"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Every play, chart and report will be removed. Your players and settings are not affected. This cannot be undone."
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Cancel"
+msgstr ""
+
+#: build/analytics.js:1
+msgid "All analytics data was deleted."
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Could not delete the data."
+msgstr ""
+
+#: build/analytics.js:1
+msgid "Delete data"
 msgstr ""
 
 #: build/dashboard.js:1

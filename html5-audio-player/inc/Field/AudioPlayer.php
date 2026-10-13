@@ -95,6 +95,25 @@ class AudioPlayer
           'button_title' => 'Upload Audio',
           'remove_title' => 'Remove Audio',
         ),
+        // Sticky player title and poster. The sticky template reads these keys, so existing players keep their values.
+        array(
+          'id' => 'title_sticky',
+          'type' => 'text',
+          'title' => \__('Title', 'html5-audio-player'),
+          'default' => 'Audio Title',
+          'desc' => \__('Enter the title of the audio', 'html5-audio-player'),
+          'dependency' => array('h5ap_player_type', '==', 'opt-3'),
+        ),
+        array(
+          'id' => 'poster_sticky',
+          'type' => 'upload',
+          'library' => 'image',
+          'title' => \__('Poster', 'html5-audio-player'),
+          'button_title' => \__('Add or Upload Poster Image', 'html5-audio-player'),
+          'remove_title' => \__('Remove', 'html5-audio-player'),
+          'desc' => \__('100x100 px photo is the standard poster size, accepted file type .png, .jpeg, .jpg ', 'html5-audio-player'),
+          'dependency' => array('h5ap_player_type', '==', 'opt-3'),
+        ),
         array(
           'id' => 'standard_skin',
           'type' => 'button_set',
@@ -142,6 +161,17 @@ class AudioPlayer
           'dependency' => array(
             array('h5ap_player_type', '==', 'opt-1'),
             array('standard_skin', 'not-any', 'default,stamp,Simple-1'),
+          ),
+        ),
+        array(
+          'id' => 'hide_poster',
+          'type' => 'switcher',
+          'title' => \__('Hide Poster Image <span class="h5ap-new-badge" style="background:#2563eb;color:#fff;font-size:10px;padding:2px 6px;border-radius:4px;margin-left:6px;font-weight:600;">NEW</span>', 'html5-audio-player'),
+          'desc' => \__('Show the Fusion player without any image (the default image is not loaded either).', 'html5-audio-player'),
+          'default' => false,
+          'dependency' => array(
+            array('h5ap_player_type', '==', 'opt-1'),
+            array('standard_skin', '==', 'fusion'),
           ),
         ),
         array(
