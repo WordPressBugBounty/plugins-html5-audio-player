@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: HTML5 Audio Player - The Ultimate No-Code Podcast, MP3 & Audio Player 2.9.0\n"
+"Project-Id-Version: HTML5 Audio Player - The Ultimate No-Code Podcast, MP3 & Audio Player 2.10.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/html5-audio-player\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-13T15:52:08+00:00\n"
+"POT-Creation-Date: 2026-10-27T06:42:55+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: html5-audio-player\n"
@@ -119,6 +119,7 @@ msgid "Analytics"
 msgstr ""
 
 #: inc/Analytics/Analytics.php:155
+#: inc/Helper/Transcript.php:543
 #: build/analytics.js:1
 msgid "Upgrade to Pro"
 msgstr ""
@@ -206,83 +207,83 @@ msgid "{{data.label}}"
 msgstr ""
 
 #: inc/Elementor/Widgets/Simple.php:28
-#: inc/Elementor/Widgets/Simple.php:59
+#: inc/Elementor/Widgets/Simple.php:72
 msgid "Simple Audio Player"
 msgstr ""
 
-#: inc/Elementor/Widgets/Simple.php:66
+#: inc/Elementor/Widgets/Simple.php:79
 msgid "Upload or paste audio file"
 msgstr ""
 
-#: inc/Elementor/Widgets/Simple.php:74
+#: inc/Elementor/Widgets/Simple.php:87
 #: inc/Field/AudioPlayer.php:102
 #: inc/Field/AudioPlayer.php:134
 msgid "Title"
 msgstr ""
 
-#: inc/Elementor/Widgets/Simple.php:85
-#: inc/Field/AudioPlayer.php:317
+#: inc/Elementor/Widgets/Simple.php:98
+#: inc/Field/AudioPlayer.php:319
 msgid "Muted"
 msgstr ""
 
-#: inc/Elementor/Widgets/Simple.php:87
 #: inc/Elementor/Widgets/Simple.php:100
-#: inc/Elementor/Widgets/Simple.php:112
+#: inc/Elementor/Widgets/Simple.php:113
+#: inc/Elementor/Widgets/Simple.php:125
 msgid "Yes"
 msgstr ""
 
-#: inc/Elementor/Widgets/Simple.php:88
 #: inc/Elementor/Widgets/Simple.php:101
-#: inc/Elementor/Widgets/Simple.php:113
+#: inc/Elementor/Widgets/Simple.php:114
+#: inc/Elementor/Widgets/Simple.php:126
 msgid "No"
 msgstr ""
 
-#: inc/Elementor/Widgets/Simple.php:98
-#: inc/Field/AudioPlayer.php:325
+#: inc/Elementor/Widgets/Simple.php:111
+#: inc/Field/AudioPlayer.php:327
 msgid "Repeat"
 msgstr ""
 
-#: inc/Elementor/Widgets/Simple.php:110
+#: inc/Elementor/Widgets/Simple.php:123
 msgid "Autoplay"
 msgstr ""
 
-#: inc/Elementor/Widgets/Simple.php:123
+#: inc/Elementor/Widgets/Simple.php:136
 msgid "Seek Time"
 msgstr ""
 
-#: inc/Elementor/Widgets/Simple.php:125
+#: inc/Elementor/Widgets/Simple.php:138
 msgid "Input seek time here"
 msgstr ""
 
-#: inc/Elementor/Widgets/Simple.php:134
+#: inc/Elementor/Widgets/Simple.php:147
 msgid "Preload"
 msgstr ""
 
-#: inc/Elementor/Widgets/Simple.php:137
+#: inc/Elementor/Widgets/Simple.php:150
 msgid "Metadata (Default)"
 msgstr ""
 
-#: inc/Elementor/Widgets/Simple.php:138
+#: inc/Elementor/Widgets/Simple.php:151
 msgid "None (Load on interaction)"
 msgstr ""
 
-#: inc/Elementor/Widgets/Simple.php:139
+#: inc/Elementor/Widgets/Simple.php:152
 msgid "Auto"
 msgstr ""
 
-#: inc/Elementor/Widgets/Simple.php:150
+#: inc/Elementor/Widgets/Simple.php:168
 msgid "Style"
 msgstr ""
 
-#: inc/Elementor/Widgets/Simple.php:157
+#: inc/Elementor/Widgets/Simple.php:175
 msgid "Width"
 msgstr ""
 
-#: inc/Elementor/Widgets/Simple.php:190
+#: inc/Elementor/Widgets/Simple.php:208
 msgid "Primary Color"
 msgstr ""
 
-#: inc/Elementor/Widgets/Simple.php:208
+#: inc/Elementor/Widgets/Simple.php:226
 msgid "Background Color"
 msgstr ""
 
@@ -347,55 +348,55 @@ msgstr ""
 msgid "3. Theme, Colors &amp; Styling"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:302
+#: inc/Field/AudioPlayer.php:304
 msgid "4. Playback Behavior &amp; Options"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:309
+#: inc/Field/AudioPlayer.php:311
 msgid "AutoPlay"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:333
+#: inc/Field/AudioPlayer.php:335
 msgid "Preload Strategy"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:334
+#: inc/Field/AudioPlayer.php:336
 msgid "Specify how much audio data browser preloads on page load."
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:346
+#: inc/Field/AudioPlayer.php:348
 msgid "Disable Loading"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:354
+#: inc/Field/AudioPlayer.php:356
 msgid "Lazy Load"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:355
+#: inc/Field/AudioPlayer.php:357
 msgid "Load player only when in viewport. (Unavailable when \"Enable Sticky\" is active)."
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:357
+#: inc/Field/AudioPlayer.php:359
 msgid "Inherit (Global Settings)"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:358
+#: inc/Field/AudioPlayer.php:360
 msgid "Enable"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:359
+#: inc/Field/AudioPlayer.php:361
 msgid "Disable"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:370
+#: inc/Field/AudioPlayer.php:372
 msgid "Enable Sticky"
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:371
+#: inc/Field/AudioPlayer.php:373
 msgid "Keep player visible while scrolling. (Hides Lazy Load since sticky players must load immediately)."
 msgstr ""
 
-#: inc/Field/AudioPlayer.php:471
+#: inc/Field/AudioPlayer.php:497
 msgid "The following skins are available in the pro version."
 msgstr ""
 
@@ -413,6 +414,137 @@ msgstr ""
 
 #: inc/Helper/ShortcodeChip.php:34
 msgid "Copy this shortcode and paste it into your post, page, or text widget content:"
+msgstr ""
+
+#: inc/Helper/Transcript.php:219
+#: inc/Helper/Transcript.php:250
+#: inc/Helper/Transcript.php:320
+#: inc/Helper/Transcript.php:414
+#: inc/Helper/Transcript.php:457
+#: inc/Helper/Transcript.php:506
+msgid "Transcript"
+msgstr ""
+
+#: inc/Helper/Transcript.php:222
+msgid "Search in audio"
+msgstr ""
+
+#: inc/Helper/Transcript.php:222
+msgid "Search in transcript"
+msgstr ""
+
+#. translators: %d: number of matches in the transcript
+#: inc/Helper/Transcript.php:224
+#, php-format
+msgid "%d match"
+msgstr ""
+
+#. translators: %d: number of matches in the transcript
+#: inc/Helper/Transcript.php:225
+#, php-format
+msgid "%d matches"
+msgstr ""
+
+#. translators: %d: number of matches in the transcript
+#: inc/Helper/Transcript.php:226
+msgid "No matches"
+msgstr ""
+
+#. translators: %s: time in the audio, for example 1:15
+#: inc/Helper/Transcript.php:236
+#, php-format
+msgid "Play from %s"
+msgstr ""
+
+#: inc/Helper/Transcript.php:320
+msgid "5. Transcript"
+msgstr ""
+
+#: inc/Helper/Transcript.php:321
+#: inc/Helper/Transcript.php:384
+#: inc/Helper/Transcript.php:457
+#: inc/Helper/Transcript.php:506
+msgid "NEW"
+msgstr ""
+
+#: inc/Helper/Transcript.php:327
+#: inc/Helper/Transcript.php:462
+msgid "Show Transcript"
+msgstr ""
+
+#: inc/Helper/Transcript.php:329
+#: inc/Helper/Transcript.php:466
+msgid "Show the text of the audio under the player. Visitors can read along, search and click a line to jump there."
+msgstr ""
+
+#: inc/Helper/Transcript.php:330
+msgid "Show the text of the audio. Visitors can read along, search and click a line to jump there. In a playlist, add the text to each track; in a sticky player, a \"Transcript\" button opens it."
+msgstr ""
+
+#: inc/Helper/Transcript.php:338
+#: inc/Helper/Transcript.php:470
+msgid "Transcript Text"
+msgstr ""
+
+#: inc/Helper/Transcript.php:339
+#: inc/Helper/Transcript.php:474
+msgid "Paste an SRT or VTT caption file, or write one line per sentence starting with its time, for example: 1:15 Welcome to the show."
+msgstr ""
+
+#: inc/Helper/Transcript.php:352
+#: inc/Helper/Transcript.php:479
+msgid "Transcript Search"
+msgstr ""
+
+#: inc/Helper/Transcript.php:353
+msgid "Let visitors search the transcript."
+msgstr ""
+
+#: inc/Helper/Transcript.php:361
+#: inc/Helper/Transcript.php:487
+msgid "Open Transcript by Default"
+msgstr ""
+
+#: inc/Helper/Transcript.php:362
+msgid "Turn off to show the transcript closed, so visitors open it when they need it."
+msgstr ""
+
+#: inc/Helper/Transcript.php:371
+#: inc/Helper/Transcript.php:384
+msgid "Transcript Corner Radius"
+msgstr ""
+
+#: inc/Helper/Transcript.php:372
+#: inc/Helper/Transcript.php:517
+msgid "Round the corners of the transcript box, in pixels. 0 keeps them square."
+msgstr ""
+
+#: inc/Helper/Transcript.php:385
+msgid "Round the corners of the transcript box. 0 keeps them square."
+msgstr ""
+
+#: inc/Helper/Transcript.php:415
+msgid "Optional. Paste an SRT or VTT caption file, or write one line per sentence starting with its time, for example: 1:15 Welcome to the show."
+msgstr ""
+
+#: inc/Helper/Transcript.php:512
+msgid "Corner Radius (px)"
+msgstr ""
+
+#: inc/Helper/Transcript.php:536
+msgid "AI Transcript"
+msgstr ""
+
+#: inc/Helper/Transcript.php:537
+msgid "PRO"
+msgstr ""
+
+#: inc/Helper/Transcript.php:539
+msgid "Generate the transcript from the audio with AI, right in your browser."
+msgstr ""
+
+#: inc/Helper/Transcript.php:540
+msgid "Let visitors download the transcript as .vtt or .txt."
 msgstr ""
 
 #: inc/PostType/AudioPlayer.php:42
@@ -471,6 +603,26 @@ msgstr ""
 
 #: inc/PostType/RadioPlayer.php:52
 msgid "Add Radio Player"
+msgstr ""
+
+#: inc/Services/EnqueueAssets.php:141
+msgid "Import SRT / VTT file"
+msgstr ""
+
+#: inc/Services/EnqueueAssets.php:142
+msgid "This file is larger than 2 MB. Please choose a smaller SRT or VTT file."
+msgstr ""
+
+#: inc/Services/EnqueueAssets.php:143
+msgid "Imported. Click Update to save."
+msgstr ""
+
+#: inc/Services/EnqueueAssets.php:145
+msgid "Generate with AI"
+msgstr ""
+
+#: inc/Services/EnqueueAssets.php:146
+msgid "Write the transcript from the audio automatically. Available in Pro."
 msgstr ""
 
 #: build/analytics.js:1

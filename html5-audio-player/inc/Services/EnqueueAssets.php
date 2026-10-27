@@ -16,6 +16,7 @@ class EnqueueAssets
     {
         add_action("wp_enqueue_scripts", [$this, 'publicAssets']);
         add_action("admin_enqueue_scripts", [$this, 'adminAssets']);
+        add_action('elementor/preview/enqueue_scripts', [$this, 'elementorPreviewAssets']);
     }
 
     /**
@@ -37,6 +38,9 @@ class EnqueueAssets
         wp_register_script('bplugins-plyrio', H5AP_PLUGIN_DIR . 'assets/js/plyr-v3.7.2.js', array('jquery'), H5AP_VERSION, false);
 
         wp_register_script('h5ap-all', H5AP_PLUGIN_DIR . 'build/h5ap-all.js', array(), H5AP_VERSION, true);
+
+        // Transcript script/style: registered here, enqueued only when a transcript is shown.
+        \H5APPlayer\Helper\Transcript::register_assets();
 
         wp_enqueue_style('bplugins-plyrio', H5AP_PLUGIN_DIR . 'assets/css/plyr-v3.7.2.css', array(), H5AP_VERSION, 'all');
 
@@ -61,6 +65,45 @@ class EnqueueAssets
         // (used to build the Google Drive proxy URL) is available wherever Plyr loads.
         wp_localize_script('bplugins-plyrio', 'h5apPlayer', $h5ap_settings);
 
+        if ( Functions::getSetting('h5ap_loading_spinner', true, true) ) {
+            $this->loadingSpinner();
+        }
+    }
+
+    /**
+     * Spinner on the play button while the audio is still loading after play is pressed.
+     * Printed next to the Plyr script, so it is only on pages that have a player.
+     */
+    protected function loadingSpinner() {
+        $dir = dirname(__DIR__, 2) . '/assets/';
+        $script = is_readable($dir . 'js/loading-spinner.js') ? file_get_contents($dir . 'js/loading-spinner.js') : ''; // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- local plugin file.
+        $style = is_readable($dir . 'css/loading-spinner.css') ? file_get_contents($dir . 'css/loading-spinner.css') : ''; // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- local plugin file.
+
+        if ($script) {
+            wp_add_inline_script('bplugins-plyrio', $script);
+            wp_add_inline_script('h5ap-all', $script); // "Apply to all audios" can load Plyr by itself.
+        }
+        if ($style) {
+            wp_add_inline_style('h5ap-public', $style);
+        }
+    }
+
+    /**
+     * Elementor editor preview: load the block players' scripts and styles up front, so a player added
+     * while editing (for example a Shortcode widget with [player]) can start without a page reload.
+     */
+    public function elementorPreviewAssets() {
+        foreach (\WP_Block_Type_Registry::get_instance()->get_all_registered() as $name => $block_type) {
+            if (strpos($name, 'h5ap/') !== 0) {
+                continue;
+            }
+            foreach ((array) $block_type->view_script_handles as $handle) {
+                wp_enqueue_script($handle);
+            }
+            foreach ((array) $block_type->style_handles as $handle) {
+                wp_enqueue_style($handle);
+            }
+        }
     }
 
     /**
@@ -93,7 +136,15 @@ class EnqueueAssets
 
             wp_localize_script('h5ap-admin', 'h5apAdmin', array(
                 'ajaxUrl' => admin_url('admin-ajax.php'),
-                'website' => site_url()
+                'website' => site_url(),
+                'transcript' => array(
+                    'import'   => __('Import SRT / VTT file', 'html5-audio-player'),
+                    'tooBig'   => __('This file is larger than 2 MB. Please choose a smaller SRT or VTT file.', 'html5-audio-player'),
+                    'imported' => __('Imported. Click Update to save.', 'html5-audio-player'),
+                    'proUrl'   => \H5APPlayer\Helper\Transcript::pro_url(),
+                    'aiLocked' => __('Generate with AI', 'html5-audio-player'),
+                    'aiLockedHelp' => __('Write the transcript from the audio automatically. Available in Pro.', 'html5-audio-player'),
+                ),
             ));
 
             // Expose player settings (incl. ajaxUrl) on the admin player/Plyr scripts so the

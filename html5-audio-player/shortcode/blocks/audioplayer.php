@@ -134,4 +134,10 @@ $block = [
     'innerHTML' => '',
     'innerContent' => [],
 ];
+
+// Transcript (off unless "Show Transcript" is turned on for this player).
+// Standard and Sticky players; a sticky player shows it behind a "Transcript" button above the bar.
+if ($type === 'opt-1' || $type === 'opt-3') {
+    $block['attrs'] = array_merge($block['attrs'], \H5APPlayer\Helper\Transcript::block_attrs_from_meta($meta, $type));
+}
 // phpcs:enable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
